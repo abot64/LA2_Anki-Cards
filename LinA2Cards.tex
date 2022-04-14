@@ -313,4 +313,349 @@
 \end{note}
 
 %%%%%%%%% Vorlesung 2 %%%%%%%%%%%%
+\begin{note}
+    \tags{Def}
+    \xplain{57381bea-bbe3-11ec-8422-0242ac120002}
+
+    \xfield{
+        Eine Bilinearform \(\beta\) auf \(V\) ist \textbf{symmetrisch}, falls \dots
+    }
+    \begin{field}
+        Eine Bilinearform \(\beta\) auf \(V\) ist \textbf{symmetrisch}, falls für alle \(\vec{v},\vec{w}\in V\)
+        \[\beta(\vec{v},\vec{w}) = \beta(\vec{w},\vec{v})\]
+        \cite{Def. 10.7}
+    \end{field}
+    
+    \xfield{
+        Eine Bilinearform \(\beta\) auf \(V\) ist \textbf{schiefsymmetrisch}, falls \dots
+    }
+    \begin{field}
+        Eine Bilinearform \(\beta\) auf \(V\) ist \textbf{schiefsymmetrisch}, falls für alle \(\vec{v},\vec{w}\in V\)
+        \[\beta(\vec{v},\vec{w}) = - \beta(\vec{w},\vec{v})\]
+        \cite{Def. 10.7}
+    \end{field}
+    
+    \xfield{
+        Eine Bilinearform \(\beta\) auf \(V\) ist \textbf{alternierend}, falls \dots
+    }
+    \begin{field}
+        Eine Bilinearform \(\beta\) auf \(V\) ist \textbf{alternierend}, falls für alle \(\vec{v}\in V\)
+        \[\beta(\vec{v},\vec{v}) = 0\]
+        \cite{Def. 10.7}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{fb0e2cdc-bbf2-11ec-8422-0242ac120002}
+
+    \xfield{
+        Eine Bilinearform \(\beta\) ist \textbf{symmetrisch} genau dann, wenn \dots
+    \hint{darstellende Matrix}
+    }
+    \begin{field}
+        Eine Bilinearform \(\beta\) ist \textbf{symmetrisch} genau dann, wenn ihre darstellende Matrix \(M(\beta)\) \textbf{symmetrisch} ist:
+        \[M(\beta)^T = M(\beta)\]
+        \cite{Satz 10.9}
+    \end{field}
+    
+    \xfield{
+    Eine Bilinearform \(\beta\) ist \textbf{schiefsymmetrisch} genau dann, wenn \dots
+    \hint{darstellende Matrix}
+    }
+    \begin{field}
+        Eine Bilinearform \(\beta\) ist \textbf{schiefsymmetrisch} genau dann, wenn ihre darstellende Matrix \(M(\beta)\) \textbf{schiefsymmetrisch} ist:
+        \[M(\beta)^T = -M(\beta)\]
+        \cite{Satz 10.9}
+    \end{field}
+
+    \xfield{
+        Eine Bilinearform \(\beta\) ist \textbf{alternierend} genau dann, wenn \dots
+    \hint{darstellende Matrix}
+    }
+    \begin{field}
+        Eine Bilinearform \(\beta\) ist \textbf{alternierend} genau dann, wenn für ihre darstellende Matrix \(M(\beta)\) gilt:
+        \[M(\beta)^T = -M(\beta)\]
+        und
+        \[M_{ii} = 0 \text{ für alle }i\]
+        \cite{Satz 10.9}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{7e2e222e-bbf4-11ec-8422-0242ac120002}
+    
+    \begin{field} %Lücke 1
+        Eine \textbf{Sesquilinearform} \(\eta\) auf einem \(\CC\)-Vektorraum \(V\) ist eine Abbildung \(\eta\colon V\times V \longrightarrow \CC\) mit folgenden Eigenschaften:
+        \begin{itemize}
+            \item \hide{\(\eta\) ist linear in der ersten Koordinate:
+                \[\eta(\vec{v}_1+s\vec{v}_2, \vec{w}) = \eta(\vec{v}_1, \vec{w}) + s\cdot \eta(\vec{v}_2,\vec{w})\]
+                für alle \(\vec{v_1, v_2, w} \in V\) und alle \(s\in\CC\)}
+            \item \(\eta\) ist semilinear in der zweiten Koordinate:
+                \[\eta(\vec{v}, \vec{w}_1+\vec{w}_2) = \eta(\vec{v}, \vec{w}_1) + \eta(\vec{v},\vec{w}_2)\]
+                \[\eta(\vec{v}, s\vec{w}) = \bar{s}\cdot \eta(\vec{v},\vec{w})\]
+                für alle \(\vec{v, w, w_1, w_2} \in V\) und alle \(s\in\CC\)
+        \end{itemize}
+    \end{field} 
+    
+    \begin{field} %Antwort 1
+        Eine \textbf{Sesquilinearform} \(\eta\) auf einem \(\CC\)-Vektorraum \(V\) ist eine Abbildung \(\eta\colon V\times V \longrightarrow \CC\) mit folgenden Eigenschaften:
+        \begin{itemize}
+            \item \(\eta\) ist linear in der ersten Koordinate:
+                \[\eta(\vec{v}_1+s\vec{v}_2, \vec{w}) = \eta(\vec{v}_1, \vec{w}) + s\cdot \eta(\vec{v}_2,\vec{w})\]
+                für alle \(\vec{v_1, v_2, w} \in V\) und alle \(s\in\CC\)
+            \item \(\eta\) ist semilinear in der zweiten Koordinate:
+                \[\eta(\vec{v}, \vec{w}_1+\vec{w}_2) = \eta(\vec{v}, \vec{w}_1) + \eta(\vec{v},\vec{w}_2)\]
+                \[\eta(\vec{v}, s\vec{w}) = \bar{s}\cdot \eta(\vec{v},\vec{w})\]
+                für alle \(\vec{v, w, w_1, w_2} \in V\) und alle \(s\in\CC\)
+        \end{itemize}
+        \cite{Def. 10.10}
+    \end{field}
+
+    \begin{field} %Lücke 2
+        Eine \textbf{Sesquilinearform} \(\eta\) auf einem \(\CC\)-Vektorraum \(V\) ist eine Abbildung \(\eta\colon V\times V \longrightarrow \CC\) mit folgenden Eigenschaften:
+        \begin{itemize}
+            \item \(\eta\) ist linear in der ersten Koordinate:
+                \[\eta(\vec{v}_1+s\vec{v}_2, \vec{w}) = \eta(\vec{v}_1, \vec{w}) + s\cdot \eta(\vec{v}_2,\vec{w})\]
+                für alle \(\vec{v_1, v_2, w} \in V\) und alle \(s\in\CC\)
+            \item \hide{\(\eta\) ist semilinear in der zweiten Koordinate:
+                \[\eta(\vec{v}, \vec{w}_1+\vec{w}_2) = \eta(\vec{v}, \vec{w}_1) + \eta(\vec{v},\vec{w}_2)\]
+                \[\eta(\vec{v}, s\vec{w}) = \bar{s}\cdot \eta(\vec{v},\vec{w})\]
+                für alle \(\vec{v, w, w_1, w_2} \in V\) und alle \(s\in\CC\)}
+        \end{itemize}
+    \end{field}
+    \begin{field} %Antwort
+        Eine \textbf{Sesquilinearform} \(\eta\) auf einem \(\CC\)-Vektorraum \(V\) ist eine Abbildung \(\eta\colon V\times V \longrightarrow \CC\) mit folgenden Eigenschaften:
+        \begin{itemize}
+            \item \(\eta\) ist linear in der ersten Koordinate:
+                \[\eta(\vec{v}_1+s\vec{v}_2, \vec{w}) = \eta(\vec{v}_1, \vec{w}) + s\cdot \eta(\vec{v}_2,\vec{w})\]
+                für alle \(\vec{v_1, v_2, w} \in V\) und alle \(s\in\CC\)
+            \item\(\eta\) ist semilinear in der zweiten Koordinate:
+                \[\eta(\vec{v}, \vec{w}_1+\vec{w}_2) = \eta(\vec{v}, \vec{w}_1) + \eta(\vec{v},\vec{w}_2)\]
+                \[\eta(\vec{v}, s\vec{w}) = \bar{s}\cdot \eta(\vec{v},\vec{w})\]
+                für alle \(\vec{v, w, w_1, w_2} \in V\) und alle \(s\in\CC\)
+        \end{itemize}
+        \cite{Def. 10.10}
+    \end{field}
+    
+    \xfield{Eine Sesquilinearform \(\eta\) ist \textbf{hermitesch}, falls \dots}
+    \begin{field}
+        Eine Sesquilinearform \(\eta\) ist \textbf{hermitesch}, falls gilt
+        \[\eta(\vec{v},\vec{w}) = \overline{\eta(\vec{w},\vec{v})}\]
+        für alle \(\vec{v},\vec{w}\in V\)
+        \cite{Def. 10.10}      
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{bd8dcf48-bc10-11ec-8422-0242ac120002}
+    
+    \xfield{
+        Die darstellende Matrix \(M(\eta)\) zu einer Sesquilinearform \(\eta\) hat die Form \dots
+    }
+    \begin{field}
+        Die darstellende Matrix \(M(\eta)\) zu einer Sesquilinearform \(\eta\) hat die Form
+        \[M(\eta)\colon = (\eta(\vec{e}_i, \vec{e}_j)_{ij}\]
+        \cite{Satz 10.11}
+    \end{field}
+    
+    \xfield{
+        Zu einer gegebenen komplexen Matrix \(A\) existiert eine Sesquilinearform \(\eta\) wie folgt:\\
+        \dots
+    }
+    \begin{field}
+        Zu einer gegebenen komplexen quadratischen Matrix \(A\) existiert eine Sesquilinearform \(\eta\) wie folgt:
+        \[\eta_A(\vec{v},\vec{w}) \colon = \vec{v}^T A \overline{\vec{w}}\]
+        \cite{Satz 10.11}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{ca81504e-bc10-11ec-8422-0242ac120002}
+
+    \xfield{Eine symmetrische Bilinearform \(\beta\) auf einem \\ \(\RR\)-Vektorraum ist \textbf{positiv definit}, falls \dots}
+    \begin{field}
+        Eine symmetrische Bilinearform \(\beta\) auf einem \\ \(\RR\)-Vektorraum ist \textbf{positiv definit}, falls 
+        \[\beta(\vec{v,v}) > 0 \text{ für alle }\vec{v}\in V\setminus\{\vec{0}\}\]
+        \cite{Def. 10.14}
+    \end{field}
+    
+    \xfield{Eine hermitesche Bilinearform \(\beta\) auf einem \(\CC\)-Vektorraum ist \textbf{positiv definit}, falls \dots}
+    \begin{field}
+        Eine hermitesche Bilinearform \(\beta\) auf einem \(\CC\)-Vektorraum ist \textbf{positiv definit}, falls
+        \[\beta(\vec{v,v}) > 0 \text{ für alle }\vec{v}\in V\setminus\{\vec{0}\}\]
+        \cite{Def. 10.14}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{d1b1125a-bc10-11ec-8422-0242ac120002}
+    
+    \xfield{
+        Ein \textbf{Skalarprodukt} auf einem \(\RR\)-Vektorraum ist \dots
+    }
+    \begin{field}
+        Ein \textbf{Skalarprodukt} auf einem \(\RR\)-Vektorraum ist eine positiv definite symmetrische Bilinearform.
+        \cite{Def. 10.15}
+    \end{field}
+    
+    \xfield{
+        Ein \textbf{Skalarprodukt} auf einem \(\CC\)-Vektorraum ist \dots
+    }
+    \begin{field}
+        Ein \textbf{Skalarprodukt} auf einem \(\CC\)-Vektorraum ist eine positiv definite hermitesche Bilinearform.
+        \cite{Def. 10.15}
+    \end{field}
+    
+    \xfield{
+        Ein \textbf{euklidischer Vektorraum} ist \dots
+    }
+    \begin{field}
+        Ein \textbf{euklidischer Vektorraum} \((V, \scprod{\cdot}{\cdot}) \) ist ein \\ \(\RR\)-Vektorraum \(V\) zusammen mit einem Skalarprodukt \(\scprod{\cdot}{\cdot}\).
+        \cite{Def. 10.15}
+    \end{field}
+    
+    \xfield{
+        Ein \textbf{unitärer Vektorraum} ist \dots
+    }
+    \begin{field}
+        Ein \textbf{unitärer Vektorraum} \((V, \scprod{\cdot}{\cdot}) \) ist ein \\ \(\CC\)-Vektorraum \(V\) zusammen mit einem Skalarprodukt \(\scprod{\cdot}{\cdot}\).
+        \cite{Def. 10.15}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{d929b74e-bc10-11ec-8422-0242ac120002}
+    \begin{field}
+        Die assoziierte \textbf{Norm} zu einem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) ist gegeben durch
+        \begin{align*}
+            \norm{\cdot}\colon V \longrightarrow &\RR \\
+            \vec{v} \mapsto &\phantom{\sqrt{\scprod{\vec{v}}{\vec{v}}}}
+        \end{align*}
+    \end{field}
+    \begin{field}
+        Die assoziierte \textbf{Norm} zu einem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) ist gegeben durch
+        \begin{align*}
+            \norm{\cdot}\colon &V \longrightarrow \RR \\
+            &\vec{v} \mapsto \sqrt{\scprod{\vec{v}}{\vec{v}}}
+        \end{align*}
+        (Die Norm wird durch das Skalarprodukt \textbf{induziert}.)
+        \cite{Def. 10.15}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{e0e3bcb4-bc10-11ec-8422-0242ac120002}
+    \begin{field}
+        In jedem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) gilt:
+        \begin{enumerate}[(i)]
+            \item \hint{Verhältnis Norm und 0}\hide{\(\norm{\vec{v}} \geq 0\) für alle \(\vec{v}\in V\) \\
+                  \(\norm{\vec{v}} = 0 \Leftrightarrow \vec{v} = \vec{0}\)}
+            \item \(\norm{s\cdot\vec{v}} = \abs{s}\norm{\vec{v}}\)
+            \item \textbf{Dreiecksungleichung}:\\
+                  \(\norm{\vec{v}+ \vec{w}} \leq \norm{\vec{v}} + \norm{\vec{w}}\)
+            \item \textbf{Cauchy-Schwarz-Ungleichung}:\\
+                  \(\abs{\scprod{\vec{v}}{\vec{w}}} \leq \norm{\vec{v}}\cdot\norm{\vec{w}}\)
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        In jedem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) gilt:
+        \begin{enumerate}[(i)]
+            \item \(\norm{\vec{v}} \geq 0\) für alle \(\vec{v}\in V\) \\
+                  \(\norm{\vec{v}} = 0 \Leftrightarrow \vec{v} = \vec{0}\)
+            \item \(\norm{s\cdot\vec{v}} = \abs{s}\norm{\vec{v}}\)
+            \item \textbf{Dreiecksungleichung}:\\
+                  \(\norm{\vec{v}+ \vec{w}} \leq \norm{\vec{v}} + \norm{\vec{w}}\)
+            \item \textbf{Cauchy-Schwarz-Ungleichung}:\\
+                  \(\abs{\scprod{\vec{v}}{\vec{w}}} \leq \norm{\vec{v}}\cdot\norm{\vec{w}}\)
+        \end{enumerate}
+        \cite{Satz 10.18}
+    \end{field}
+
+    \begin{field}
+        In jedem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) gilt:
+        \begin{enumerate}[(i)]
+            \item \(\norm{\vec{v}} \geq 0\) für alle \(\vec{v}\in V\) \\
+                  \(\norm{\vec{v}} = 0 \Leftrightarrow \vec{v} = \vec{0}\)
+            \item \(\norm{s\cdot\vec{v}} = \hide{\abs{s}\norm{\vec{v}}}\)
+            \item \textbf{Dreiecksungleichung}:\\
+                  \(\norm{\vec{v}+ \vec{w}} \leq \norm{\vec{v}} + \norm{\vec{w}}\)
+            \item \textbf{Cauchy-Schwarz-Ungleichung}:\\
+                  \(\abs{\scprod{\vec{v}}{\vec{w}}} \leq \norm{\vec{v}}\cdot\norm{\vec{w}}\)
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        In jedem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) gilt:
+        \begin{enumerate}[(i)]
+            \item \(\norm{\vec{v}} \geq 0\) für alle \(\vec{v}\in V\) \\
+                  \(\norm{\vec{v}} = 0 \Leftrightarrow \vec{v} = \vec{0}\)
+            \item \(\norm{s\cdot\vec{v}} = \abs{s}\norm{\vec{v}}\)
+            \item \textbf{Dreiecksungleichung}:\\
+                  \(\norm{\vec{v}+ \vec{w}} \leq \norm{\vec{v}} + \norm{\vec{w}}\)
+            \item \textbf{Cauchy-Schwarz-Ungleichung}:\\
+                  \(\abs{\scprod{\vec{v}}{\vec{w}}} \leq \norm{\vec{v}}\cdot\norm{\vec{w}}\)
+        \end{enumerate}
+        \cite{Satz 10.18}
+    \end{field}
+
+    \begin{field}
+        In jedem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) gilt:
+        \begin{enumerate}[(i)]
+            \item \(\norm{\vec{v}} \geq 0\) für alle \(\vec{v}\in V\) \\
+                  \(\norm{\vec{v}} = 0 \Leftrightarrow \vec{v} = \vec{0}\)
+            \item \(\norm{s\cdot\vec{v}} = \abs{s}\norm{\vec{v}}\)
+            \item \hint{\textbf{Dreiecksungleichung}:}\\
+                  \hide{\(\norm{\vec{v}+ \vec{w}} \leq \norm{\vec{v}} + \norm{\vec{w}}\)}
+            \item \textbf{Cauchy-Schwarz-Ungleichung}:\\
+                  \(\abs{\scprod{\vec{v}}{\vec{w}}} \leq \norm{\vec{v}}\cdot\norm{\vec{w}}\)
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        In jedem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) gilt:
+        \begin{enumerate}[(i)]
+            \item \(\norm{\vec{v}} \geq 0\) für alle \(\vec{v}\in V\) \\
+                  \(\norm{\vec{v}} = 0 \Leftrightarrow \vec{v} = \vec{0}\)
+            \item \(\norm{s\cdot\vec{v}} = \abs{s}\norm{\vec{v}}\)
+            \item \textbf{Dreiecksungleichung}:\\
+                  \(\norm{\vec{v}+ \vec{w}} \leq \norm{\vec{v}} + \norm{\vec{w}}\)
+            \item \textbf{Cauchy-Schwarz-Ungleichung}:\\
+                  \(\abs{\scprod{\vec{v}}{\vec{w}}} \leq \norm{\vec{v}}\cdot\norm{\vec{w}}\)
+        \end{enumerate}
+        \cite{Satz 10.18}
+    \end{field}
+    \begin{field}
+        In jedem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) gilt:
+        \begin{enumerate}[(i)]
+            \item \(\norm{\vec{v}} \geq 0\) für alle \(\vec{v}\in V\) \\
+                  \(\norm{\vec{v}} = 0 \Leftrightarrow \vec{v} = \vec{0}\)
+            \item \(\norm{s\cdot\vec{v}} = \abs{s}\norm{\vec{v}}\)
+            \item \textbf{Dreiecksungleichung}:\\
+                  \(\norm{\vec{v}+ \vec{w}} \leq \norm{\vec{v}} + \norm{\vec{w}}\)
+            \item \hint{\textbf{Cauchy-Schwarz-Ungleichung}}:\\
+                  \hide{\(\abs{\scprod{\vec{v}}{\vec{w}}} \leq \norm{\vec{v}}\cdot\norm{\vec{w}}\)}
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        In jedem euklidischen oder unitären Vektorraum \((V, \scprod{\cdot}{\cdot})\) gilt:
+        \begin{enumerate}[(i)]
+            \item \(\norm{\vec{v}} \geq 0\) für alle \(\vec{v}\in V\) \\
+                  \(\norm{\vec{v}} = 0 \Leftrightarrow \vec{v} = \vec{0}\)
+            \item \(\norm{s\cdot\vec{v}} = \abs{s}\norm{\vec{v}}\)
+            \item \textbf{Dreiecksungleichung}:\\
+                  \(\norm{\vec{v}+ \vec{w}} \leq \norm{\vec{v}} + \norm{\vec{w}}\)
+            \item \textbf{Cauchy-Schwarz-Ungleichung}:\\
+                  \(\abs{\scprod{\vec{v}}{\vec{w}}} \leq \norm{\vec{v}}\cdot\norm{\vec{w}}\)
+        \end{enumerate}
+        \cite{Satz 10.18}
+    \end{field}
+\end{note}
+
+
+%%%%%%%%% Vorlesung 3 %%%%%%%%%%%%
 \end{document}
