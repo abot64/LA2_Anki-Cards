@@ -1,0 +1,316 @@
+% -*- coding: utf-8-unix -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The first part of the header needs to be copied
+%       into the note options in Anki.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% layout in Anki:
+\documentclass[11pt]{article}
+\usepackage[a4paper]{geometry}
+\geometry{paperwidth=.5\paperwidth,paperheight=100in,left=2em,right=2em,bottom=1em,top=2em}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+ 
+% hyphenation:
+\usepackage[ngerman]{babel}
+
+% encoding:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% packages:
+\usepackage{
+  % maths:
+  amssymb,
+  amsmath,
+  mathtools,  % (corrects some bugs in ams-packages)
+  bm,         % (bold maths symbols)
+  calc,
+  nicefrac,
+  stmaryrd,   % (symbols)  
+  % microtype, don't use this:  
+  %   line breaks will differ between latex & pdflatex output
+  eqparbox,
+  paralist,
+  xcolor,
+  bbm         % mathbbm = math-blackboard-bold
+} 
+\renewcommand{\cite}[1]{\par\bigskip\hfill{\color{gray}\tiny\(\to\) #1}}
+% Diagrams:
+\usepackage[all]{xy}
+
+% Blackboard:
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\ve}{\underline}
+
+% (Redefined) symobls:
+\newcommand*{\abs}[1]{\left\vert#1\right\vert}
+\newcommand*{\norm}[1]{\left\|#1\right\|}
+\newcommand*{\scprod}[2]{\langle #1, #2\rangle} %Skalarprodukt
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+%\renewcommand{\setminus}{\!-\!}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\newcommand{\tsmash}{\wedge}
+\newcommand{\twedge}{\vee}
+\newcommand{\from}{\leftarrow}
+\newcommand{\noloc}{:\!}
+% Special maps:
+\newcommand{\id}{\mathrm{id}}
+
+% Linear algebra:
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\Potenz}{\mathfrak P}
+%\newcommand{\im}{\mathrm{im}}
+\newcommand{\hull}[1]{\langle #1 \rangle}
+\newcommand{\Lraum}{\mathcal L}
+
+% Categories:
+\DeclareMathOperator{\Ar}{Ar}
+\usepackage{bm}
+\newcommand{\cat}[1]{\bm{\mathsf{#1}}}
+\newcommand{\iTop}{\underline{\smash{\mathsf{Top}}}}  % internal hom in Top
+\newcommand{\iAut}{\underline{\smash{\mathsf{Aut}}}}  
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Mor}{\mathrm{Mor}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\signum}{sgn}
+\DeclareMathOperator{\rank}{rk}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\Mat}{Mat}
+
+
+
+\mathchardef\mhyphen="2D
+\newcommand*{\factor}[2]{\left.\raisebox{.1em}{\ensuremath{#1}}\middle/\raisebox{-.1em}{\ensuremath{#2}}\right.}
+
+% arrows:
+\newcommand*{\openhookrightarrow}{\mathrel{\ooalign{$\hookrightarrow$\cr\hidewidth\hbox{$\circ\,\,$}\cr}}}
+\newcommand*{\closedhookrightarrow}{\mathrel{\ooalign{$\hookrightarrow$\cr\hidewidth\raise0.1ex\hbox{$\rule{0.5pt}{1ex}\;\;$}\cr}}}
+\newcommand*{\openhookleftarrow}{\mathrel{\ooalign{$\hookleftarrow$\cr\hidewidth\hbox{$\circ\;$}\cr}}}
+\newcommand*{\closedhookleftarrow}{\mathrel{\ooalign{$\hookleftarrow$\cr\hidewidth\raise0.1ex\hbox{$\rule{0.5pt}{1ex}\,\;$}\cr}}}
+\newcommand*{\leadsleadsto}{\mathrel{\substack{\leadsto\\[-1em]\leadsto}}}
+
+
+% text positioning in maths:
+\newcommand{\ctext}[2]{\text{\parbox{#1}{\centering #2}}}
+\newcommand{\ltext}[2]{\text{\parbox{#1}{\raggedright#2}}}
+\newcommand{\rtext}[2]{\text{\parbox{#1}{\raggedleft#2}}}
+\newcommand{\cttext}[2]{\text{\parbox[t]{#1}{\centering #2}}}
+\newcommand{\lttext}[2]{\text{\parbox[t]{#1}{\raggedright#2}}}
+\newcommand{\rttext}[2]{\text{\parbox[t]{#1}{\raggedleft#2}}}
+% Hide
+\newcommand{\hide}[1]{\parbox{0cm}{\raisebox{-7pt}[0cm]{\dots}}\color{white}#1\color{black}}
+\newcommand{\hint}[1]{{\color{lightgray}(#1)}}
+\let\olddots\dots
+\renewcommand{\dots}{\,\olddots\,}
+
+% bold text sans serif
+\DeclareTextFontCommand{\textbf}{\bfseries\sffamily} 
+\hyphenation{
+  Vektor-raum 
+  Vektor-raums
+  Unter-vektor-raum
+  Unter-vektor-raums
+  Ortho-normal-basis
+  Skalar-produkt
+  Standard-skalar-produkt
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Following part of header NOT to be copied into
+%            the note options in Anki.
+%          ! Anki will throw an errow !
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  pdf layout:
+%
+\geometry{paperheight=74.25mm}
+\usepackage{pgfpages}
+\pagestyle{empty}
+\pgfpagesuselayout{8 on 1}[a4paper,border shrink=0cm]
+\makeatletter
+\@tempcnta=1\relax
+\loop\ifnum\@tempcnta<9\relax
+\pgf@pset{\the\@tempcnta}{bordercode}{\pgfusepath{stroke}}
+\advance\@tempcnta by 1\relax
+\repeat
+\makeatother
+% 
+%  notes, fields, tags:
+%
+\newcommand{\xfield}[1]{
+        #1\par
+        \vfill
+        {\tiny\texttt{\parbox[t]{\textwidth}{\localtag\\\globaltag\hfill\uuid}}}
+        \newpage}
+\newenvironment{field}{}{\newpage}
+\newif\ifnote
+\newenvironment{note}{\notetrue}{\notefalse}
+\newcommand{\localtag}{}
+\newcommand{\globaltag}{}
+\newcommand{\uuid}{}
+\newcommand{\tags}[1]{
+    \ifnote 
+        \renewcommand{\localtag}{#1}
+    \else
+        \renewcommand{\globaltag}{#1}
+    \fi 
+    }
+\newcommand{\xplain}[1]{\renewcommand{\uuid}{#1}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The following line again needs to be copied 
+% into Anki:
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tags{LinA-II-10-Skalarprodukte}
+%%%%%%%%% Vorlesung 1 %%%%%%%%%%%%
+\begin{note}
+    \xplain{6fc8a1b6-b98b-11ec-8422-0242ac120002}
+    \tags{Def}
+    \begin{field} %Frage 1
+    Sei \(K\) ein Körper, \(V\) ein \(K\)-VR. Eine \textbf{Bilinearform} auf \(V\) ist eine (bilineare) Abbildung  \(\beta\colon V\times V \to K\), für die gilt:
+    \begin{itemize}
+        \item[(1)] \hide{\(\beta(\vec{v_1} + \vec{v_2}, \vec{w}) = \beta(\vec{v_1}, \vec{w}) + \beta(\vec{v_2}, \vec{w})\) für alle \(\vec{v_1, v_2, w} \in V\)}
+        \item[(2)] \(\beta(s\cdot\vec{v},\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+        \item[(3)]\(\beta(\vec{v}, \vec{w_1} + \vec{w_2}) = \beta(\vec{v}, \vec{w_1}) + \beta(\vec{v}, \vec{w_2})\) für alle \(\vec{v, w_1, w_2} \in V\)
+        \item[(4)]\(\beta(\vec{v},s\cdot\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+    \end{itemize}
+    \end{field}
+    \begin{field} %Antwort 1
+    Sei \(K\) ein Körper, \(V\) ein \(K\)-VR. Eine \textbf{Bilinearform} auf \(V\) ist eine (bilineare) Abbildung  \(\beta\colon V\times V \to K\), für die gilt:
+    \begin{itemize}
+        \item[(1)] \(\beta(\vec{v_1} + \vec{v_2}, \vec{w}) = \beta(\vec{v_1}, \vec{w}) + \beta(\vec{v_2}, \vec{w})\) für alle \(\vec{v_1, v_2, w} \in V\)
+        \item[(2)] \(\beta(s\cdot\vec{v},\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+        \item[(3)]\(\beta(\vec{v}, \vec{w_1} + \vec{w_2}) = \beta(\vec{v}, \vec{w_1}) + \beta(\vec{v}, \vec{w_2})\) für alle \(\vec{v, w_1, w_2} \in V\)
+        \item[(4)]\(\beta(\vec{v},s\cdot\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+    \end{itemize}
+    \cite{Def. ~10.1}
+    \end{field}
+    \begin{field} %Frage 2
+    Sei \(K\) ein Körper, \(V\) ein \(K\)-VR. Eine \textbf{Bilinearform} auf \(V\) ist eine (bilineare) Abbildung  \(\beta\colon V\times V \to K\), für die gilt:
+    \begin{itemize}
+        \item[(1)] \(\beta(\vec{v_1} + \vec{v_2}, \vec{w}) = \beta(\vec{v_1}, \vec{w}) + \beta(\vec{v_2}, \vec{w})\) für alle \(\vec{v_1, v_2, w} \in V\)
+        \item[(2)] \hide{\(\beta(s\cdot\vec{v},\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)}
+        \item[(3)]\(\beta(\vec{v}, \vec{w_1} + \vec{w_2}) = \beta(\vec{v}, \vec{w_1}) + \beta(\vec{v}, \vec{w_2})\) für alle \(\vec{v, w_1, w_2} \in V\)
+        \item[(4)]\(\beta(\vec{v},s\cdot\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+    \end{itemize}
+    \end{field}
+    \begin{field} %Antwort 2
+    Sei \(K\) ein Körper, \(V\) ein \(K\)-VR. Eine \textbf{Bilinearform} auf \(V\) ist eine (bilineare) Abbildung  \(\beta\colon V\times V \to K\), für die gilt:
+    \begin{itemize}
+        \item[(1)] \(\beta(\vec{v_1} + \vec{v_2}, \vec{w}) = \beta(\vec{v_1}, \vec{w}) + \beta(\vec{v_2}, \vec{w})\) für alle \(\vec{v_1, v_2, w} \in V\)
+        \item[(2)] \(\beta(s\cdot\vec{v},\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+        \item[(3)]\(\beta(\vec{v}, \vec{w_1} + \vec{w_2}) = \beta(\vec{v}, \vec{w_1}) + \beta(\vec{v}, \vec{w_2})\) für alle \(\vec{v, w_1, w_2} \in V\)
+        \item[(4)]\(\beta(\vec{v},s\cdot\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+    \end{itemize}
+    \cite{Def. ~10.1}
+    \end{field}
+    \begin{field} %Frage 3
+    Sei \(K\) ein Körper, \(V\) ein \(K\)-VR. Eine \textbf{Bilinearform} auf \(V\) ist eine (bilineare) Abbildung  \(\beta\colon V\times V \to K\), für die gilt:
+    \begin{itemize}
+        \item[(1)] \(\beta(\vec{v_1} + \vec{v_2}, \vec{w}) = \beta(\vec{v_1}, \vec{w}) + \beta(\vec{v_2}, \vec{w})\) für alle \(\vec{v_1, v_2, w} \in V\)
+        \item[(2)] \(\beta(s\cdot\vec{v},\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+        \item[(3)]\hide{\(\beta(\vec{v}, \vec{w_1} + \vec{w_2}) = \beta(\vec{v}, \vec{w_1}) + \beta(\vec{v}, \vec{w_2})\) für alle \(\vec{v, w_1, w_2} \in V\)}
+        \item[(4)]\(\beta(\vec{v},s\cdot\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+    \end{itemize}
+    \end{field}
+    \begin{field} %Antwort 3
+    Sei \(K\) ein Körper, \(V\) ein \(K\)-VR. Eine \textbf{Bilinearform} auf \(V\) ist eine (bilineare) Abbildung  \(\beta\colon V\times V \to K\), für die gilt:
+    \begin{itemize}
+        \item[(1)] \(\beta(\vec{v_1} + \vec{v_2}, \vec{w}) = \beta(\vec{v_1}, \vec{w}) + \beta(\vec{v_2}, \vec{w})\) für alle \(\vec{v_1, v_2, w} \in V\)
+        \item[(2)] \(\beta(s\cdot\vec{v},\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+        \item[(3)]\(\beta(\vec{v}, \vec{w_1} + \vec{w_2}) = \beta(\vec{v}, \vec{w_1}) + \beta(\vec{v}, \vec{w_2})\) für alle \(\vec{v, w_1, w_2} \in V\)
+        \item[(4)]\(\beta(\vec{v},s\cdot\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+    \end{itemize}
+    \cite{Def. ~10.1}
+    \end{field}
+    \begin{field} %Frage 4
+    Sei \(K\) ein Körper, \(V\) ein \(K\)-VR. Eine \textbf{Bilinearform} auf \(V\) ist eine (bilineare) Abbildung  \(\beta\colon V\times V \to K\), für die gilt:
+    \begin{itemize}
+        \item[(1)] \(\beta(\vec{v_1} + \vec{v_2}, \vec{w}) = \beta(\vec{v_1}, \vec{w}) + \beta(\vec{v_2}, \vec{w})\) für alle \(\vec{v_1, v_2, w} \in V\)
+        \item[(2)] \(\beta(s\cdot\vec{v},\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+        \item[(3)]\(\beta(\vec{v}, \vec{w_1} + \vec{w_2}) = \beta(\vec{v}, \vec{w_1}) + \beta(\vec{v}, \vec{w_2})\) für alle \(\vec{v, w_1, w_2} \in V\)
+        \item[(4)]\hide{\(\beta(\vec{v},s\cdot\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)}
+    \end{itemize}
+    \end{field}
+    \begin{field}%Antwort 4
+    Sei \(K\) ein Körper, \(V\) ein \(K\)-VR. Eine \textbf{Bilinearform} auf \(V\) ist eine (bilineare) Abbildung  \(\beta\colon V\times V \to K\), für die gilt:
+    \begin{itemize}
+        \item[(1)] \(\beta(\vec{v_1} + \vec{v_2}, \vec{w}) = \beta(\vec{v_1}, \vec{w}) + \beta(\vec{v_2}, \vec{w})\) für alle \(\vec{v_1, v_2, w} \in V\)
+        \item[(2)] \(\beta(s\cdot\vec{v},\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+        \item[(3)]\(\beta(\vec{v}, \vec{w_1} + \vec{w_2}) = \beta(\vec{v}, \vec{w_1}) + \beta(\vec{v}, \vec{w_2})\) für alle \(\vec{v, w_1, w_2} \in V\)
+        \item[(4)]\(\beta(\vec{v},s\cdot\vec{w}) = s\cdot\beta(\vec{v},\vec{w})\) für alle \(s\in K\),\(\vec{v},\vec{w}\in V\)
+    \end{itemize}
+    \cite{Def. ~10.1}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{d607e83e-b98f-11ec-8422-0242ac120002}
+    \begin{field}
+    Jede Bilinearform \(\beta\) auf \(K^n\) liefert eine Matrix \hide{\(M(\beta)\in \Mat_K(n\times n)\) der Gestalt}
+    \end{field}
+    \begin{field}
+    Jede Bilinearform \(\beta\) auf \(K^n\) liefert eine Matrix \(M(\beta)\in \Mat_K(n\times n)\) der Gestalt
+    \[M(\beta)\colon = \beta(\vec{e}_i, \vec{e}_j)_{ij}\] \cite{Satz ~10.2}
+    \end{field}
+    \begin{field}
+    Jede Matrix \(A\in\Mat_K(n\times n)\) liefert eine \hide{Bilinearform auf \(K^n\)} wie folgt:
+    \end{field}
+    \begin{field}
+    Jede Matrix \(A\in\Mat_K(n\times n)\) liefert eine Bilinearform auf \(K^n\) wie folgt:
+    \begin{align*}
+    \beta_A: K^n\times K^n &\longrightarrow K \\
+    (\vec{v}, \vec{w}) &\mapsto \vec{v}^T A \vec{w}
+    \end{align*}
+    \cite{Satz ~10.2}
+    \end{field}
+    \begin{field}
+    Die Menge der Bilinearformen auf \(K^n\) und die Menge der \(n\times n\) Matrizen über \(K\) sind \hide{isomorph}.
+    \end{field}
+    \begin{field}
+    Die Menge der Bilinearformen auf \(K^n\) und die Menge der \(n\times n\) Matrizen über \(K\) sind isomorph.
+    \cite{Satz ~10.2}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{51387522-ba4a-11ec-8422-0242ac120002}
+    \begin{field}
+    Die \textbf{darstellende Matrix} einer Bilinearform \(\beta\) bezüglich einer Basis \(B\) ist gegeben durch \hide{\[M_B(\beta)\colon = \beta(\vec{b}_i, \vec{b}_j)_{ij}\]}
+    \end{field}
+    \begin{field}
+    Die \textbf{darstellende Matrix} einer Bilinearform \(\beta\) bezüglich einer Basis \(B\) ist gegeben durch
+    \[M_B(\beta)\colon = \beta(\vec{b}_i, \vec{b}_j)_{ij}\]
+    \cite{Def. ~10.3}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{b9664264-bb12-11ec-8422-0242ac120002}
+    \begin{field}
+        Zwei Matrizen \(A, A'\) sind \textbf{kongruent}, falls es \hide{eine invertierbare Matrix \(S\) gibt mit}
+    \end{field}
+
+    \begin{field}
+        Zwei quadratische Matrizen \(A, A'\) sind \textbf{kongruent}, falls es eine invertierbare Matrix \(S\) gibt mit
+        \[ A' = S^TAS\]
+    \cite{Def. ~10.5}
+    \end{field}
+\end{note}
+
+%%%%%%%%% Vorlesung 2 %%%%%%%%%%%%
+\end{document}
