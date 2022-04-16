@@ -10,7 +10,7 @@
 \geometry{paperwidth=.5\paperwidth,paperheight=100in,left=2em,right=2em,bottom=1em,top=2em}
 \pagestyle{empty}
 \setlength{\parindent}{0in}
- 
+
 % hyphenation:
 \usepackage[ngerman]{babel}
 
@@ -28,14 +28,14 @@
   bm,         % (bold maths symbols)
   calc,
   nicefrac,
-  stmaryrd,   % (symbols)  
-  % microtype, don't use this:  
+  stmaryrd,   % (symbols)
+  % microtype, don't use this:
   %   line breaks will differ between latex & pdflatex output
   eqparbox,
   paralist,
   xcolor,
   bbm         % mathbbm = math-blackboard-bold
-} 
+}
 \renewcommand{\cite}[1]{\par\bigskip\hfill{\color{gray}\tiny\(\to\) #1}}
 % Diagrams:
 \usepackage[all]{xy}
@@ -77,7 +77,7 @@
 \usepackage{bm}
 \newcommand{\cat}[1]{\bm{\mathsf{#1}}}
 \newcommand{\iTop}{\underline{\smash{\mathsf{Top}}}}  % internal hom in Top
-\newcommand{\iAut}{\underline{\smash{\mathsf{Aut}}}}  
+\newcommand{\iAut}{\underline{\smash{\mathsf{Aut}}}}
 \newcommand{\Aut}{\mathrm{Aut}}
 \newcommand{\Mor}{\mathrm{Mor}}
 \newcommand{\Hom}{\mathrm{Hom}}
@@ -114,9 +114,9 @@
 \renewcommand{\dots}{\,\olddots\,}
 
 % bold text sans serif
-\DeclareTextFontCommand{\textbf}{\bfseries\sffamily} 
+\DeclareTextFontCommand{\textbf}{\bfseries\sffamily}
 \hyphenation{
-  Vektor-raum 
+  Vektor-raum
   Vektor-raums
   Unter-vektor-raum
   Unter-vektor-raums
@@ -143,7 +143,7 @@
 \advance\@tempcnta by 1\relax
 \repeat
 \makeatother
-% 
+%
 %  notes, fields, tags:
 %
 \newcommand{\xfield}[1]{
@@ -158,16 +158,16 @@
 \newcommand{\globaltag}{}
 \newcommand{\uuid}{}
 \newcommand{\tags}[1]{
-    \ifnote 
+    \ifnote
         \renewcommand{\localtag}{#1}
     \else
         \renewcommand{\globaltag}{#1}
-    \fi 
+    \fi
     }
 \newcommand{\xplain}[1]{\renewcommand{\uuid}{#1}}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The following line again needs to be copied 
+% The following line again needs to be copied
 % into Anki:
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -325,7 +325,7 @@
         \[\beta(\vec{v},\vec{w}) = \beta(\vec{w},\vec{v})\]
         \cite{Def. 10.7}
     \end{field}
-    
+
     \xfield{
         Eine Bilinearform \(\beta\) auf \(V\) ist \textbf{schiefsymmetrisch}, falls \dots
     }
@@ -334,7 +334,7 @@
         \[\beta(\vec{v},\vec{w}) = - \beta(\vec{w},\vec{v})\]
         \cite{Def. 10.7}
     \end{field}
-    
+
     \xfield{
         Eine Bilinearform \(\beta\) auf \(V\) ist \textbf{alternierend}, falls \dots
     }
@@ -358,7 +358,7 @@
         \[M(\beta)^T = M(\beta)\]
         \cite{Satz 10.9}
     \end{field}
-    
+
     \xfield{
     Eine Bilinearform \(\beta\) ist \textbf{schiefsymmetrisch} genau dann, wenn \dots
     \hint{darstellende Matrix}
@@ -385,7 +385,7 @@
 \begin{note}
     \tags{Def}
     \xplain{7e2e222e-bbf4-11ec-8422-0242ac120002}
-    
+
     \begin{field} %Lücke 1
         Eine \textbf{Sesquilinearform} \(\eta\) auf einem \(\CC\)-Vektorraum \(V\) ist eine Abbildung \(\eta\colon V\times V \longrightarrow \CC\) mit folgenden Eigenschaften:
         \begin{itemize}
@@ -397,8 +397,8 @@
                 \(\eta(\vec{v}, s\vec{w}) = \bar{s}\cdot \eta(\vec{v},\vec{w})\)\\
                 für alle \(\vec{v, w, w_1, w_2} \in V\) und alle \(s\in\CC\)
         \end{itemize}
-    \end{field} 
-    
+    \end{field}
+
     \begin{field} %Antwort 1
         Eine \textbf{Sesquilinearform} \(\eta\) auf einem \(\CC\)-Vektorraum \(V\) ist eine Abbildung \(\eta\colon V\times V \longrightarrow \CC\) mit folgenden Eigenschaften:
         \begin{itemize}
@@ -438,20 +438,20 @@
         \end{itemize}
         \cite{Def. 10.10}
     \end{field}
-    
+
     \xfield{Eine Sesquilinearform \(\eta\) ist \textbf{hermitesch}, falls \dots}
     \begin{field}
         Eine Sesquilinearform \(\eta\) ist \textbf{hermitesch}, falls gilt
         \[\eta(\vec{v},\vec{w}) = \overline{\eta(\vec{w},\vec{v})}\]
         für alle \(\vec{v},\vec{w}\in V\)
-        \cite{Def. 10.10}      
+        \cite{Def. 10.10}
     \end{field}
 \end{note}
 
 \begin{note}
     \tags{Satz}
     \xplain{bd8dcf48-bc10-11ec-8422-0242ac120002}
-    
+
     \xfield{
         Jede Sesquilinearform \(\eta\) liefert eine Matrix der Form \dots
     }
@@ -460,7 +460,7 @@
         \[M(\eta)\colon = \eta(\vec{e}_i, \vec{e}_j)_{ij}\]
         \cite{Satz 10.11}
     \end{field}
-    
+
     \xfield{
         Zu einer gegebenen komplexen Matrix \(A\) existiert eine Sesquilinearform \(\eta\) wie folgt:\\
         \dots
@@ -478,11 +478,11 @@
 
     \xfield{Eine symmetrische Bilinearform \(\beta\) auf einem \\ \(\RR\)-Vektorraum ist \textbf{positiv definit}, falls \dots}
     \begin{field}
-        Eine symmetrische Bilinearform \(\beta\) auf einem \\ \(\RR\)-Vektorraum ist \textbf{positiv definit}, falls 
+        Eine symmetrische Bilinearform \(\beta\) auf einem \\ \(\RR\)-Vektorraum ist \textbf{positiv definit}, falls
         \[\beta(\vec{v,v}) > 0 \text{ für alle }\vec{v}\in V\setminus\{\vec{0}\}\]
         \cite{Def. 10.14}
     \end{field}
-    
+
     \xfield{Eine hermitesche Bilinearform \(\beta\) auf einem \(\CC\)-Vektorraum ist \textbf{positiv definit}, falls \dots}
     \begin{field}
         Eine hermitesche Bilinearform \(\beta\) auf einem \(\CC\)-Vektorraum ist \textbf{positiv definit}, falls
@@ -494,7 +494,7 @@
 \begin{note}
     \tags{Def}
     \xplain{d1b1125a-bc10-11ec-8422-0242ac120002}
-    
+
     \xfield{
         Ein \textbf{Skalarprodukt} auf einem \(\RR\)-Vektorraum ist \dots
     }
@@ -502,7 +502,7 @@
         Ein \textbf{Skalarprodukt} auf einem \(\RR\)-Vektorraum ist eine positiv definite symmetrische Bilinearform.
         \cite{Def. 10.15}
     \end{field}
-    
+
     \xfield{
         Ein \textbf{Skalarprodukt} auf einem \(\CC\)-Vektorraum ist \dots
     }
@@ -510,7 +510,7 @@
         Ein \textbf{Skalarprodukt} auf einem \(\CC\)-Vektorraum ist eine positiv definite hermitesche Bilinearform.
         \cite{Def. 10.15}
     \end{field}
-    
+
     \xfield{
         Ein \textbf{euklidischer Vektorraum} ist \dots
     }
@@ -518,7 +518,7 @@
         Ein \textbf{euklidischer Vektorraum} \((V, \scprod{\cdot}{\cdot}) \) ist ein \\ \(\RR\)-Vektorraum \(V\) zusammen mit einem Skalarprodukt \(\scprod{\cdot}{\cdot}\).
         \cite{Def. 10.15}
     \end{field}
-    
+
     \xfield{
         Ein \textbf{unitärer Vektorraum} ist \dots
     }
@@ -658,4 +658,140 @@
 
 
 %%%%%%%%% Vorlesung 3 %%%%%%%%%%%%
+\begin{note}
+    \tags{Def}
+    \xplain{1794ed94-bdbc-11ec-9d64-0242ac120002}
+
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(v\in V\) heißt \textbf{normiert}, falls \dots
+    \end{field}
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(v\in V\) heißt \textbf{normiert}, falls \(\norm{v} = 1\)
+        \cite{Def. 10.20}
+    \end{field}
+
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(v,w\in V\) sind zueinander \textbf{orthogonal}, falls \dots
+    \end{field}
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(v,w\in V\) sind zueinander \textbf{orthogonal}, falls \(\scprod{\vec{v}}{\vec{w}} = 0\)
+
+        [Notation: \(\vec{v}\perp\vec{w}\)]
+        \cite{Def. 10.20}
+    \end{field}
+
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. Eine Basis \(B\) von \(V\) heißt \textbf{Orthonormalbasis} von \(V\), falls \dots
+    \end{field}
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. Eine Basis \(B=(\vec{b}_i)_i\) von \(V\) heißt \textbf{Orthonormalbasis} von \(V\), falls
+        \begin{itemize}
+            \item jedes \(\vec{b}_i\in B\) normiert ist, und
+            \item jeweils \(\vec{b}_i\perp\vec{b}_j\) für \(i\neq j\)
+        \end{itemize}
+        \cite{Def. 10.20}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{44bab364-bdbf-11ec-9d64-0242ac120002}
+
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) euklidisch oder unitär. Das \textbf{orthogonale Komplement} eines Untervektorraums \(W\subseteq V\) ist
+        \[W^{\perp} :=\phantom{\{\vec{v}\in V \vert \vec{v}\perp\vec{w} \text{ für alle } \vec{w}\in W\}}\]
+    \end{field}
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) euklidisch oder unitär. Das \textbf{orthogonale Komplement} eines Untervektorraums \(W\subseteq V\) ist
+        \[W^{\perp} := \{\vec{v}\in V \vert \vec{v}\perp\vec{w} \text{ für alle } \vec{w}\in W\}\]
+        \cite{Def. 10.23}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{bd8678f8-bdc1-11ec-9d64-0242ac120002}
+
+    \xfield{
+        Ein \textbf{affiner Unterraum} eines Vektorraums \(V\) ist \dots
+    }
+    \begin{field}
+        Ein \textbf{affiner Unterraum} eines Vektorraums \(V\) ist eine Teilmenge der Form
+        \[\vec{u}_0 + U = \{\vec{v}\in V \vert \vec{v} - \vec{u}_0 \in U\}\]
+        für einen Untervektorraum \(U\subseteq V\).
+    \end{field}
+
+    \xfield{
+        Eine \textbf{affine Hyperebene} ist \dots
+    }
+    \begin{field}
+        Eine \textbf{affine Hyperebene} ist ein affiner Unterraum, dessen zugehöriger Untervektorraum \(U\) die Dimension \(\dim U = \dim V - 1\) hat.
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{3f20cf54-bdd0-11ec-9d64-0242ac120002}
+
+    \begin{field}
+        Jede affine Hyperrebene in einem euklidischen oder unitären VR hat die Form
+        \[H = \phantom{\{\vec{v}\in V\vert\scprod{\vec{v}}{\vec{n}} = d\}} \]
+    \end{field}
+    \begin{field}
+        Jede affine Hyperrebene in einem euklidischen oder unitären VR hat die Form
+        \[H = \{\vec{v}\in V\vert\scprod{\vec{v}}{\vec{n}} = d\}\]
+        für einen normierten Vektor \(\vec{n}\) und ein \(d\in\RR\) mit \(d\geq 0\)
+        \cite{Satz 10.25}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{47c00c10-bdd0-11ec-9d64-0242ac120002}
+
+    \begin{field}
+        Für \(\vec{x, y}\in\RR^3\) gilt:
+        \begin{enumerate}
+            \item \hint{Winkel zwischen Vektoren und ihrem Kreuzprodukt} \hide{\((\vec{x}\times\vec{y})\perp\vec{x}\) und
+                  \((\vec{x}\times\vec{y})\perp\vec{y}\)}
+            \item \(\norm{\vec{x}\times\vec{y}} =
+                    \norm{\vec{x}}\cdot\norm{\vec{y}}
+                    \cdot \sin\sphericalangle(\vec{x,y})\)
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Für \(\vec{x, y}\in\RR^3\) gilt:
+        \begin{enumerate}
+            \item \((\vec{x}\times\vec{y})\perp\vec{x}\) und
+                  \((\vec{x}\times\vec{y})\perp\vec{y}\)
+            \item \(\norm{\vec{x}\times\vec{y}} =
+                    \norm{\vec{x}}\cdot\norm{\vec{y}}
+                    \cdot \sin\sphericalangle(\vec{x,y})\)
+        \end{enumerate}
+        \cite{Satz 10.28}
+    \end{field}
+    \begin{field}
+        Für \(\vec{x, y}\in\RR^3\) gilt:
+        \begin{enumerate}
+            \item \((\vec{x}\times\vec{y})\perp\vec{x}\) und
+                  \((\vec{x}\times\vec{y})\perp\vec{y}\)
+            \item \hint{Norm des Kreuzprodukts} \hide{\(\norm{\vec{x}\times\vec{y}} =
+                    \norm{\vec{x}}\cdot\norm{\vec{y}}
+                    \cdot \sin\sphericalangle(\vec{x,y})\)}
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Für \(\vec{x, y}\in\RR^3\) gilt:
+        \begin{enumerate}
+            \item \((\vec{x}\times\vec{y})\perp\vec{x}\) und
+                  \((\vec{x}\times\vec{y})\perp\vec{y}\)
+            \item \(\norm{\vec{x}\times\vec{y}} =
+                    \norm{\vec{x}}\cdot\norm{\vec{y}}
+                    \cdot \sin\sphericalangle(\vec{x,y})\)
+        \end{enumerate}
+        \cite{Satz 10.28}
+    \end{field}
+\end{note}
+
+%%%%%%%%% Vorlesung 4 %%%%%%%%%%%%
 \end{document}
