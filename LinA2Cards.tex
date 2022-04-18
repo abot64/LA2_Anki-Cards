@@ -793,5 +793,166 @@
     \end{field}
 \end{note}
 
+\tags{LinA-II-11-Isometrien}
 %%%%%%%%% Vorlesung 4 %%%%%%%%%%%%
+
+\begin{note}
+    \tags{Def}
+    \xplain{282be322-bf03-11ec-9d64-0242ac120002}
+
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) euklidischer oder unitärer Vektorraum.\\
+        Eine \textbf{Isometrie} ist eine lineare Abbildung \(f\colon V \rightarrow V\), für die gilt \dots
+    \end{field}
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) euklidischer oder unitärer Vektorraum.\\
+        Eine \textbf{Isometrie} ist eine lineare Abbildung \(f\colon V \rightarrow V\), für die gilt:
+        \[\scprod{f(\vec{v})}{f(\vec{w})} = \scprod{\vec{v}}{\vec{w}} \text{ für alle } \vec{v}\in V\]
+        \cite{Def. 11.1}
+    \end{field}
+
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) euklidischer oder unitärer Vektorraum.\\
+        Eine \textbf{Isometrie} ist \hide{eine lineare Abbildung \(f\colon V \rightarrow V\)}, für die gilt:
+        \[\scprod{f(\vec{v})}{f(\vec{w})} = \scprod{\vec{v}}{\vec{w}} \text{ für alle } \vec{v}\in V\]
+    \end{field}
+    \begin{field}
+        Sei \((V,\scprod{\cdot}{\cdot})\) euklidischer oder unitärer Vektorraum.\\
+        Eine \textbf{Isometrie} ist eine lineare Abbildung \(f\colon V \rightarrow V\), für die gilt:
+        \[\scprod{f(\vec{v})}{f(\vec{w})} = \scprod{\vec{v}}{\vec{w}} \text{ für alle } \vec{v}\in V\]
+        \cite{Def. 11.1}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{21857eac-bf03-11ec-9d64-0242ac120002}
+
+    \xfield{Alle Eigenwerte einer Isometrie \dots}
+    \xfield{
+        Alle Eigenwerte einer Isometrie haben Betrag 1.
+        \cite{Satz 10.2}
+    }
+
+    \begin{field}
+        Eigenwerte einer Isometrie in einem euklidischen Vektorraum haben die Form
+        \[a = \phantom{\pm 1}\]
+    \end{field}
+    \begin{field}
+        Eigenwerte einer Isometrie in einem euklidischen Vektorraum haben die Form
+        \[a = \pm 1\]
+        \cite{Satz 10.2}
+    \end{field}
+
+    \begin{field}
+        Eigenwerte einer Isometrie in einem unitären Vektorraum haben die Form
+        \[a = \phantom{x + \mathrm{i}y \text{ mit } x^2+y^2=1}\]
+    \end{field}
+    \begin{field}
+        Eigenwerte einer Isometrie in einem unitären Vektorraum haben die Form
+        \[a = x + \mathrm{i}y \text{ mit } x^2+y^2=1\]
+        \cite{Satz 10.2}
+    \end{field}
+
+    \xfield{Eigenvektoren zu verschiedenen Eigenwerten einer Isometrie \dots}
+    \xfield{
+        Eigenvektoren zu verschiedenen Eigenwerten einer Isometrie stehen senkrecht zueinander.
+        \cite{Satz 10.2}
+    }
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{59a91c62-bf03-11ec-9d64-0242ac120002}
+
+    \begin{field} %1
+        Sei \(K\in\{\RR,\CC\}\) und \(V=K^n\) versehen mit dem entsprechenden Standardskalarprodukt.\\
+        Für \(A\in \Mat_K(n\times n)\) sind äquivalent:
+        \begin{enumerate}[(i)]
+            \item \hide{\(f_A\) ist eine Isometrie auf \(V\).}
+            \item \(A\) ist invertierbar und \(A^{-1}=\overline{A}^T\)
+            \item Die Spalten von \(A\) bilden eine Orthonormalbasis von \(V\).
+            \item Die Zeilen von \(A\) bilden eine Orthonormalbasis von \(V\).
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Sei \(K\in\{\RR,\CC\}\) und \(V=K^n\) versehen mit dem entsprechenden Standardskalarprodukt.\\
+        Für \(A\in \Mat_K(n\times n)\) sind äquivalent:
+        \begin{enumerate}[(i)]
+            \item \(f_A\) ist eine Isometrie auf \(V\).
+            \item \(A\) ist invertierbar und \(A^{-1}=\overline{A}^T\)
+            \item Die Spalten von \(A\) bilden eine Orthonormalbasis von \(V\).
+            \item Die Zeilen von \(A\) bilden eine Orthonormalbasis von \(V\).
+        \end{enumerate}
+        \cite{Satz 11.3}
+    \end{field}
+
+    \begin{field}%2
+        Sei \(K\in\{\RR,\CC\}\) und \(V=K^n\) versehen mit dem entsprechenden Standardskalarprodukt.\\
+        Für \(A\in \Mat_K(n\times n)\) sind äquivalent:
+        \begin{enumerate}[(i)]
+            \item \(f_A\) ist eine Isometrie auf \(V\).
+            \item \hide{\(A\) ist invertierbar und \(A^{-1}=\overline{A}^T\)}
+            \item Die Spalten von \(A\) bilden eine Orthonormalbasis von \(V\).
+            \item Die Zeilen von \(A\) bilden eine Orthonormalbasis von \(V\).
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Sei \(K\in\{\RR,\CC\}\) und \(V=K^n\) versehen mit dem entsprechenden Standardskalarprodukt.\\
+        Für \(A\in \Mat_K(n\times n)\) sind äquivalent:
+        \begin{enumerate}[(i)]
+            \item \(f_A\) ist eine Isometrie auf \(V\).
+            \item \(A\) ist invertierbar und \(A^{-1}=\overline{A}^T\)
+            \item Die Spalten von \(A\) bilden eine Orthonormalbasis von \(V\).
+            \item Die Zeilen von \(A\) bilden eine Orthonormalbasis von \(V\).
+        \end{enumerate}
+        \cite{Satz 11.3}
+    \end{field}
+
+    \begin{field}%3
+        Sei \(K\in\{\RR,\CC\}\) und \(V=K^n\) versehen mit dem entsprechenden Standardskalarprodukt.\\
+        Für \(A\in \Mat_K(n\times n)\) sind äquivalent:
+        \begin{enumerate}[(i)]
+            \item \(f_A\) ist eine Isometrie auf \(V\).
+            \item \(A\) ist invertierbar und \(A^{-1}=\overline{A}^T\)
+            \item \hide{Die Spalten von \(A\) bilden eine Orthonormalbasis von \(V\).}
+            \item Die Zeilen von \(A\) bilden eine Orthonormalbasis von \(V\).
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Sei \(K\in\{\RR,\CC\}\) und \(V=K^n\) versehen mit dem entsprechenden Standardskalarprodukt.\\
+        Für \(A\in \Mat_K(n\times n)\) sind äquivalent:
+        \begin{enumerate}[(i)]
+            \item \(f_A\) ist eine Isometrie auf \(V\).
+            \item \(A\) ist invertierbar und \(A^{-1}=\overline{A}^T\)
+            \item Die Spalten von \(A\) bilden eine Orthonormalbasis von \(V\).
+            \item Die Zeilen von \(A\) bilden eine Orthonormalbasis von \(V\).
+        \end{enumerate}
+        \cite{Satz 11.3}
+    \end{field}
+
+    \begin{field}%4
+        Sei \(K\in\{\RR,\CC\}\) und \(V=K^n\) versehen mit dem entsprechenden Standardskalarprodukt.\\
+        Für \(A\in \Mat_K(n\times n)\) sind äquivalent:
+        \begin{enumerate}[(i)]
+            \item \(f_A\) ist eine Isometrie auf \(V\).
+            \item \(A\) ist invertierbar und \(A^{-1}=\overline{A}^T\)
+            \item Die Spalten von \(A\) bilden eine Orthonormalbasis von \(V\).
+            \item \hide{Die Zeilen von \(A\) bilden eine Orthonormalbasis von \(V\).}
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Sei \(K\in\{\RR,\CC\}\) und \(V=K^n\) versehen mit dem entsprechenden Standardskalarprodukt.\\
+        Für \(A\in \Mat_K(n\times n)\) sind äquivalent:
+        \begin{enumerate}[(i)]
+            \item \(f_A\) ist eine Isometrie auf \(V\).
+            \item \(A\) ist invertierbar und \(A^{-1}=\overline{A}^T\)
+            \item Die Spalten von \(A\) bilden eine Orthonormalbasis von \(V\).
+            \item Die Zeilen von \(A\) bilden eine Orthonormalbasis von \(V\).
+        \end{enumerate}
+        \cite{Satz 11.3}
+    \end{field}
+\end{note}
+
+%%%%%%%%% Vorlesung 5 %%%%%%%%%%%%
 \end{document}
