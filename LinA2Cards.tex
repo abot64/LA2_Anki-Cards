@@ -88,7 +88,6 @@
 \DeclareMathOperator{\Mat}{Mat}
 
 
-
 \mathchardef\mhyphen="2D
 \newcommand*{\factor}[2]{\left.\raisebox{.1em}{\ensuremath{#1}}\middle/\raisebox{-.1em}{\ensuremath{#2}}\right.}
 
@@ -955,4 +954,322 @@
 \end{note}
 
 %%%%%%%%% Vorlesung 5 %%%%%%%%%%%%
+\begin{note}
+    \tags{Def Satz}
+    \xplain{91122bd6-c30d-11ec-9d64-0242ac120002}
+    \begin{field} %1
+        Die \textbf{allgemeine lineare Gruppe} über einem Körper \(K\) ist definiert als
+        \begin{align*}
+            \text{GL}_n(K) :&= \hide{(\{A\in\Mat_K(n \times n) \vert f_A \text{ Isomorphismus} \}, \cdot)}\\
+            &= (\{A\in\Mat_K(n \times n) \vert \det(A) \neq 0 \}, \cdot)
+        \end{align*}
+    \end{field}
+    \begin{field}
+        Die \textbf{allgemeine lineare Gruppe} über einem Körper \(K\) ist definiert als
+        \begin{align*}
+            \text{GL}_n(K) :&= (\{A\in\Mat_K(n \times n) \ \vert \ f_A \text{ Isomorphismus} \}, \cdot)\\
+            &= (\{A\in\Mat_K(n \times n) \ \vert \ \det(A) \neq 0 \}, \cdot)
+        \end{align*}
+        \cite{Def/Satz 11.5}
+    \end{field}
+
+    \begin{field} %2
+        Die \textbf{allgemeine lineare Gruppe} über einem Körper \(K\) ist definiert als
+        \begin{align*}
+            \text{GL}_n(K) :&= (\{A\in\Mat_K(n \times n) \ \vert \  f_A \text{ Isomorphismus} \}, \cdot)\\
+            &= \hide{(\{A\in\Mat_K(n \times n) \ \vert \ \det(A) \neq 0 \}, \cdot)}
+        \end{align*}
+    \end{field}
+    \begin{field}
+        Die \textbf{allgemeine lineare Gruppe} über einem Körper \(K\) ist definiert als
+        \begin{align*}
+            \text{GL}_n(K) :&= (\{A\in\Mat_K(n \times n) \ \vert \  f_A \text{ Isomorphismus} \}, \cdot)\\
+            &= (\{A\in\Mat_K(n \times n) \ \vert \  \det(A) \neq 0 \}, \cdot)
+        \end{align*}
+        \cite{Def/Satz 11.5}
+    \end{field}
+
+    \begin{field} %3
+        Die \textbf{spezielle lineare Gruppe} über einem Körper \(K\) ist definiert als
+        \[\text{SL}_n(K) := \phantom{(\{ A \in\Mat_K(n\times n)\ \vert \ \det(A) = 1\}, \cdot ) }\]
+    \end{field}
+    \begin{field}
+        Die \textbf{spezielle lineare Gruppe} über einem Körper \(K\) ist definiert als
+        \[\text{SL}_n(K) := (\{ A \in\Mat_K(n\times n)\ \vert \ \det(A) = 1\}, \cdot )\]
+        \cite{Def/Satz 11.5}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def Satz}
+    \xplain{9a5ba794-c30d-11ec-9d64-0242ac120002}
+    \begin{field}
+        Die \textbf{orthogonale Gruppe} ist definiert als
+        \begin{align*}
+            \text{O}(n) :&= \hide{(\{A\in\Mat_{\RR}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)}\\
+            &= (\{A \in \text{GL}_n(\RR) \ \vert \ A^{-1} = A^T\}, \cdot)
+        \end{align*}
+    \end{field}
+    \begin{field}
+        Die \textbf{orthogonale Gruppe} ist definiert als
+        \begin{align*}
+            \text{O}(n) :&= (\{A\in\Mat_{\RR}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
+            &= (\{A \in \text{GL}_n(\RR) \ \vert \ A^{-1} = A^T\}, \cdot)
+        \end{align*}
+        \cite{Def/Satz 11.5}
+    \end{field}
+
+    \begin{field}
+        Die \textbf{orthogonale Gruppe} ist definiert als
+        \begin{align*}
+            \text{O}(n) :&= (\{A\in\Mat_{\RR}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
+            &= \hide{(\{A \in \text{GL}_n(\RR) \ \vert \ A^{-1} = A^T\}, \cdot)}
+        \end{align*}
+    \end{field}
+    \begin{field}
+        Die \textbf{orthogonale Gruppe} ist definiert als
+        \begin{align*}
+            \text{O}(n) :&= (\{A\in\Mat_{\RR}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
+            &= (\{A \in \text{GL}_n(\RR) \ \vert \ A^{-1} = A^T\}, \cdot)
+        \end{align*}
+        \cite{Def/Satz 11.5}
+    \end{field}
+
+    \begin{field}
+        Die \textbf{spezielle orthogonale Gruppe} ist definiert als
+        \[\text{SO}(n) := \phantom{\text{O}(n) \cap \text{SL}_n(\RR)}\]
+    \end{field}
+    \begin{field}
+        Die \textbf{spezielle orthogonale Gruppe} ist definiert als
+        \[\text{SO}(n) := \text{O}(n) \cap \text{SL}_n(\RR)\]
+        \cite{Def/Satz 11.5}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def Satz}
+    \xplain{a0b73478-c30d-11ec-9d64-0242ac120002}
+    \begin{field}
+        Die \textbf{unitäre Gruppe} ist definiert als
+        \begin{align*}
+            \text{U}(n) :&= \hide{(\{A\in\Mat_{\CC}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)}\\
+            &= (\{A \in \text{GL}_n(\CC) \ \vert \ A^{-1} = \overline{A}^T\}, \cdot)
+        \end{align*}
+    \end{field}
+    \begin{field}
+        Die \textbf{unitäre Gruppe} ist definiert als
+        \begin{align*}
+            \text{U}(n) :&= (\{A\in\Mat_{\CC}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
+            &= (\{A \in \text{GL}_n(\CC) \ \vert \ A^{-1} = \overline{A}^T\}, \cdot)
+        \end{align*}
+        \cite{Def/Satz 11.5}
+    \end{field}
+
+    \begin{field}
+        Die \textbf{unitäre Gruppe} ist definiert als
+        \begin{align*}
+            \text{U}(n) :&= (\{A\in\Mat_{\CC}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
+            &= \hide{(\{A \in \text{GL}_n(\CC) \ \vert \ A^{-1} = \overline{A}^T\}, \cdot)}
+        \end{align*}
+    \end{field}
+    \begin{field}
+        Die \textbf{unitäre Gruppe} ist definiert als
+        \begin{align*}
+            \text{U}(n) :&= (\{A\in\Mat_{\CC}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
+            &= (\{A \in \text{GL}_n(\CC) \ \vert \ A^{-1} = \overline{A}^T\}, \cdot)
+        \end{align*}
+        \cite{Def/Satz 11.5}
+    \end{field}
+
+    \begin{field}
+        Die \textbf{spezielle unitäre Gruppe} ist definiert als
+        \[\text{SU}(n) := \phantom{\text{U}(n) \cap \text{SL}_n(\CC)}\]
+    \end{field}
+    \begin{field}
+        Die \textbf{spezielle unitäre Gruppe} ist definiert als
+        \[\text{SU}(n) := \text{U}(n) \cap \text{SL}_n(\RR)\]
+        \cite{Def/Satz 11.5}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \xplain{ac148780-c30d-11ec-9d64-0242ac120002}
+    \begin{field}
+        Eine Isometrie auf \(\RR^2\) ist \hide{eine Rotation um \(\vec{0}\)} oder eine Spiegelung an einer Ursprungsgeraden.
+    \end{field}
+    \begin{field}
+        Eine Isometrie auf \(\RR^2\) ist eine Rotation um \(\vec{0}\) oder eine Spiegelung an einer Ursprungsgeraden.
+        \cite{Lemma 11.6}
+    \end{field}
+
+    \begin{field}
+        Eine Isometrie auf \(\RR^2\) ist eine Rotation um \(\vec{0}\) oder \hide{eine Spiegelung an einer Ursprungsgeraden}.
+    \end{field}
+    \begin{field}
+        Eine Isometrie auf \(\RR^2\) ist eine Rotation um \(\vec{0}\) oder eine Spiegelung an einer Ursprungsgeraden.
+        \cite{Lemma 11.6}
+    \end{field}
+
+    \begin{field}
+        Die orthogonale Gruppe \(\text{O}(2)\) hat die Form
+        \begin{align*}
+            \text{O}(2) = &\dots\\
+            \phantom{\dot\cup} &\left\{\left(\begin{smallmatrix}
+                              a & b\\ b & -a
+                          \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}
+        \end{align*}
+    \end{field}
+    \begin{field}
+        Die orthogonale Gruppe \(\text{O}(2)\) hat die Form
+        \begin{align*}
+            \text{O}(2) = &\left\{\left(\begin{smallmatrix}
+                                  a & -b\\ b & a
+                                \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}\\
+            \dot\cup &\left\{\left(\begin{smallmatrix}
+                              a & b\\ b & -a
+                            \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}
+        \end{align*}
+        \cite{Lemma 11.6}
+    \end{field}
+
+    \begin{field}
+        Die orthogonale Gruppe \(\text{O}(2)\) hat die Form
+        \begin{align*}
+            \text{O}(2) = &\left\{\left(\begin{smallmatrix}
+                                  a & -b\\ b & a
+                                \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}\\
+            \phantom{\dot\cup} &\dots
+        \end{align*}
+    \end{field}
+    \begin{field}
+        Die orthogonale Gruppe \(\text{O}(2)\) hat die Form
+        \begin{align*}
+            \text{O}(2) = &\left\{\left(\begin{smallmatrix}
+                                  a & -b\\ b & a
+                                \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}\\
+            \dot\cup &\left\{\left(\begin{smallmatrix}
+                              a & b\\ b & -a
+                          \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}
+        \end{align*}
+        \cite{Lemma 11.6}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \renewcommand{\cite}[1]{\bigskip\hfill{\color{gray}\tiny\(\to\) #1}}
+    \tags{Satz}
+    \xplain{b2f42114-c30d-11ec-9d64-0242ac120002}
+    \begin{field}
+        \textbf{Struktursatz für euklidische Isometrien}
+
+        Jede Isometrie eines \hide{endlich-dimensionalen} euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form
+        \[\left(\begin{smallmatrix}
+            +1 \\
+              & \ddots \\
+              &        & +1 &  &       &  &     \mbox{\Large 0}\\
+              &        &    &-1\\
+              &        &    &  &\ddots\\
+              &        &    &  &       &-1\\
+              &\mbox{\Large 0}&    &  &       &  & A_1\\
+              &        &    &  &       &  &     &\ddots\\
+              &        &    &  &       &  &     &       & A_k\\
+        \end{smallmatrix}\right)\]
+        mit \(A_i\) Rotationsmatrizen.
+    \end{field}
+    \begin{field}
+        \textbf{Struktursatz für euklidische Isometrien}
+
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form
+        \[\left(\begin{smallmatrix}
+            +1 \\
+              & \ddots \\
+              &        & +1 &  &       &  &     \mbox{\Large 0}\\
+              &        &    &-1\\
+              &        &    &  &\ddots\\
+              &        &    &  &       &-1\\
+              &\mbox{\Large 0}&    &  &       &  & A_1\\
+              &        &    &  &       &  &     &\ddots\\
+              &        &    &  &       &  &     &       & A_k\\
+        \end{smallmatrix}\right)\]
+        mit \(A_i\) Rotationsmatrizen.
+        \cite{satz 11.7}
+    \end{field}
+
+    \begin{field}
+        \textbf{Struktursatz für euklidische Isometrien}
+
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat \hide{bezüglich einer geeigneten ON-Basis} eine darstellende Matrix der Form
+        \[\left(\begin{smallmatrix}
+            +1 \\
+              & \ddots \\
+              &        & +1 &  &       &  &     \mbox{\Large 0}\\
+              &        &    &-1\\
+              &        &    &  &\ddots\\
+              &        &    &  &       &-1\\
+              &\mbox{\Large 0}&    &  &       &  & A_1\\
+              &        &    &  &       &  &     &\ddots\\
+              &        &    &  &       &  &     &       & A_k\\
+        \end{smallmatrix}\right)\]
+        mit \(A_i\) Rotationsmatrizen.
+    \end{field}
+    \begin{field}
+        \textbf{Struktursatz für euklidische Isometrien}
+
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form
+        \[\left(\begin{smallmatrix}
+            +1 \\
+              & \ddots \\
+              &        & +1 &  &       &  &     \mbox{\Large 0}\\
+              &        &    &-1\\
+              &        &    &  &\ddots\\
+              &        &    &  &       &-1\\
+              &\mbox{\Large 0}&    &  &       &  & A_1\\
+              &        &    &  &       &  &     &\ddots\\
+              &        &    &  &       &  &     &       & A_k\\
+        \end{smallmatrix}\right)\]
+        mit \(A_i\) Rotationsmatrizen.
+        \cite{satz 11.7}
+    \end{field}
+
+    \begin{field}
+        \textbf{Struktursatz für euklidische Isometrien}
+
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form \dots
+    \end{field}
+    \begin{field}
+        \textbf{Struktursatz für euklidische Isometrien}
+
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form
+        \[\left(\begin{smallmatrix}
+            +1 \\
+              & \ddots \\
+              &        & +1 &  &       &  &     \mbox{\large 0}\\
+              &        &    &-1\\
+              &        &    &  &\ddots\\
+              &        &    &  &       &-1\\
+              &\mbox{\large 0}&    &  &       &  & A_1\\
+              &        &    &  &       &  &     &\ddots\\
+              &        &    &  &       &  &     &       & A_k\\
+        \end{smallmatrix}\right)\]
+        mit \(A_i\) Rotationsmatrizen. \cite{satz 11.7}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{b9b834fe-c30d-11ec-9d64-0242ac120002}
+
+    \begin{field}
+        Sei \(K\) eine Körper, \(V\) ein K-Vektorraum, \(f\colon V\rightarrow V\) ein Endomorphismus.\\
+        Ein Untervektorraum \(W \subseteq V\) heißt \textbf{f-stabil}, falls \dots
+    \end{field}
+    \begin{field}
+        Sei \(K\) eine Körper, \(V\) ein K-Vektorraum, \(f\colon V\rightarrow V\) ein Endomorphismus.\\
+        Ein Untervektorraum \(W \subseteq V\) heißt \textbf{f-stabil}, falls $f(W)\subseteq W$.
+        \cite{Satz 11.7}
+    \end{field}
+\end{note}
+
+
+%%%%%%%%% Vorlesung 6 %%%%%%%%%%%%
 \end{document}
