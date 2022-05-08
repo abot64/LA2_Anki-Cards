@@ -87,7 +87,6 @@
 \DeclareMathOperator{\Abb}{Abb}
 \DeclareMathOperator{\Mat}{Mat}
 
-
 \mathchardef\mhyphen="2D
 \newcommand*{\factor}[2]{\left.\raisebox{.1em}{\ensuremath{#1}}\middle/\raisebox{-.1em}{\ensuremath{#2}}\right.}
 
@@ -1428,7 +1427,7 @@
 \end{note}
 
 %%%%%%%%% Vorlesung 7 %%%%%%%%%%%%
-\begin{note}%TODO
+\begin{note}
     \tags{Satz}
     \xplain{c8642aef-feb0-4273-9657-9874c2229640}
     \begin{field}
@@ -1761,7 +1760,7 @@
     \begin{field}
         \textbf{Trägheitssatz von Sylvester}
 
-        Jede reelle symmetrische Matrix $A$ ist kongruent zu einer Diagonalmatrix der Form
+        \small{Jede reelle symmetrische Matrix $A$ ist kongruent zu einer Diagonalmatrix der Form}
         \[\left(\begin{smallmatrix}
             +1\\
             &\ddots\\
@@ -1773,8 +1772,249 @@
             &&&&&&&\ddots\\
             &&&&&&&&0
         \end{smallmatrix}\right)\]
-        Die Anzahl der $+1$-, $-1$- und $0$-Einträge ist dabei durch $A$ eindeutig bestimmt.
+        \small{Die Anzahl der $+1$-, $-1$- und $0$-Einträge ist dabei durch $A$ eindeutig bestimmt.}
         \cite{Satz 12.9}
     \end{field}
 \end{note}
+
+%%%%%%%%% Vorlesung 8 %%%%%%%%%%%%
+\tags{LinA-II-13-Euklidische-Ringe}
+
+\begin{note}
+    \tags{Def}
+    \xplain{55ce91b8-e23b-4abe-9697-514111245c46}
+
+    \begin{field}
+        Ein \textbf{Integritätsring} ist ein \hide{kommutativer} Ring $R$, in dem für alle $a,b\in R$ gilt:
+        \[ab = 0 \Rightarrow [a= 0 \text{ oder } b=0] \]
+    \end{field}
+    \begin{field}
+        Ein \textbf{Integritätsring} ist ein kommutativer Ring $R$, in dem für alle $a,b\in R$ gilt:
+        \[ab = 0 \Rightarrow [a= 0 \text{ oder } b=0] \]
+        \cite{Def. 13.1}
+    \end{field}
+    \begin{field}
+        Ein \textbf{Integritätsring} ist ein kommutativer Ring $R$, in dem gilt: \dots
+
+    \end{field}
+    \begin{field}
+        Ein \textbf{Integritätsring} ist ein kommutativer Ring $R$, in dem für alle $a,b\in R$ gilt:
+        \[ab = 0 \Rightarrow [a= 0 \text{ oder } b=0] \]
+        \cite{Def. 13.1}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{14fc167f-f4e0-4a6d-bfd8-cab8ec0f0377}
+
+    \begin{field}
+        Für jeden Integritätsring $R$ ist \hint{Polynomring über $R$}\hide{auch $R[X]$ ein Integritätsring}.
+    \end{field}
+    \begin{field}
+        Für jeden Integritätsring $R$ ist auch $R[X]$ ein Integritätsring.
+        \cite{Satz 13.2}
+    \end{field}
+
+    \begin{field}
+        Für jeden Integritätsring $R$ gilt
+        \[(R[X])^\times = \phantom{R^{\times}}\]
+    \end{field}
+    \begin{field}
+        Für jeden Integritätsring $R$ gilt
+        \[(R[X])^\times = R^{\times}\]
+        \cite{Satz 13.2}
+    \end{field}
+\end{note}
+
+
+\begin{note}
+    \tags{Def}
+    \xplain{cbe89edb-ace5-43ba-afc9-5fa41ab1b1cb}
+
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $a$ ist ein \textbf{Teiler} von $b$ und $b$ ist ein \textbf{Vielfaches} von $a$ ($a\vert b$) genau dann, wenn \dots
+    \end{field}
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $a$ ist ein \textbf{Teiler} von $b$ und $b$ ist ein \textbf{Vielfaches} von $a$ ($a\vert b$) genau dann, wenn
+        \[\exists c\in R \colon b = c\cdot a\]
+        \cite{Def. 13.4}
+    \end{field}
+
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $a$ und $b$ sind \textbf{assoziiert} ($a \sim b$) genau dann, wenn \dots
+    \end{field}
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $a$ und $b$ sind \textbf{assoziiert} ($a \sim b$) genau dann, wenn
+        \[\exists c\in R^\times\colon b = c\cdot a\]
+        \cite{Def. 13.4}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{3024e3e1-e61b-40fe-890f-52ea6401dd61}
+
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $c$ ist ein \textbf{größter gemeinsamer Teiler} von $a$ und $b$ ($c \sim \text{ggT}(a,b)$) genau dann, wenn
+        \begin{itemize}
+            \item \hide{$c\vert a$ und $c\vert b$}
+        \end{itemize}
+        und
+        \begin{itemize}
+            \item $\forall c'\in R\colon (c'\vert a) \text{ und } (c'\vert b) \Rightarrow c'\vert c$
+        \end{itemize}
+    \end{field}
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $c$ ist ein \textbf{größter gemeinsamer Teiler} von $a$ und $b$ ($c \sim \text{ggT}(a,b)$) genau dann, wenn
+        \begin{itemize}
+            \item $c\vert a$ und $c\vert b$
+        \end{itemize}
+        und
+        \begin{itemize}
+            \item $\forall c'\in R\colon (c'\vert a) \text{ und } (c'\vert b) \Rightarrow c'\vert c$
+        \end{itemize}
+        \cite{Def. 13.7}
+    \end{field}
+
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $c$ ist ein \textbf{größter gemeinsamer Teiler} von $a$ und $b$ ($c \sim \text{ggT}(a,b)$) genau dann, wenn
+        \begin{itemize}
+            \item $c\vert a$ und $c\vert b$
+        \end{itemize}
+        und
+        \begin{itemize}
+            \item \hide{$\forall c'\in R\colon (c'\vert a) \text{ und } (c'\vert b) \Rightarrow c'\vert c$}
+        \end{itemize}
+    \end{field}
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $c$ ist ein \textbf{größter gemeinsamer Teiler} von $a$ und $b$ ($c \sim \text{ggT}(a,b)$) genau dann, wenn
+        \begin{itemize}
+            \item $c\vert a$ und $c\vert b$
+        \end{itemize}
+        und
+        \begin{itemize}
+            \item $\forall c'\in R\colon (c'\vert a) \text{ und } (c'\vert b) \Rightarrow c'\vert c$
+        \end{itemize}
+        \cite{Def. 13.7}
+    \end{field}
+
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $a$ und $b$ sind \textbf{teilerfremd}, falls \dots
+    \end{field}
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $a$ und $b$ sind \textbf{teilerfremd}, falls $1\sim \text{ggT}(a,b)$
+        \cite{Def. 13.7}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{c29e019b-0c2c-4dec-94e0-316d6e0f0112}
+
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $c$ ist ein \textbf{kleinstes gemeinsames Vielfaches} von $a$ und $b$ ($c \sim \text{kgV}(a,b)$) genau dann, wenn
+        \begin{itemize}
+            \item \hide{$a\vert c$ und $b\vert c$}
+        \end{itemize}
+        und
+        \begin{itemize}
+            \item $\forall c'\in R\colon (a\vert c') \text{ und } (b\vert c') \Rightarrow c\vert c'$
+        \end{itemize}
+    \end{field}
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $c$ ist ein \textbf{kleinstes gemeinsames Vielfaches} von $a$ und $b$ ($c \sim \text{kgV}(a,b)$) genau dann, wenn
+        \begin{itemize}
+            \item $a\vert c$ und $b\vert c$
+        \end{itemize}
+        und
+        \begin{itemize}
+            \item $\forall c'\in R\colon (a\vert c') \text{ und } (b\vert c') \Rightarrow c\vert c'$
+        \end{itemize}
+        \cite{Def. 13.7}
+    \end{field}
+
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $c$ ist ein \textbf{kleinstes gemeinsames Vielfaches} von $a$ und $b$ ($c \sim \text{kgV}(a,b)$) genau dann, wenn
+        \begin{itemize}
+            \item $a\vert c$ und $b\vert c$
+        \end{itemize}
+        und
+        \begin{itemize}
+            \item \hide{$\forall c'\in R\colon (a\vert c') \text{ und } (b\vert c') \Rightarrow c\vert c'$}
+        \end{itemize}
+    \end{field}
+    \begin{field}
+        Sei $R$ ein Integritätsring und $a,b\in R$.\\
+        $c$ ist ein \textbf{kleinstes gemeinsames Vielfaches} von $a$ und $b$ ($c \sim \text{kgV}(a,b)$) genau dann, wenn
+        \begin{itemize}
+            \item $a\vert c$ und $b\vert c$
+        \end{itemize}
+        und
+        \begin{itemize}
+            \item $\forall c'\in R\colon (a\vert c') \text{ und } (b\vert c') \Rightarrow c\vert c'$
+        \end{itemize}
+        \cite{Def. 13.7}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{f86a676e-ef48-4e9b-a39b-9bf39ad9c931}
+
+    \begin{field}
+        Ein Integritätsring $R$ ist \textbf{euklidisch}, falls eine Abbildung
+        \[\delta: R\setminus \{0\} \longrightarrow \NN_0\]
+        mit folgender Eigenschaft existiert:\\
+        Für $a,b\in R$ mit $b\neq 0$ existieren $q,r$ mit        \begin{center}\dots\end{center}
+
+        und
+        \[r=0 \text{ oder } \delta(r) < \delta(b)\]
+    \end{field}
+    \begin{field}
+        Ein Integritätsring $R$ ist \textbf{euklidisch}, falls eine Abbildung
+        \[\delta: R\setminus \{0\} \longrightarrow \NN_0\]
+        mit folgender Eigenschaft existiert:\\
+        Für $a,b\in R$ mit $b\neq 0$ existieren $q,r$ mit
+        \[ a = q\cdot b + r\]
+        und
+        \[r=0 \text{ oder } \delta(r) < \delta(b)\]
+    \end{field}
+
+    \begin{field}
+        Ein Integritätsring $R$ ist \textbf{euklidisch}, falls eine Abbildung
+        \[\delta: R\setminus \{0\} \longrightarrow \NN_0\]
+        mit folgender Eigenschaft existiert:\\
+        Für $a,b\in R$ mit $b\neq 0$ existieren $q,r$ mit
+        \[ a = q\cdot b + r\]
+        und
+        \begin{center}\dots\end{center}
+    \end{field}
+    \begin{field}
+        Ein Integritätsring $R$ ist \textbf{euklidisch}, falls eine Abbildung
+        \[\delta: R\setminus \{0\} \longrightarrow \NN_0\]
+        mit folgender Eigenschaft existiert:\\
+        Für $a,b\in R$ mit $b\neq 0$ existieren $q,r$ mit
+        \[ a = q\cdot b + r\]
+        und
+        \[r=0 \text{ oder } \delta(r) < \delta(b)\]
+        \cite{Def. 13.9}
+    \end{field}
+\end{note}
+
+%%%%%%%%% Vorlesung 9 %%%%%%%%%%%%
+
 \end{document}
