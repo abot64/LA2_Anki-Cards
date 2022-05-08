@@ -288,11 +288,11 @@
     \tags{Def}
     \xplain{51387522-ba4a-11ec-8422-0242ac120002}
     \begin{field}
-    Die \textbf{darstellende Matrix} einer Bilinearform \(\beta\) bezüglich einer Basis \(B=(\vec{b}_i)_i\) ist gegeben durch \hide{\[M_B(\beta)\colon = \beta(\vec{b}_i, \vec{b}_j)_{ij}\]}
+    Die \textbf{darstellende Matrix} einer Bilinearform \(\beta\) bezüglich einer Basis \(B=(\vec{b}_i)_i\) ist gegeben durch \hide{\[M_B(\beta) := \beta(\vec{b}_i, \vec{b}_j)_{ij}\]}
     \end{field}
     \begin{field}
     Die \textbf{darstellende Matrix} einer Bilinearform \(\beta\) bezüglich einer Basis \(B=(\vec{b}_i)_i\) ist gegeben durch
-    \[M_B(\beta)\colon = \beta(\vec{b}_i, \vec{b}_j)_{ij}\]
+    \[M_B(\beta) := \beta(\vec{b}_i, \vec{b}_j)_{ij}\]
     \cite{Def. ~10.3}
     \end{field}
 \end{note}
@@ -456,7 +456,7 @@
     }
     \begin{field}
         Jede Sesquilinearform \(\eta\) liefert eine Matrix \(M(\eta) \in \Mat_{\CC}(n\times n)\) der Form
-        \[M(\eta)\colon = \eta(\vec{e}_i, \vec{e}_j)_{ij}\]
+        \[M(\eta) := \eta(\vec{e}_i, \vec{e}_j)_{ij}\]
         \cite{Satz 10.11}
     \end{field}
 
@@ -466,7 +466,7 @@
     }
     \begin{field}
         Zu einer gegebenen komplexen quadratischen Matrix \(A\) existiert eine Sesquilinearform \(\eta\) wie folgt:
-        \[\eta_A(\vec{v},\vec{w}) \colon = \vec{v}^T A \overline{\vec{w}}\]
+        \[\eta_A(\vec{v},\vec{w})  := \vec{v}^T A \overline{\vec{w}}\]
         \cite{Satz 10.11}
     \end{field}
 \end{note}
@@ -662,18 +662,18 @@
     \xplain{1794ed94-bdbc-11ec-9d64-0242ac120002}
 
     \begin{field}
-        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(v\in V\) heißt \textbf{normiert}, falls \dots
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(\vec{v}\in V\) heißt \textbf{normiert}, falls \dots
     \end{field}
     \begin{field}
-        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(v\in V\) heißt \textbf{normiert}, falls \(\norm{v} = 1\)
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(\vec{v}\in V\) heißt \textbf{normiert}, falls \(\norm{\vec{v}} = 1\)
         \cite{Def. 10.20}
     \end{field}
 
     \begin{field}
-        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(v,w\in V\) sind zueinander \textbf{orthogonal}, falls \dots
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(\vec{v},\vec{w}\in V\) sind zueinander \textbf{orthogonal}, falls \dots
     \end{field}
     \begin{field}
-        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(v,w\in V\) sind zueinander \textbf{orthogonal}, falls \(\scprod{\vec{v}}{\vec{w}} = 0\)
+        Sei \((V,\scprod{\cdot}{\cdot})\) ein euklidischer oder unitärer Vektorraum. \(\vec{v},\vec{w}\in V\) sind zueinander \textbf{orthogonal}, falls \(\scprod{\vec{v}}{\vec{w}} = 0\)
 
         [Notation: \(\vec{v}\perp\vec{w}\)]
         \cite{Def. 10.20}
@@ -698,11 +698,11 @@
 
     \begin{field}
         Sei \((V,\scprod{\cdot}{\cdot})\) euklidisch oder unitär. Das \textbf{orthogonale Komplement} eines Untervektorraums \(W\subseteq V\) ist
-        \[W^{\perp} :=\phantom{\{\vec{v}\in V \vert \vec{v}\perp\vec{w} \text{ für alle } \vec{w}\in W\}}\]
+        \[W^{\perp} :=\phantom{\{\vec{v}\in V \mid \vec{v}\perp\vec{w} \text{ für alle } \vec{w}\in W\}}\]
     \end{field}
     \begin{field}
         Sei \((V,\scprod{\cdot}{\cdot})\) euklidisch oder unitär. Das \textbf{orthogonale Komplement} eines Untervektorraums \(W\subseteq V\) ist
-        \[W^{\perp} := \{\vec{v}\in V \vert \vec{v}\perp\vec{w} \text{ für alle } \vec{w}\in W\}\]
+        \[W^{\perp} := \{\vec{v}\in V \mid \vec{v}\perp\vec{w} \text{ für alle } \vec{w}\in W\}\]
         \cite{Def. 10.23}
     \end{field}
 \end{note}
@@ -716,7 +716,7 @@
     }
     \begin{field}
         Ein \textbf{affiner Unterraum} eines Vektorraums \(V\) ist eine Teilmenge der Form
-        \[\vec{u}_0 + U = \{\vec{v}\in V \vert \vec{v} - \vec{u}_0 \in U\}\]
+        \[\vec{u}_0 + U = \{\vec{v}\in V \mid \vec{v} - \vec{u}_0 \in U\}\]
         für einen Untervektorraum \(U\subseteq V\).
     \end{field}
 
@@ -733,12 +733,16 @@
     \xplain{3f20cf54-bdd0-11ec-9d64-0242ac120002}
 
     \begin{field}
+        \textbf{Hessesche Normalform}
+      
         Jede affine Hyperrebene in einem euklidischen oder unitären VR hat die Form
-        \[H = \phantom{\{\vec{v}\in V\vert\scprod{\vec{v}}{\vec{n}} = d\}} \]
+        \[H = \phantom{\{\vec{v}\in V\mid\scprod{\vec{v}}{\vec{n}} = d\}} \]
     \end{field}
     \begin{field}
+        \textbf{Hessesche Normalform}
+      
         Jede affine Hyperrebene in einem euklidischen oder unitären VR hat die Form
-        \[H = \{\vec{v}\in V\vert\scprod{\vec{v}}{\vec{n}} = d\}\]
+        \[H = \{\vec{v}\in V\mid\scprod{\vec{v}}{\vec{n}} = d\}\]
         für einen normierten Vektor \(\vec{n}\) und ein \(d\in\RR\) mit \(d\geq 0\)
         \cite{Satz 10.25}
     \end{field}
@@ -960,15 +964,15 @@
     \begin{field} %1
         Die \textbf{allgemeine lineare Gruppe} über einem Körper \(K\) ist definiert als
         \begin{align*}
-            \text{GL}_n(K) :&= \hide{(\{A\in\Mat_K(n \times n) \vert f_A \text{ Isomorphismus} \}, \cdot)}\\
-            &= (\{A\in\Mat_K(n \times n) \vert \det(A) \neq 0 \}, \cdot)
+            \text{GL}_n(K) :&= \hide{(\{A\in\Mat_K(n \times n) \mid f_A \text{ Isomorphismus} \}, \cdot)}\\
+            &= (\{A\in\Mat_K(n \times n) \mid \det(A) \neq 0 \}, \cdot)
         \end{align*}
     \end{field}
     \begin{field}
         Die \textbf{allgemeine lineare Gruppe} über einem Körper \(K\) ist definiert als
         \begin{align*}
-            \text{GL}_n(K) :&= (\{A\in\Mat_K(n \times n) \ \vert \ f_A \text{ Isomorphismus} \}, \cdot)\\
-            &= (\{A\in\Mat_K(n \times n) \ \vert \ \det(A) \neq 0 \}, \cdot)
+            \text{GL}_n(K) :&= (\{A\in\Mat_K(n \times n) \mid f_A \text{ Isomorphismus} \}, \cdot)\\
+            &= (\{A\in\Mat_K(n \times n) \mid \det(A) \neq 0 \}, \cdot)
         \end{align*}
         \cite{Def/Satz 11.5}
     \end{field}
@@ -976,26 +980,26 @@
     \begin{field} %2
         Die \textbf{allgemeine lineare Gruppe} über einem Körper \(K\) ist definiert als
         \begin{align*}
-            \text{GL}_n(K) :&= (\{A\in\Mat_K(n \times n) \ \vert \  f_A \text{ Isomorphismus} \}, \cdot)\\
-            &= \hide{(\{A\in\Mat_K(n \times n) \ \vert \ \det(A) \neq 0 \}, \cdot)}
+            \text{GL}_n(K) :&= (\{A\in\Mat_K(n \times n) \mid  f_A \text{ Isomorphismus} \}, \cdot)\\
+            &= \hide{(\{A\in\Mat_K(n \times n) \mid \det(A) \neq 0 \}, \cdot)}
         \end{align*}
     \end{field}
     \begin{field}
         Die \textbf{allgemeine lineare Gruppe} über einem Körper \(K\) ist definiert als
         \begin{align*}
-            \text{GL}_n(K) :&= (\{A\in\Mat_K(n \times n) \ \vert \  f_A \text{ Isomorphismus} \}, \cdot)\\
-            &= (\{A\in\Mat_K(n \times n) \ \vert \  \det(A) \neq 0 \}, \cdot)
+            \text{GL}_n(K) :&= (\{A\in\Mat_K(n \times n) \mid  f_A \text{ Isomorphismus} \}, \cdot)\\
+            &= (\{A\in\Mat_K(n \times n) \mid  \det(A) \neq 0 \}, \cdot)
         \end{align*}
         \cite{Def/Satz 11.5}
     \end{field}
 
     \begin{field} %3
         Die \textbf{spezielle lineare Gruppe} über einem Körper \(K\) ist definiert als
-        \[\text{SL}_n(K) := \phantom{(\{ A \in\Mat_K(n\times n)\ \vert \ \det(A) = 1\}, \cdot ) }\]
+        \[\text{SL}_n(K) := \phantom{(\{ A \in\Mat_K(n\times n)\mid \det(A) = 1\}, \cdot ) }\]
     \end{field}
     \begin{field}
         Die \textbf{spezielle lineare Gruppe} über einem Körper \(K\) ist definiert als
-        \[\text{SL}_n(K) := (\{ A \in\Mat_K(n\times n)\ \vert \ \det(A) = 1\}, \cdot )\]
+        \[\text{SL}_n(K) := (\{ A \in\Mat_K(n\times n)\mid \det(A) = 1\}, \cdot )\]
         \cite{Def/Satz 11.5}
     \end{field}
 \end{note}
@@ -1006,15 +1010,15 @@
     \begin{field}
         Die \textbf{orthogonale Gruppe} ist definiert als
         \begin{align*}
-            \text{O}(n) :&= \hide{(\{A\in\Mat_{\RR}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)}\\
-            &= (\{A \in \text{GL}_n(\RR) \ \vert \ A^{-1} = A^T\}, \cdot)
+            \text{O}(n) :&= \hide{(\{A\in\Mat_{\RR}(n\times n) \mid f_A \text{ Isometrie}\}, \cdot)}\\
+            &= (\{A \in \text{GL}_n(\RR) \mid A^{-1} = A^T\}, \cdot)
         \end{align*}
     \end{field}
     \begin{field}
         Die \textbf{orthogonale Gruppe} ist definiert als
         \begin{align*}
-            \text{O}(n) :&= (\{A\in\Mat_{\RR}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
-            &= (\{A \in \text{GL}_n(\RR) \ \vert \ A^{-1} = A^T\}, \cdot)
+            \text{O}(n) :&= (\{A\in\Mat_{\RR}(n\times n) \mid f_A \text{ Isometrie}\}, \cdot)\\
+            &= (\{A \in \text{GL}_n(\RR) \mid A^{-1} = A^T\}, \cdot)
         \end{align*}
         \cite{Def/Satz 11.5}
     \end{field}
@@ -1022,15 +1026,15 @@
     \begin{field}
         Die \textbf{orthogonale Gruppe} ist definiert als
         \begin{align*}
-            \text{O}(n) :&= (\{A\in\Mat_{\RR}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
-            &= \hide{(\{A \in \text{GL}_n(\RR) \ \vert \ A^{-1} = A^T\}, \cdot)}
+            \text{O}(n) :&= (\{A\in\Mat_{\RR}(n\times n) \mid f_A \text{ Isometrie}\}, \cdot)\\
+            &= \hide{(\{A \in \text{GL}_n(\RR) \mid A^{-1} = A^T\}, \cdot)}
         \end{align*}
     \end{field}
     \begin{field}
         Die \textbf{orthogonale Gruppe} ist definiert als
         \begin{align*}
-            \text{O}(n) :&= (\{A\in\Mat_{\RR}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
-            &= (\{A \in \text{GL}_n(\RR) \ \vert \ A^{-1} = A^T\}, \cdot)
+            \text{O}(n) :&= (\{A\in\Mat_{\RR}(n\times n) \mid f_A \text{ Isometrie}\}, \cdot)\\
+            &= (\{A \in \text{GL}_n(\RR) \mid A^{-1} = A^T\}, \cdot)
         \end{align*}
         \cite{Def/Satz 11.5}
     \end{field}
@@ -1052,15 +1056,15 @@
     \begin{field}
         Die \textbf{unitäre Gruppe} ist definiert als
         \begin{align*}
-            \text{U}(n) :&= \hide{(\{A\in\Mat_{\CC}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)}\\
-            &= (\{A \in \text{GL}_n(\CC) \ \vert \ A^{-1} = \overline{A}^T\}, \cdot)
+            \text{U}(n) :&= \hide{(\{A\in\Mat_{\CC}(n\times n) \mid f_A \text{ Isometrie}\}, \cdot)}\\
+            &= (\{A \in \text{GL}_n(\CC) \mid A^{-1} = \overline{A}^T\}, \cdot)
         \end{align*}
     \end{field}
     \begin{field}
         Die \textbf{unitäre Gruppe} ist definiert als
         \begin{align*}
-            \text{U}(n) :&= (\{A\in\Mat_{\CC}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
-            &= (\{A \in \text{GL}_n(\CC) \ \vert \ A^{-1} = \overline{A}^T\}, \cdot)
+            \text{U}(n) :&= (\{A\in\Mat_{\CC}(n\times n) \mid f_A \text{ Isometrie}\}, \cdot)\\
+            &= (\{A \in \text{GL}_n(\CC) \mid A^{-1} = \overline{A}^T\}, \cdot)
         \end{align*}
         \cite{Def/Satz 11.5}
     \end{field}
@@ -1068,15 +1072,15 @@
     \begin{field}
         Die \textbf{unitäre Gruppe} ist definiert als
         \begin{align*}
-            \text{U}(n) :&= (\{A\in\Mat_{\CC}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
-            &= \hide{(\{A \in \text{GL}_n(\CC) \ \vert \ A^{-1} = \overline{A}^T\}, \cdot)}
+            \text{U}(n) :&= (\{A\in\Mat_{\CC}(n\times n) \mid f_A \text{ Isometrie}\}, \cdot)\\
+            &= \hide{(\{A \in \text{GL}_n(\CC) \mid A^{-1} = \overline{A}^T\}, \cdot)}
         \end{align*}
     \end{field}
     \begin{field}
         Die \textbf{unitäre Gruppe} ist definiert als
         \begin{align*}
-            \text{U}(n) :&= (\{A\in\Mat_{\CC}(n\times n) \ \vert \ f_A \text{ Isometrie}\}, \cdot)\\
-            &= (\{A \in \text{GL}_n(\CC) \ \vert \ A^{-1} = \overline{A}^T\}, \cdot)
+            \text{U}(n) :&= (\{A\in\Mat_{\CC}(n\times n) \mid f_A \text{ Isometrie}\}, \cdot)\\
+            &= (\{A \in \text{GL}_n(\CC) \mid A^{-1} = \overline{A}^T\}, \cdot)
         \end{align*}
         \cite{Def/Satz 11.5}
     \end{field}
@@ -1116,7 +1120,7 @@
             \text{O}(2) = &\dots\\
             \phantom{\dot\cup} &\left\{\left(\begin{smallmatrix}
                               a & b\\ b & -a
-                          \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}
+                          \end{smallmatrix}\right) \;\middle\vert\; a,b\in \RR, a^2+b^2=1\right\}
         \end{align*}
     \end{field}
     \begin{field}
@@ -1124,10 +1128,10 @@
         \begin{align*}
             \text{O}(2) = &\left\{\left(\begin{smallmatrix}
                                   a & -b\\ b & a
-                                \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}\\
+                                \end{smallmatrix}\right) \;\middle\vert\; a,b\in \RR, a^2+b^2=1\right\}\\
             \dot\cup &\left\{\left(\begin{smallmatrix}
                               a & b\\ b & -a
-                            \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}
+                            \end{smallmatrix}\right) \;\middle\vert\; a,b\in \RR, a^2+b^2=1\right\}
         \end{align*}
         \cite{Lemma 11.6}
     \end{field}
@@ -1137,7 +1141,7 @@
         \begin{align*}
             \text{O}(2) = &\left\{\left(\begin{smallmatrix}
                                   a & -b\\ b & a
-                                \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}\\
+                                \end{smallmatrix}\right) \;\middle\vert\; a,b\in \RR, a^2+b^2=1\right\}\\
             \phantom{\dot\cup} &\dots
         \end{align*}
     \end{field}
@@ -1146,10 +1150,10 @@
         \begin{align*}
             \text{O}(2) = &\left\{\left(\begin{smallmatrix}
                                   a & -b\\ b & a
-                                \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}\\
+                                \end{smallmatrix}\right) \;\middle\vert\; a,b\in \RR, a^2+b^2=1\right\}\\
             \dot\cup &\left\{\left(\begin{smallmatrix}
                               a & b\\ b & -a
-                          \end{smallmatrix}\right) \vert a,b\in \RR, a^2+b^2=1\right\}
+                          \end{smallmatrix}\right) \;\middle\vert\; a,b\in \RR, a^2+b^2=1\right\}
         \end{align*}
         \cite{Lemma 11.6}
     \end{field}
@@ -1162,7 +1166,7 @@
     \begin{field}
         \textbf{Struktursatz für euklidische Isometrien}
 
-        Jede Isometrie eines \hide{endlich-dimensionalen} euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form
+        Jede Isometrie eines \hide{endlich-dimensionalen} euklidischen Vektorraums hat bezüglich einer geeigneten \emph{Orthonormal}basis eine darstellende Matrix der Form
         \[\left(\begin{smallmatrix}
             +1 \\
               & \ddots \\
@@ -1179,43 +1183,7 @@
     \begin{field}
         \textbf{Struktursatz für euklidische Isometrien}
 
-        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form
-        \[\left(\begin{smallmatrix}
-            +1 \\
-              & \ddots \\
-              &        & +1 &  &       &  &     \mbox{\Large 0}\\
-              &        &    &-1\\
-              &        &    &  &\ddots\\
-              &        &    &  &       &-1\\
-              &\mbox{\Large 0}&    &  &       &  & A_1\\
-              &        &    &  &       &  &     &\ddots\\
-              &        &    &  &       &  &     &       & A_k\\
-        \end{smallmatrix}\right)\]
-        mit \(A_i\) Rotationsmatrizen.
-        \cite{satz 11.7}
-    \end{field}
-
-    \begin{field}
-        \textbf{Struktursatz für euklidische Isometrien}
-
-        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat \hide{bezüglich einer geeigneten ON-Basis} eine darstellende Matrix der Form
-        \[\left(\begin{smallmatrix}
-            +1 \\
-              & \ddots \\
-              &        & +1 &  &       &  &     \mbox{\Large 0}\\
-              &        &    &-1\\
-              &        &    &  &\ddots\\
-              &        &    &  &       &-1\\
-              &\mbox{\Large 0}&    &  &       &  & A_1\\
-              &        &    &  &       &  &     &\ddots\\
-              &        &    &  &       &  &     &       & A_k\\
-        \end{smallmatrix}\right)\]
-        mit \(A_i\) Rotationsmatrizen.
-    \end{field}
-    \begin{field}
-        \textbf{Struktursatz für euklidische Isometrien}
-
-        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten \emph{Orthonormal}basis eine darstellende Matrix der Form
         \[\left(\begin{smallmatrix}
             +1 \\
               & \ddots \\
@@ -1234,12 +1202,48 @@
     \begin{field}
         \textbf{Struktursatz für euklidische Isometrien}
 
-        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form \dots
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat \hide{bezüglich einer geeigneten \emph{Orthonormal}basis} eine darstellende Matrix der Form
+        \[\left(\begin{smallmatrix}
+            +1 \\
+              & \ddots \\
+              &        & +1 &  &       &  &     \mbox{\Large 0}\\
+              &        &    &-1\\
+              &        &    &  &\ddots\\
+              &        &    &  &       &-1\\
+              &\mbox{\Large 0}&    &  &       &  & A_1\\
+              &        &    &  &       &  &     &\ddots\\
+              &        &    &  &       &  &     &       & A_k\\
+        \end{smallmatrix}\right)\]
+        mit \(A_i\) Rotationsmatrizen.
     \end{field}
     \begin{field}
         \textbf{Struktursatz für euklidische Isometrien}
 
-        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten ON-Basis eine darstellende Matrix der Form
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten \emph{Orthonormal}basis eine darstellende Matrix der Form
+        \[\left(\begin{smallmatrix}
+            +1 \\
+              & \ddots \\
+              &        & +1 &  &       &  &     \mbox{\Large 0}\\
+              &        &    &-1\\
+              &        &    &  &\ddots\\
+              &        &    &  &       &-1\\
+              &\mbox{\Large 0}&    &  &       &  & A_1\\
+              &        &    &  &       &  &     &\ddots\\
+              &        &    &  &       &  &     &       & A_k\\
+        \end{smallmatrix}\right)\]
+        mit \(A_i\) Rotationsmatrizen.
+        \cite{satz 11.7}
+    \end{field}
+
+    \begin{field}
+        \textbf{Struktursatz für euklidische Isometrien}
+
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten \emph{Orthonormal}basis eine darstellende Matrix der Form \dots
+    \end{field}
+    \begin{field}
+        \textbf{Struktursatz für euklidische Isometrien}
+
+        Jede Isometrie eines endlich-dimensionalen euklidischen Vektorraums hat bezüglich einer geeigneten \emph{Orthonormal}basis eine darstellende Matrix der Form
         \[\left(\begin{smallmatrix}
             +1 \\
               & \ddots \\
@@ -1291,7 +1295,7 @@
     \begin{field}
         \textbf{Struktursatz für unitäre Isometrien}
 
-        Jede Isometrie eines \hide{endlich-dimensionalen} unitären Vektorraums wird bezüglich einer geeigneten Orthonormalbasis dargestellt von einer Diagonalmatrix
+        Jede Isometrie eines \hide{endlich-dimensionalen} unitären Vektorraums wird bezüglich einer geeigneten \emph{Orthonormal}basis dargestellt von einer Diagonalmatrix
         \[\begin{pmatrix}
              a_1 \\
             &\ddots\\
@@ -1302,31 +1306,7 @@
     \begin{field}
         \textbf{Struktursatz für unitäre Isometrien}
 
-        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird bezüglich einer geeigneten Orthonormalbasis dargestellt von einer Diagonalmatrix
-        \[\begin{pmatrix}
-             a_1 \\
-            &\ddots\\
-            &&a_n
-        \end{pmatrix}\]
-        mit $a_i \in \CC, \vert a_i \vert = 1$.
-        \cite{Satz 11.12}
-    \end{field}
-
-    \begin{field}
-        \textbf{Struktursatz für unitäre Isometrien}
-
-        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird \hide{bezüglich einer geeigneten Orthonormalbasis} dargestellt von einer Diagonalmatrix
-        \[\begin{pmatrix}
-             a_1 \\
-            &\ddots\\
-            &&a_n
-        \end{pmatrix}\]
-        mit $a_i \in \CC, \vert a_i \vert = 1$.
-    \end{field}
-    \begin{field}
-        \textbf{Struktursatz für unitäre Isometrien}
-
-        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird bezüglich einer geeigneten Orthonormalbasis dargestellt von einer Diagonalmatrix
+        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird bezüglich einer geeigneten \emph{Orthonormal}basis dargestellt von einer Diagonalmatrix
         \[\begin{pmatrix}
              a_1 \\
             &\ddots\\
@@ -1339,12 +1319,36 @@
     \begin{field}
         \textbf{Struktursatz für unitäre Isometrien}
 
-        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird bezüglich einer geeigneten Orthonormalbasis dargestellt von \dots
+        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird \hide{bezüglich einer geeigneten \emph{Orthonormal}basis} dargestellt von einer Diagonalmatrix
+        \[\begin{pmatrix}
+             a_1 \\
+            &\ddots\\
+            &&a_n
+        \end{pmatrix}\]
+        mit $a_i \in \CC, \vert a_i \vert = 1$.
     \end{field}
     \begin{field}
         \textbf{Struktursatz für unitäre Isometrien}
 
-        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird bezüglich einer geeigneten Orthonormalbasis dargestellt von einer Diagonalmatrix
+        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird bezüglich einer geeigneten \emph{Orthonormal}basis dargestellt von einer Diagonalmatrix
+        \[\begin{pmatrix}
+             a_1 \\
+            &\ddots\\
+            &&a_n
+        \end{pmatrix}\]
+        mit $a_i \in \CC, \vert a_i \vert = 1$.
+        \cite{Satz 11.12}
+    \end{field}
+
+    \begin{field}
+        \textbf{Struktursatz für unitäre Isometrien}
+
+        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird bezüglich einer geeigneten \emph{Orthonormal}basis dargestellt von \dots
+    \end{field}
+    \begin{field}
+        \textbf{Struktursatz für unitäre Isometrien}
+
+        Jede Isometrie eines endlich-dimensionalen unitären Vektorraums wird bezüglich einer geeigneten \emph{Orthonormal}basis dargestellt von einer Diagonalmatrix
         \[\begin{pmatrix}
              a_1 \\
             &\ddots\\
@@ -1362,41 +1366,41 @@
     \xplain{f145cd78-c790-11ec-9d64-0242ac120002}
 
     \begin{field}
-        Ein Endomorphismus $f$ eines euklidischen oder unitären Vektorraums $(V, \scprod{\cdot}{\cdot})$ ist \textbf{selbstadjungiert}, falls \dots
+        Ein Endomorphismus $f$ eines euklidischen oder unitären Vektorraums $(V, \scprod{\cdot}{\cdot})$ ist \emph{selbstadjungiert}, falls \dots
     \end{field}
     \begin{field}
-        Ein Endomorphismus $f$ eines euklidischen oder unitären Vektorraums $(V, \scprod{\cdot}{\cdot})$ ist \textbf{selbstadjungiert}, falls
+        Ein Endomorphismus $f$ eines euklidischen oder unitären Vektorraums $(V, \scprod{\cdot}{\cdot})$ ist \emph{selbstadjungiert}, falls
         \[\scprod{f(\vec{v})}{\vec{w}} = \scprod{\vec{v}}{f(\vec{w})} \quad \forall \vec{v,w}\in V\]
         \cite{Def. 12.1}
     \end{field}
 
     \begin{field}
-        Sei $A\in \Mat_K(n\times n), K\in\{\RR,\CC\}$. Dann ist äquivalent:
+        Sei $A\in \Mat_K(n\times n), K\in\{\RR,\CC\}$. Dann sind äquivalent:
         \begin{itemize}
-            \item \hide{Die lineare Abbildung $f_A: K^n\longrightarrow K^n$ ist \textbf{selbstadjungiert} bezüglich des Standardskalarprodukts auf $K^n$.}
+            \item \hide{Die lineare Abbildung $f_A: K^n\longrightarrow K^n$ ist \emph{selbstadjungiert} bezüglich des Standardskalarprodukts auf $K^n$.}
             \item $A$ ist symmetrisch ($A = A^T$) \\ bzw. hermitesch ($A = \overline{A^T}$)
         \end{itemize}
     \end{field}
     \begin{field}
-        Sei $A\in \Mat_K(n\times n), K\in\{\RR,\CC\}$. Dann ist äquivalent:
+        Sei $A\in \Mat_K(n\times n), K\in\{\RR,\CC\}$. Dann sind äquivalent:
         \begin{itemize}
-            \item Die lineare Abbildung $f_A: K^n\longrightarrow K^n$ ist \textbf{selbstadjungiert} bezüglich des Standardskalarprodukts auf $K^n$.
+            \item Die lineare Abbildung $f_A: K^n\longrightarrow K^n$ ist \emph{selbstadjungiert} bezüglich des Standardskalarprodukts auf $K^n$.
             \item $A$ ist symmetrisch ($A = A^T$) \\ bzw. hermitesch ($A = \overline{A^T}$)
         \end{itemize}
         \cite{Notiz 12.2}
     \end{field}
 
     \begin{field}
-        Sei $A\in \Mat_K(n\times n), K\in\{\RR,\CC\}$. Dann ist äquivalent:
+        Sei $A\in \Mat_K(n\times n), K\in\{\RR,\CC\}$. Dann sind äquivalent:
         \begin{itemize}
-            \item Die lineare Abbildung $f_A: K^n\longrightarrow K^n$ ist \textbf{selbstadjungiert} bezüglich des Standardskalarprodukts auf $K^n$.
+            \item Die lineare Abbildung $f_A: K^n\longrightarrow K^n$ ist \emph{selbstadjungiert} bezüglich des Standardskalarprodukts auf $K^n$.
             \item \hide{$A$ ist symmetrisch ($A = A^T$) \\ bzw. hermitesch ($A = \overline{A^T}$}
         \end{itemize}
     \end{field}
     \begin{field}
-        Sei $A\in \Mat_K(n\times n), K\in\{\RR,\CC\}$. Dann ist äquivalent:
+        Sei $A\in \Mat_K(n\times n), K\in\{\RR,\CC\}$. Dann sind äquivalent:
         \begin{itemize}
-            \item Die lineare Abbildung $f_A: K^n\longrightarrow K^n$ ist \textbf{selbstadjungiert} bezüglich des Standardskalarprodukts auf $K^n$.
+            \item Die lineare Abbildung $f_A: K^n\longrightarrow K^n$ ist \emph{selbstadjungiert} bezüglich des Standardskalarprodukts auf $K^n$.
             \item $A$ ist symmetrisch ($A = A^T$) \\ bzw. hermitesch ($A = \overline{A^T}$)
         \end{itemize}
         \cite{Notiz 12.2}
@@ -1407,18 +1411,18 @@
     \tags{Satz}
     \xplain{eaa8db5e-c790-11ec-9d64-0242ac120002}
     \begin{field}
-        Alle Eigenwerte eines \textbf{selbstadjungierten Endomorphismus} \dots
+        Alle Eigenwerte eines \emph{selbstadjungierten} Endomorphismus \dots
     \end{field}
     \begin{field}
-        Alle Eigenwerte eines \textbf{selbstadjungierten Endomorphismus} sind reell.
+        Alle Eigenwerte eines \emph{selbstadjungierten} Endomorphismus sind reell.
         \cite{Satz 12.3}
     \end{field}
 
     \begin{field}
-        Eigenvektoren zu verschiedenen Eigenwerten eines \textbf{selbstadjungierten Endomorphismus} \dots
+        Eigenvektoren zu verschiedenen Eigenwerten eines \emph{selbstadjungierten} Endomorphismus \dots
     \end{field}
     \begin{field}
-        Eigenvektoren zu verschiedenen Eigenwerten eines \textbf{selbstadjungierten Endomorphismus} stehen senkrecht zueinander.
+        Eigenvektoren zu verschiedenen Eigenwerten eines \emph{selbstadjungierten} Endomorphismus stehen senkrecht zueinander.
         \cite{Satz 12.3}
     \end{field}
 \end{note}
