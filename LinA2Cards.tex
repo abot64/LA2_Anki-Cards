@@ -2148,5 +2148,167 @@
 \end{note}
 
 
+%%%%%%%%% Vorlesung 11 %%%%%%%%%%%%
 \tags{LinA-II-14-Minimalpolynom}
+
+\begin{note}
+    \tags{Def}
+    \xplain{ec41baef-a06e-43ff-a6d0-24b3ae262be4}
+
+    \begin{field}
+        Das \textbf{Minimalpolynom} von $f$ ist das eindeutige Polynom $\mu_f\in K[X]\setminus{\{0\}}$ für das gilt:
+        \begin{enumerate}[(1)]
+            \item \hide{$\mu_f(f)=0$ (Nullabbildung in $\text{End}_K(V))$}
+            \item Unter allen Polynomen $\neq 0$, die (1) erfüllen, hat $\mu_f$ minimalen Grad.
+            \item $\mu_f$ ist normiert (d.h. Leitkoeffizient = 1)
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Das \textbf{Minimalpolynom} von $f$ ist das eindeutige Polynom $\mu_f\in K[X]\setminus{\{0\}}$ für das gilt:
+        \begin{enumerate}[(1)]
+            \item $\mu_f(f)=0$ (Nullabbildung in $\text{End}_K(V))$
+            \item Unter allen Polynomen $\neq 0$, die (1) erfüllen, hat $\mu_f$ minimalen Grad.
+            \item $\mu_f$ ist normiert (d.h. Leitkoeffizient = 1)
+        \end{enumerate}
+        \cite{Def. 14.4}
+    \end{field}
+
+    \begin{field}
+        Das \textbf{Minimalpolynom} von $f$ ist das eindeutige Polynom $\mu_f\in K[X]\setminus{\{0\}}$ für das gilt:
+        \begin{enumerate}[(1)]
+            \item $\mu_f(f)=0$ (Nullabbildung in $\text{End}_K(V))$
+            \item \hide{Unter allen Polynomen $\neq 0$, die (1) erfüllen, hat $\mu_f$ minimalen Grad.}
+            \item $\mu_f$ ist normiert (d.h. Leitkoeffizient = 1)
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Das \textbf{Minimalpolynom} von $f$ ist das eindeutige Polynom $\mu_f\in K[X]\setminus{\{0\}}$ für das gilt:
+        \begin{enumerate}[(1)]
+            \item $\mu_f(f)=0$ (Nullabbildung in $\text{End}_K(V))$
+            \item Unter allen Polynomen $\neq 0$, die (1) erfüllen, hat $\mu_f$ minimalen Grad.
+            \item $\mu_f$ ist normiert (d.h. Leitkoeffizient = 1)
+        \end{enumerate}
+        \cite{Def. 14.4}
+    \end{field}
+
+    \begin{field}
+        Das \textbf{Minimalpolynom} von $f$ ist das eindeutige Polynom $\mu_f\in K[X]\setminus{\{0\}}$ für das gilt:
+        \begin{enumerate}[(1)]
+            \item $\mu_f(f)=0$ (Nullabbildung in $\text{End}_K(V))$
+            \item Unter allen Polynomen $\neq 0$, die (1) erfüllen, hat $\mu_f$ minimalen Grad.
+            \item \hide{$\mu_f$ ist normiert (d.h. Leitkoeffizient = 1)}
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Das \textbf{Minimalpolynom} von $f$ ist das eindeutige Polynom $\mu_f\in K[X]\setminus{\{0\}}$ für das gilt:
+        \begin{enumerate}[(1)]
+            \item $\mu_f(f)=0$ (Nullabbildung in $\text{End}_K(V))$
+            \item Unter allen Polynomen $\neq 0$, die (1) erfüllen, hat $\mu_f$ minimalen Grad.
+            \item $\mu_f$ ist normiert (d.h. Leitkoeffizient = 1)
+        \end{enumerate}
+        \cite{Def. 14.4}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{b684bb58-b59c-4e97-953f-6d32f2a58dcf}
+
+    \xfield{
+    \textbf{Satz von Caley-Hamilton}\\
+    Für das charakteristische Polynom eines Endomorphismus $f$ gilt \dots
+    }
+    \begin{field}
+        \textbf{Satz von Caley-Hamilton}\\
+        Für das charakteristische Polynom eines Endomorphismus $f$ gilt
+        \[\chi_f(f) = 0\]
+        \cite{Satz 14.7}
+    \end{field}
+
+    \xfield{
+    \textbf{Satz von Caley-Hamilton im zyklischen Fall}\\
+    Ist $W\subseteq V$ f-zyklisch, so ist\\
+     \dots\\
+    das Minimalpolynom für $f\vert_W$.
+    }
+    \begin{field}
+        \textbf{Satz von Caley-Hamilton im zyklischen Fall}\\
+        Ist $W\subseteq V$ f-zyklisch, so ist
+        \[(-1)^{\text{dim} W} \chi_{f\vert_W}\]
+        das Minimalpolynom für $f\vert_W$.
+        \cite{Satz 14.13}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{6088f132-4411-44e9-aa19-9c0cfa13ab91}
+
+    \xfield{
+    Ein Untervektorraum $W\subseteq V$ ist \textbf{f-zyklisch}, falls \dots
+    }
+    \begin{field}
+         Ein Untervektorraum $W\subseteq V$ ist \textbf{f-zyklisch}, falls
+         \[W = \langle \vec{w}, f(\vec{w}), f^2(\vec{w}), \dots \rangle \text{ für ein } \vec{w}\in V\]
+         \cite{Def. 14.8}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{31141f5d-f74d-45d8-bd71-4577c54a1e2c}
+
+    \xfield{
+    Ist $W$ ein \emph{f-zyklischer} Untervektorraum der Dimension $d$, so ist \hint{Basis}\hide{$(\vec{w}, f(\vec{w}), f^2(\vec{w}),\dots, f^{d-1}(\vec{w}))$ eine Basis von $W$.}
+    }
+    \begin{field}
+        Ist $W$ ein \emph{f-zyklischer} Untervektorraum der Dimension $d$, so ist $(\vec{w}, f(\vec{w}), f^2(\vec{w}),\dots, f^{d-1}(\vec{w}))$ eine Basis von $W$.
+        \cite{Lemma 14.10}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{2e432a06-1654-4799-8785-7f9fe0a985e8}
+
+    \xfield{
+    Die \textbf{Begleitmatrix} zu einem normierten Polynom\\$A = X^d + \sum_{i=0}^{d-1} a_i X^i$ ist die Matrix \dots
+    }
+    \begin{field}
+        Die \textbf{Begleitmatrix} zu einem normierten Polynom\\$A = X^d + \sum_{i=0}^{d-1} a_i X^i$ ist die Matrix
+        \[\begin{pmatrix}
+            0 &   &   && -a_0\\
+            1 & 0 & &\smash{\text{\huge 0}} & -a_1\\
+              & 1 & \ddots\\
+              &   & \ddots & 0 & -a_{d-2}\\
+              \smash{\text{\huge 0}}&   &   & 1 & -a_{d-1}
+    \end{pmatrix}
+        \]
+    \cite{Def 14.11}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{66558bcf-5640-4356-9392-437b27624b3d}
+
+    \xfield{ Sei $f$ ein $V$-Endomorphismus.\\
+    Ein Untervektorraum $W\subseteq V$ ist genau dann \hide{f-zyklisch}, wenn er f-stabil ist und eine Basis besitzt, in der $f\vert_W$ durch eine Begleitmatrix gegeben ist.}
+    \begin{field}
+        Sei $f$ ein $V$-Endomorphismus.\\
+       Ein Untervektorraum $W\subseteq V$ ist genau dann f-zyklisch, wenn er f-stabil ist und eine Basis besitzt, in der $f\vert_W$ durch eine Begleitmatrix gegeben ist.
+       \cite{Satz 14.12}
+    \end{field}
+
+    \xfield{ Sei $f$ ein $V$-Endomorphismus.\\
+    Ein Untervektorraum $W\subseteq V$ ist genau dann f-zyklisch, wenn \hide{er f-stabil ist und eine Basis besitzt, in der $f\vert_W$ durch eine Begleitmatrix gegeben ist.}
+    }
+    \begin{field}
+        Sei $f$ ein $V$-Endomorphismus.\\
+       Ein Untervektorraum $W\subseteq V$ ist genau dann f-zyklisch, wenn er f-stabil ist und eine Basis besitzt, in der $f\vert_W$ durch eine Begleitmatrix gegeben ist.
+       \cite{Satz 14.12}
+    \end{field}
+\end{note}
+
+
 \end{document}
