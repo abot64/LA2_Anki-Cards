@@ -2342,7 +2342,7 @@
         \textbf{Spaltungssatz}\\
         Sei $f$ ein Endomorphismus auf einem Vektorraum $V$.\\
         Ist $\mu_f = P\cdot Q$ für zwei teilerfremde normierte Polynome $P$ und $Q$, so ist \[V = W_P \oplus W_Q\]
-        für zwei $f$-stabile Untervektorräume $W_P$ und $W_Q$, für die gilt:
+        für zwei \emph{$f$-stabile} Untervektorräume $W_P$ und $W_Q$, für die gilt:
         \[W_P = \ker(P(f)) = \im(Q(f)) \text{ und } \mu_f\vert_{W_P} = P\]
         \[W_Q = \ker(Q(f)) = \im(P(f)) \text{ und } \mu_f\vert_{W_Q} = Q\]
         \cite{Satz 14.17}
@@ -2352,7 +2352,7 @@
         \textbf{Spaltungssatz}\\
         Sei $f$ ein Endomorphismus auf einem Vektorraum $V$.\\
         Ist $\mu_f = P\cdot Q$ für zwei teilerfremde normierte Polynome $P$ und $Q$, so ist \[V = W_P \oplus W_Q\]
-        für zwei $f$-stabile Untervektorräume $W_P$ und $W_Q$, für die gilt:
+        für zwei \emph{$f$-stabile} Untervektorräume $W_P$ und $W_Q$, für die gilt:
         \[W_P = \ker(P(f)) = \im(Q(f)) \text{ und } \dots\]
         \[W_Q = \ker(Q(f)) = \im(P(f)) \text{ und } \dots\]
     \end{field}
@@ -2360,10 +2360,361 @@
         \textbf{Spaltungssatz}\\
         Sei $f$ ein Endomorphismus auf einem Vektorraum $V$.\\
         Ist $\mu_f = P\cdot Q$ für zwei teilerfremde normierte Polynome $P$ und $Q$, so ist \[V = W_P \oplus W_Q\]
-        für zwei $f$-stabile Untervektorräume $W_P$ und $W_Q$, für die gilt:
+        für zwei \emph{$f$-stabile} Untervektorräume $W_P$ und $W_Q$, für die gilt:
         \[W_P = \ker(P(f)) = \im(Q(f)) \text{ und } \mu_f\vert_{W_P} = P\]
         \[W_Q = \ker(Q(f)) = \im(P(f)) \text{ und } \mu_f\vert_{W_Q} = Q\]
         \cite{Satz 14.17}
+    \end{field}
+\end{note}
+
+%%%%%%%%% Vorlesung 13 %%%%%%%%%%%%
+
+\begin{note}
+    \tags{Satz}
+    \xplain{18d801db-b3d0-4036-bfb0-0472478225c4}
+
+    \xfield{
+    \textbf{Drittes Diagonalisierbarkeitskriterium}\\
+    Ein Endomorphismus $f$ ist diagonalisierbar genau dann, wenn \hint{Minimalpolynom}\dots
+    }
+
+    \begin{field}
+
+        \textbf{Drittes Diagonalisierbarkeitskriterium}\\
+        Ein Endomorphismus $f$ ist diagonalisierbar genau dann, wenn $\mu_f$ in paarweise verschiedene Linearfaktoren zerfällt.
+        \cite{Korollar 14.19}
+    \end{field}
+\end{note}
+
+\tags{LinA-II-15-Jordannormalform}
+\begin{note}
+    \tags{Def}
+    \xplain{2c897805-8ca5-4437-8781-b1ad98648537}
+
+    \xfield{ Ein \textbf{Jordanblock} ist \dots}
+    \begin{field}
+        Ein \textbf{Jordanblock} ist eine (Unter-)matrix der Form
+        \[J(m; a) := \begin{pmatrix}
+            a& 1\\
+            &a&1&&\smash{\text{\huge 0}}\\
+            &&\ddots&\ddots\\
+            &&&\ddots&1\\
+            \smash{\text{\huge 0}}&&&&a
+        \end{pmatrix} \in \Mat_K(m\times m)\]
+        \cite{Def 15.1}
+    \end{field}
+
+    \xfield{Ein \textbf{Hauptraumblock} ist \dots}
+    \begin{field}
+        \setlength{\fboxsep}{0pt}
+        Ein \textbf{Hauptraumblock} ist eine (Unter-)matrix der Form
+        \small
+        \[ H(m_1,\dots,m_k;a) := \left(\begin{smallmatrix}
+            \fbox{\, $J(m_1;a)$}\\
+            &\fbox{\, $J(m_2;a)$}&&\smash{\text{\huge 0}}\\
+            && \ddots\\
+            \smash{\text{\huge 0}}&&&\fbox{\, $J(m_k;a)$}
+        \end{smallmatrix}\right)\]
+        \cite{Def 15.1}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{15f3d72f-70b5-495b-bb04-a3f157dbea7b}
+    \xfield{
+    \textbf{Jordannormalform}\\
+    Sei $f$ ein Endomorphismus eines endlich-dimensionalen Vektorraums.\\
+    Zerfällt $\chi_f$ in Linearfaktoren, so hat $f$ bezüglich einer geeigneten Basis folgende Gestalt:\\
+    \dots
+    }
+    \begin{field}
+        \setlength{\fboxsep}{0pt}
+        \textbf{Jordannormalform}\\
+        Sei $f$ ein Endomorphismus eines endlich-dimensionalen Vektorraums.\\
+        Zerfällt $\chi_f$ in Linearfaktoren, so hat $f$ bezüglich einer geeigneten Basis folgende Gestalt:
+        \[_B M_B(f) = \left(\begin{smallmatrix}
+        \fbox{\, $H(\dots;a_1)$}\\
+        &\fbox{\, $H(\dots;a_2)$}&&\smash{\text{\huge 0}}\\
+        &&\ddots\\
+        \smash{\text{\huge 0}}&&&\fbox{\, $H(\dots;a_l)$}
+        \end{smallmatrix}\right)\]
+        \cite{Theorem 15.2}
+    \end{field}
+
+    \begin{field}
+        \setlength{\fboxsep}{0pt}
+        \textbf{Jordannormalform}\\
+        Sei $f$ ein Endomorphismus eines endlich-dimensionalen Vektorraums.\\
+        Wenn \hide{$\chi_f$ in Linearfaktoren zerfällt}, so hat $f$ bezüglich einer geeigneten Basis folgende Gestalt:
+        \[_B M_B(f) = \left(\begin{smallmatrix}
+        \fbox{\, $H(\dots;a_1)$}\\
+        &\fbox{\, $H(\dots;a_2)$}&&\smash{\text{\huge 0}}\\
+        &&\ddots\\
+        \smash{\text{\huge 0}}&&&\fbox{\, $H(\dots;a_l)$}
+        \end{smallmatrix}\right)\]
+    \end{field}
+    \begin{field}
+        \setlength{\fboxsep}{0pt}
+        \textbf{Jordannormalform}\\
+        Sei $f$ ein Endomorphismus eines endlich-dimensionalen Vektorraums.\\
+        Wenn $\chi_f$ in Linearfaktoren zerfällt, so hat $f$ bezüglich einer geeigneten Basis folgende Gestalt:
+        \[_B M_B(f) = \left(\begin{smallmatrix}
+        \fbox{\, $H(\dots;a_1)$}\\
+        &\fbox{\, $H(\dots;a_2)$}&&\smash{\text{\huge 0}}\\
+        &&\ddots\\
+        \smash{\text{\huge 0}}&&&\fbox{\, $H(\dots;a_l)$}
+        \end{smallmatrix}\right)\]
+        \cite{Theorem 15.2}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{c22833e4-8610-427a-8142-05abf2f142c1}
+
+    \begin{field}
+        Für die Jordannormalform von $f$ gilt:
+        \begin{itemize}
+            \item $a_1,\dots,a_l$ sind \hide{die verschiedenen Eigenwerte von $f$.}
+            \item Größe von $H(m_1,\dots,m_k;a)$ ist die algebraische Vielfachheit von $a$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \chi_f\}$)
+            \item Größe $m$ des größten Jordanblocks $J(m;a)$ zu $a$ ist der Exponent von $(X-a)$ in $\mu_f$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \mu_f\}$)
+        \end{itemize}
+    \end{field}
+    \begin{field}
+        Für die Jordannormalform von $f$ gilt:
+        \begin{itemize}
+            \item $a_1,\dots,a_l$ sind die verschiedenen Eigenwerte von $f$.
+            \item Größe von $H(m_1,\dots,m_k;a)$ ist die algebraische Vielfachheit von $a$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \chi_f\}$)
+            \item Größe $m$ des größten Jordanblocks $J(m;a)$ zu $a$ ist der Exponent von $(X-a)$ in $\mu_f$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \mu_f\}$)
+        \end{itemize}
+        \cite{Notiz 15.3}
+    \end{field}
+
+    \begin{field}
+        Für die Jordannormalform von $f$ gilt:
+        \begin{itemize}
+            \item $a_1,\dots,a_l$ sind die verschiedenen Eigenwerte von $f$.
+            \item Größe von $H(m_1,\dots,m_k;a)$ \hide{ist die algebraische Vielfachheit von $a$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \chi_f\}$)}
+            \item Größe $m$ des größten Jordanblocks $J(m;a)$ zu $a$ ist der Exponent von $(X-a)$ in $\mu_f$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \mu_f\}$)
+        \end{itemize}
+    \end{field}
+    \begin{field}
+        Für die Jordannormalform von $f$ gilt:
+        \begin{itemize}
+            \item $a_1,\dots,a_l$ sind die verschiedenen Eigenwerte von $f$.
+            \item Größe von $H(m_1,\dots,m_k;a)$ ist die algebraische Vielfachheit von $a$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \chi_f\}$)
+            \item Größe $m$ des größten Jordanblocks $J(m;a)$ zu $a$ ist der Exponent von $(X-a)$ in $\mu_f$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \mu_f\}$)
+        \end{itemize}
+        \cite{Notiz 15.3}
+    \end{field}
+
+    \begin{field}
+        Für die Jordannormalform von $f$ gilt:
+        \begin{itemize}
+            \item $a_1,\dots,a_l$ sind die verschiedenen Eigenwerte von $f$.
+            \item Größe von $H(m_1,\dots,m_k;a)$ ist die algebraische Vielfachheit von $a$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \chi_f\}$)
+            \item Größe $m$ des größten Jordanblocks $J(m;a)$ zu $a$ \hide{ist der Exponent von $(X-a)$ in $\mu_f$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \mu_f\}$)}
+        \end{itemize}
+    \end{field}
+    \begin{field}
+        Für die Jordannormalform von $f$ gilt:
+        \begin{itemize}
+            \item $a_1,\dots,a_l$ sind die verschiedenen Eigenwerte von $f$.
+            \item Größe von $H(m_1,\dots,m_k;a)$ ist die algebraische Vielfachheit von $a$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \chi_f\}$)
+            \item Größe $m$ des größten Jordanblocks $J(m;a)$ zu $a$ ist der Exponent von $(X-a)$ in $\mu_f$.\\
+            ($= \max\{r\in \NN \mid (X-a)^r \text{ teilt } \mu_f\}$)
+        \end{itemize}
+        \cite{Notiz 15.3}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{f0eae56c-7693-4b1b-b3bf-82466a1966bb}
+
+    \xfield{
+    \textbf{Triagonalisierbarkeitskriterium}\\
+    Ein Endomorphismus $f$ ist \textbf{triagonalisierbar}, falls \dots
+    }
+    \begin{field}
+        \textbf{Triagonalisierbarkeitskriterium}\\
+        Ein Endomorphismus $f$ ist \textbf{triagonalisierbar}, falls eine Basis $B$ existiert, in der $_B M_B(f)$ eine obere Dreiecksmatrix ist.
+        \cite{Def. 15.4}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{24fdceea-c59b-4730-9a1d-506ef970bedf}
+
+    \xfield{
+    Sei $a$ ein Eigenwert von $f$, sei $\mu_f = (X-a)^m\cdot P$ mit $P$ teilerfremd zu $(X-a)$.\\
+    Der \textbf{Hauptraum} von $f$ zu $a$ ist \dots
+    }
+    \begin{field}
+        Sei $a$ ein Eigenwert von $f$, sei $\mu_f = (X-a)^m\cdot P$ mit $P$ teilerfremd zu $(X-a)$.\\
+        Der \textbf{Hauptraum} von $f$ zu $a$ ist
+        \[\text{Hau}(f;a) := \ker((f - a\cdot \id)^m)\]
+        \cite{Def. 15.7}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{73273508-0f38-4c7e-ba80-bf591c7f3800}
+
+    \xfield{
+        \textbf{Hauptraumzerlegung}\\
+        Zerfällt $\chi_f$ in Linearfaktoren, so \hint{Zerlegung von $V$}\dots
+    }
+    \begin{field}
+        \textbf{Hauptraumzerlegung}\\
+        Zerfällt $\chi_f$ in Linearfaktoren, so zerfällt $V$ in die Haupträume:
+        \[V = \oplus_{i=1}^l \text{Hau}(f;a_i)\]
+        wobei $a_1,\dots,a_l$ die verschiedenen Eigenwerte von $f$ sind.
+        \cite{Satz 15.8}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{2351ff5a-204c-45bb-8b66-75d2238fbfb3}
+
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item \hide{$\text{Hau}(f;a)$ ist $f$-stabil.}
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = (-1)^r(X-a)^r$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = (X-a)^m$
+            \item $\dim \text{Hau}(f;a) = r$
+            \item $\text{Hau}(f;a)= \ker((f- a\cdot \id)^i) \ \forall i \geq m$.
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item $\text{Hau}(f;a)$ ist $f$-stabil.
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = (-1)^r(X-a)^r$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = (X-a)^m$
+            \item $\dim \text{Hau}(f;a) = r$
+            \item $\text{Hau}(f;a)= \ker((f- a\cdot \id)^i) \ \forall i \geq m$.
+        \end{enumerate}
+        \cite{Satz 15.9}
+    \end{field}
+
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item $\text{Hau}(f;a)$ ist $f$-stabil.
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = \phantom{(-1)^r(X-a)^r}$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = (X-a)^m$
+            \item $\dim \text{Hau}(f;a) = r$
+            \item $\text{Hau}(f;a)= \ker((f- a\cdot \id)^i) \ \forall i \geq m$.
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item $\text{Hau}(f;a)$ ist $f$-stabil.
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = (-1)^r(X-a)^r$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = (X-a)^m$
+            \item $\dim \text{Hau}(f;a) = r$
+            \item $\text{Hau}(f;a)= \ker((f- a\cdot \id)^i) \ \forall i \geq m$.
+        \end{enumerate}
+        \cite{Satz 15.9}
+    \end{field}
+
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item $\text{Hau}(f;a)$ ist $f$-stabil.
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = (-1)^r(X-a)^r$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = \phantom{(X-a)^m}$
+            \item $\dim \text{Hau}(f;a) = r$
+            \item $\text{Hau}(f;a)= \ker((f- a\cdot \id)^i) \ \forall i \geq m$.
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item $\text{Hau}(f;a)$ ist $f$-stabil.
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = (-1)^r(X-a)^r$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = (X-a)^m$
+            \item $\dim \text{Hau}(f;a) = r$
+            \item $\text{Hau}(f;a)= \ker((f- a\cdot \id)^i) \ \forall i \geq m$.
+        \end{enumerate}
+        \cite{Satz 15.9}
+    \end{field}
+
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item $\text{Hau}(f;a)$ ist $f$-stabil.
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = (-1)^r(X-a)^r$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = (X-a)^m$
+            \item $\dim \text{Hau}(f;a) = \phantom{r}$
+            \item $\text{Hau}(f;a)= \ker((f- a\cdot \id)^i) \ \forall i \geq m$.
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item $\text{Hau}(f;a)$ ist $f$-stabil.
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = (-1)^r(X-a)^r$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = (X-a)^m$
+            \item $\dim \text{Hau}(f;a) = r$
+            \item $\text{Hau}(f;a)= \ker((f- a\cdot \id)^i) \ \forall i \geq m$.
+        \end{enumerate}
+        \cite{Satz 15.9}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{5416b650-4583-4a20-90b5-6c32a203b282}
+
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item $\text{Hau}(f;a)$ ist $f$-stabil.
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = (-1)^r(X-a)^r$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = (X-a)^m$
+            \item $\dim \text{Hau}(f;a) = r$
+            \item $\text{Hau}(f;a)= \phantom{\ker((f- a\cdot \id)^i) \ \forall i \geq m}$.
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        \textbf{Eigenschaften der Haupträume}\\
+        Sei $a$ Eigenwert von $f$ mit algebraischer Vielfachheit $r$, also $\chi_f = (X-a)^r\cdot P$ und $\mu_f = (X-a)^m\cdot \tilde P$ mit $P$ und $\tilde P$ jeweils teilerfremd zu $(X-a)$.
+        \begin{enumerate}[(1)]
+            \item $\text{Hau}(f;a)$ ist $f$-stabil.
+            \item $\chi_f\vert_{\text{Hau}(f;a)} = (-1)^r(X-a)^r$
+            \item $\mu_f\vert_{\text{Hau}(f;a)} = (X-a)^m$
+            \item $\dim \text{Hau}(f;a) = r$
+            \item $\text{Hau}(f;a)= \ker((f- a\cdot \id)^i) \ \forall i \geq m$.
+        \end{enumerate}
+        \cite{Satz 15.9}
     \end{field}
 \end{note}
 \end{document}
