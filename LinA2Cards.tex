@@ -2439,6 +2439,7 @@
         &&\ddots\\
         \smash{\text{\huge 0}}&&&\fbox{\, $H(\dots;a_l)$}
         \end{smallmatrix}\right)\]
+        Dabei sind die Hauptraumblöcke und die Jordanblöcke innerhalb dieser bis auf Reihenfolge eindeutig.
         \cite{Theorem 15.2}
     \end{field}
 
@@ -2453,6 +2454,7 @@
         &&\ddots\\
         \smash{\text{\huge 0}}&&&\fbox{\, $H(\dots;a_l)$}
         \end{smallmatrix}\right)\]
+        Dabei sind die Hauptraumblöcke und die Jordanblöcke innerhalb dieser bis auf Reihenfolge eindeutig.
     \end{field}
     \begin{field}
         \setlength{\fboxsep}{0pt}
@@ -2465,6 +2467,7 @@
         &&\ddots\\
         \smash{\text{\huge 0}}&&&\fbox{\, $H(\dots;a_l)$}
         \end{smallmatrix}\right)\]
+        Dabei sind die Hauptraumblöcke und die Jordanblöcke innerhalb dieser bis auf Reihenfolge eindeutig.
         \cite{Theorem 15.2}
     \end{field}
 \end{note}
@@ -2717,4 +2720,153 @@
         \cite{Satz 15.9}
     \end{field}
 \end{note}
+
+%%%%%%%%% Vorlesung 14 %%%%%%%%%%%%
+
+\begin{note}
+    \tags{Def}
+    \xplain{32fa39ce-09db-4219-a5c1-6c2e711728c6}
+
+    \xfield{
+    Ein Endomorphismus $g$ ist \textbf{nilpotent}, wenn \dots
+    }
+    \begin{field}
+        Ein Endomorphismus $g$ ist \textbf{nilpotent}, wenn $g^k = 0$ für ein $k\in\NN$.
+        \cite{Def. 15.10}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{36322b72-9b20-482b-bf70-882813cdb5db}
+
+    \begin{field}
+        \small
+        Für einen (endlich-dimenionalen) Vektorraum $V$ mit Untervektorräumen $U_1,\dots,U_k$ sind äquivalent:
+        \begin{enumerate}[(1)]
+            \item \hide{$V = \oplus_{i=1}^k U_i$}
+            \item $V$ hat eine Basis der Form \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+            derart, dass $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ Basis von $U_i$ ist.
+            \item Für beliebige Basen $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ von $U_i$ ist
+             \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+             eine Basis von $V$.
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        \small
+        Für einen (endlich-dimenionalen) Vektorraum $V$ mit Untervektorräumen $U_1,\dots,U_k$ sind äquivalent:
+        \begin{enumerate}[(1)]
+            \item $V = \oplus_{i=1}^k U_i$
+            \item $V$ hat eine Basis der Form \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+            derart, dass $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ Basis von $U_i$ ist.
+            \item Für beliebige Basen $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ von $U_i$ ist
+             \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+             eine Basis von $V$.
+        \end{enumerate}
+        \cite{Notiz 15.13}
+    \end{field}
+
+    \begin{field}
+        \small
+        Für einen (endlich-dimenionalen) Vektorraum $V$ mit Untervektorräumen $U_1,\dots,U_k$ sind äquivalent:
+        \begin{enumerate}[(1)]
+            \item $V = \oplus_{i=1}^k U_i$
+            \item \hide{$V$ hat eine Basis der Form \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+            derart, dass $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ Basis von $U_i$ ist.}
+            \item Für beliebige Basen $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ von $U_i$ ist
+             \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+             eine Basis von $V$.
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        \small
+        Für einen (endlich-dimenionalen) Vektorraum $V$ mit Untervektorräumen $U_1,\dots,U_k$ sind äquivalent:
+        \begin{enumerate}[(1)]
+            \item $V = \oplus_{i=1}^k U_i$
+            \item $V$ hat eine Basis der Form \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+            derart, dass $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ Basis von $U_i$ ist.
+            \item Für beliebige Basen $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ von $U_i$ ist
+             \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+             eine Basis von $V$.
+        \end{enumerate}
+        \cite{Notiz 15.13}
+    \end{field}
+
+    \begin{field}
+        \small
+        Für einen (endlich-dimenionalen) Vektorraum $V$ mit Untervektorräumen $U_1,\dots,U_k$ sind äquivalent:
+        \begin{enumerate}[(1)]
+            \item $V = \oplus_{i=1}^k U_i$
+            \item $V$ hat eine Basis der Form \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+            derart, dass $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ Basis von $U_i$ ist.
+            \item \hide{Für beliebige Basen $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ von $U_i$ ist
+             \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+             eine Basis von $V$.}
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        \small
+        Für einen (endlich-dimenionalen) Vektorraum $V$ mit Untervektorräumen $U_1,\dots,U_k$ sind äquivalent:
+        \begin{enumerate}[(1)]
+            \item $V = \oplus_{i=1}^k U_i$
+            \item $V$ hat eine Basis der Form \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+            derart, dass $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ Basis von $U_i$ ist.
+            \item Für beliebige Basen $(\vec{u}_1^{(i)}, \dots, \vec{u}_{m_i}^{(i)})$ von $U_i$ ist
+             \[(\vec{u}_1^{(1)},\dots,\vec{u}_{m_1}^{(1)},\vec{u}_1^{(2)},\dots,\vec{u}_{m_2}^{(2)},\dots,\vec{u}_1^{(k)},\dots,\vec{u}_{m_k}^{(k)})\]
+             eine Basis von $V$.
+        \end{enumerate}
+        \cite{Notiz 15.13}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{0e4987e4-ed28-4005-83aa-1d66ccedb48b}
+
+    \xfield{
+    Ein \textbf{komplementärer Untervektorraum} zu einem Untervektorraum $W\subseteq V$ ist ein Untervektorraum $U$\dots
+    }
+    \begin{field}
+        Ein \textbf{komplementärer Untervektorraum} zu einem Untervektorraum $W\subseteq V$ ist ein Untervektorraum $U\subseteq V$ mit
+        \[V = W \oplus U\]
+        \cite{Def. 14.15}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{eba13948-a4e5-4157-ad25-ff5e44396703}
+
+    \xfield{
+    \textbf{Jordannormalform im nilpotenten Fall}\\
+    Zu jedem nilpotenten Endomorphismus $g$ existiert \dots
+    }
+    \begin{field}
+    \small
+    \textbf{Jordannormalform im nilpotenten Fall}\\
+    Zu jedem nilpotenten Endomorphismus $g$ existiert eine \emph{Jordanbasis}, also eine Basis $B$, in der $_B M_B(g)$ JNF hat
+    \begin{align*}
+        _B M_B(g) &= H(m_1,\dots,m_k;0)\\
+            &= \left(\begin{smallmatrix}
+                J(m_1;0)\\
+                &J(m_2;0)&&\smash{\text{\LARGE 0}}\\\\
+                &&\ddots\\
+                \smash{\text{\LARGE 0}}&&&J(m_3;0)
+            \end{smallmatrix}\right)
+    \end{align*}
+    mit $J(m;0) := \left(\begin{smallmatrix}
+        0&1&&\smash{\text{\Large 0}}\\
+        &\ddots&\ddots\\
+        &&\ddots&1\\
+        \smash{\text{\Large 0}}&&&0
+    \end{smallmatrix}\right)$
+    \cite{Satz 15.16}
+    \end{field}
+\end{note}
+
+%%%%%%%%% Vorlesung 15 %%%%%%%%%%%%
+
+%%%%%%%%% Vorlesung 16 %%%%%%%%%%%%
+
+
 \end{document}
