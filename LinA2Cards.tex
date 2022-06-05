@@ -2866,7 +2866,137 @@
 
 %%%%%%%%% Vorlesung 15 %%%%%%%%%%%%
 
+% Vorlesung 15 enthielt Beweis zu Satz 15.16 und ein Rezept zum Finden einer Jordanbasis; hierzu gibt es keine Anki-Karten
+
 %%%%%%%%% Vorlesung 16 %%%%%%%%%%%%
 
+\begin{note}
+    \tags{Def}
+    \xplain{82c3d9b0-77fe-4d2d-9e8f-786c5a7c2689}
+
+    \xfield{
+        Eine \textbf{Jordan-Chevalley-Zerlegung} eines Endomorphismus $f$ ist eine Zerlegung
+        \[ f = \phantom{d + n}\]
+        für die gilt \dots
+    }
+    \begin{field}
+        Eine \textbf{Jordan-Chevalley-Zerlegung} eines Endomorphismus $f$ ist eine Zerlegung
+        \[ f = d + n\]
+        für die gilt
+        \begin{itemize}
+            \item $d$ diagonalisierbar
+            \item $n$ nilpotent
+            \item $f,d,n$ kommutieren
+        \end{itemize}
+        \cite{Def. 15.18}
+    \end{field}
+
+    \xfield{
+        Eine \textbf{Jordan-Chevalley-Zerlegung} einer Matrix $A\in\Mat_K(n\times n)$ ist eine Zerlegung
+        \[ A = \phantom{D + N}\]
+        für die gilt \dots
+    }
+    \begin{field}
+        Eine \textbf{Jordan-Chevalley-Zerlegung} einer Matrix $A\in\Mat_K(n\times n)$ ist eine Zerlegung
+        \[ A = D + N\]
+        für die gilt
+        \begin{itemize}
+            \item $D$ diagonalisierbar
+            \item $N$ nilpotent
+            \item $A,D,N$ kommutieren
+        \end{itemize}
+        \cite{Def. 15.18}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{1061827d-0c35-43f1-8234-67975bbb50a9}
+
+    \xfield{
+        Für eine Matrix $A\in \Mat_K(n\times n)$ gilt:\\
+        Zerfällt $\chi_A$ in Linearfaktoren, dann \hint{Zerlegung von $A$}\dots
+    }
+    \begin{field}
+        Für eine Matrix $A\in \Mat_K(n\times n)$ gilt:\\
+        Zerfällt $\chi_A$ in Linearfaktoren, dann besitzt $A$ eine Jordan-Chevalley-Zerlegung.
+        \cite{Kor. 15.19}
+    \end{field}
+
+    \begin{field}
+        Die Jordan-Chevalley-Zerlegung einer Matrix $A$ in Jordannormalform hat die Form
+        \[A = D + N\]
+        mit $D:=$\hide{ Diagonalmatrix mit Einträgen der Hauptdiagonale von $A$ }\\
+        und $N := A - D$
+    \end{field}
+    \begin{field}
+        Die Jordan-Chevalley-Zerlegung einer Matrix $A$ in Jordannormalform hat die Form
+        \[A = D + N\]
+        mit $D:=$ Diagonalmatrix mit Einträgen der Hauptdiagonale von $A$\\
+        und $N := A - D$
+        \cite{Kor. 15.19}
+    \end{field}
+
+    \begin{field}
+        Die Jordan-Chevalley-Zerlegung einer Matrix $A$ in Jordannormalform hat die Form
+        \[A = D + N\]
+        mit $D:=$ Diagonalmatrix mit Einträgen der Hauptdiagonale von $A$ \\
+        und $N := \phantom{A - D}$
+    \end{field}
+    \begin{field}
+        Die Jordan-Chevalley-Zerlegung einer Matrix $A$ in Jordannormalform hat die Form
+        \[A = D + N\]
+        mit $D:=$ Diagonalmatrix mit Einträgen der Hauptdiagonale von $A$ \\
+        und $N := A - D$
+        \cite{Kor. 15.19}
+    \end{field}
+
+    \begin{field}
+        Sei $J$ eine Jordanbasis, aufgefasst als Matrix, und $\hat A$ die zugehörige Jordannormalform einer Matrix $A$, sodass gilt
+        \[A = J\hat A J^{-1}\]
+        Dann hat die Jordan-Chevalley-Zerlegung von $A$ die Form
+        \[A = \phantom{J\hat D J^{-1} + J\hat N J^{-1}}\]
+    \end{field}
+    \begin{field}
+        Sei $J$ eine Jordanbasis, aufgefasst als Matrix, und $\hat A$ die zugehörige Jordannormalform einer Matrix $A$, sodass gilt
+        \[A = J\hat A J^{-1}\]
+        Dann hat die Jordan-Chevalley-Zerlegung von $A$ die Form
+        \[A = J\hat D J^{-1} + J\hat N J^{-1}\]
+        mit $\hat D + \hat N$ Jordan-Chevalley-Zerlegung von $\hat A$.
+        \cite{Kor. 15.19}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{febe77ae-0879-4a9d-a962-0459c8e49a26}
+
+    \xfield{
+        Die Jordan-Chevalley-Zerlegung eines Endomorphismus $f$ ist \dots
+    }
+    \begin{field}
+        Die Jordan-Chevalley-Zerlegung eines Endomorphismus $f$ ist eindeutig, falls sie existiert.
+        \cite{Satz 15.20}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{8514298c-baac-4d09-9742-ae03641c1360}
+
+    \xfield{
+        \textbf{Binomischer Lehrsatz}\\
+        Für \emph{kommutierende} Elemente $a,b$ eines Rings gilt:
+        \[(a+b)^n = \dots\]
+        für alle $n\in\NN$.
+    }
+    \begin{field}
+        \textbf{Binomischer Lehrsatz}\\
+        Für \emph{kommutierende} Elemente $a,b$ eines Rings gilt:
+        \[(a+b)^n = \sum_{i=0}^n \binom{n}{i}a^i b^{n-i}\]
+        für alle $n\in\NN$.
+        \cite{Notiz 15.22}
+    \end{field}
+\end{note}
 
 \end{document}
