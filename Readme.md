@@ -1,5 +1,3 @@
-### Aufgrund von Krankheit verzögert sich das Erstellen der Karten ein wenig. Die Karten zu den Vorlesungen 12 bis 16 werden bis Ende der Woche hochgeladen.
-
 # LA2 Anki Lernkarten
 
 Liebe Kommilitonen, hier findet ihr meine Lernkarten für "Lineare Algebra 2". Ihr habt verschiedene Möglichkeiten, wie ihr dieses Repository nutzen könnt:

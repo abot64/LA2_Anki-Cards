@@ -2892,12 +2892,14 @@
     \end{field}
 
     \xfield{
-        Eine \textbf{Jordan-Chevalley-Zerlegung} einer Matrix $A\in\Mat_K(n\times n)$ ist eine Zerlegung
+        Eine \textbf{Jordan-Chevalley-Zerlegung} einer Matrix\\
+        $A\in\Mat_K(n\times n)$ ist eine Zerlegung
         \[ A = \phantom{D + N}\]
         für die gilt \dots
     }
     \begin{field}
-        Eine \textbf{Jordan-Chevalley-Zerlegung} einer Matrix $A\in\Mat_K(n\times n)$ ist eine Zerlegung
+        Eine \textbf{Jordan-Chevalley-Zerlegung} einer Matrix\\
+        $A\in\Mat_K(n\times n)$ ist eine Zerlegung
         \[ A = D + N\]
         für die gilt
         \begin{itemize}
@@ -2999,4 +3001,255 @@
     \end{field}
 \end{note}
 
+%%%%%%%%% Vorlesung 17 %%%%%%%%%%%%
+
+\begin{note}
+    \tags{Def}
+    \xplain{bb355039-9444-484e-8f10-64ee1c1f53ce}
+
+    \xfield{
+        Die \textbf{Matrixexponentialfunktion} ist die Abbildung \[\exp \colon \dots\]
+    }
+    \begin{field}
+        Die \textbf{Matrixexponentialfunktion} ist die Abbildung
+        \begin{align*}
+            \exp\colon \Mat_{\CC}(n \times n) &\longrightarrow \Mat_{\CC}(n \times n)\\
+            A &\mapsto \sum_{k=0}^\infty \frac{1}{k!} A^k
+        \end{align*}
+        \cite{Def. 15.25}
+    \end{field}
+
+    \xfield{
+        Für eine Matrix $A = (a_{ij})_{ij}\in\Mat_{\CC}(n \times n)$ ist
+        \[\Vert A \Vert := \dots\]
+    }
+    \begin{field}
+        Für eine Matrix $A = (a_{ij})_{ij}\in\Mat_{\CC}(n \times n)$ ist
+        \[\Vert A \Vert := n \cdot \max\{\vert a_{ij} \vert \mid i,j=1,\dots,n\}\in\RR\]
+        \cite{Def. 15.26}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{1d0ba926-a85b-47e5-8c4b-c00669b8c6a6}
+
+    \begin{field}
+        Für die Matrixnorm gilt:
+        \begin{enumerate}[(1)]
+            \item \hide{$\Vert A \Vert \geq 0$ und $\Vert A \Vert = 0 \Leftrightarrow A = 0$}
+            \item $\Vert s\cdot A\Vert = \vert s \vert\cdot\Vert A \Vert$
+            \item Dreiecksungleichung\\
+            $\Vert A+B\Vert \leq \Vert A\Vert+\Vert B \Vert$
+            \item $\Vert A\cdot B\Vert \leq \Vert A\Vert\cdot\Vert B \vert$
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Für die Matrixnorm gilt:
+        \begin{enumerate}[(1)]
+            \item $\Vert A \Vert \geq 0$ und $\Vert A \Vert = 0 \Leftrightarrow A = 0$
+            \item $\Vert s\cdot A\Vert = \vert s \vert\cdot\Vert A \Vert$
+            \item Dreiecksungleichung\\
+            $\Vert A+B\Vert \leq \Vert A\Vert+\Vert B \Vert$
+            \item $\Vert A\cdot B\Vert \leq \Vert A\Vert\cdot\Vert B \vert$
+            \cite{Notiz 15.27}
+        \end{enumerate}
+    \end{field}
+
+    \begin{field}
+        Für die Matrixnorm gilt:
+        \begin{enumerate}[(1)]
+            \item $\Vert A \Vert \geq 0$ und $\Vert A \Vert = 0 \Leftrightarrow A = 0$
+            \item \hide{$\Vert s\cdot A\Vert = \vert s \vert\cdot\Vert A \Vert$}
+            \item Dreiecksungleichung\\
+            $\Vert A+B\Vert \leq \Vert A\Vert+\Vert B \Vert$
+            \item $\Vert A\cdot B\Vert \leq \Vert A\Vert\cdot\Vert B \vert$
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Für die Matrixnorm gilt:
+        \begin{enumerate}[(1)]
+            \item $\Vert A \Vert \geq 0$ und $\Vert A \Vert = 0 \Leftrightarrow A = 0$
+            \item $\Vert s\cdot A\Vert = \vert s \vert\cdot\Vert A \Vert$
+            \item Dreiecksungleichung\\
+            $\Vert A+B\Vert \leq \Vert A\Vert+\Vert B \Vert$
+            \item $\Vert A\cdot B\Vert \leq \Vert A\Vert\cdot\Vert B \vert$
+            \cite{Notiz 15.27}
+        \end{enumerate}
+    \end{field}
+
+    \begin{field}
+        Für die Matrixnorm gilt:
+        \begin{enumerate}[(1)]
+            \item $\Vert A \Vert \geq 0$ und $\Vert A \Vert = 0 \Leftrightarrow A = 0$
+            \item $\Vert s\cdot A\Vert = \vert s \vert\cdot\Vert A \Vert$
+            \item \hide{Dreiecksungleichung\\
+            $\Vert A+B\Vert \leq \Vert A\Vert+\Vert B \Vert$}
+            \item $\Vert A\cdot B\Vert \leq \Vert A\Vert\cdot\Vert B \vert$
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Für die Matrixnorm gilt:
+        \begin{enumerate}[(1)]
+            \item $\Vert A \Vert \geq 0$ und $\Vert A \Vert = 0 \Leftrightarrow A = 0$
+            \item $\Vert s\cdot A\Vert = \vert s \vert\cdot\Vert A \Vert$
+            \item Dreiecksungleichung\\
+            $\Vert A+B\Vert \leq \Vert A\Vert+\Vert B \Vert$
+            \item $\Vert A\cdot B\Vert \leq \Vert A\Vert\cdot\Vert B \vert$
+            \cite{Notiz 15.27}
+        \end{enumerate}
+    \end{field}
+
+    \begin{field}
+        Für die Matrixnorm gilt:
+        \begin{enumerate}[(1)]
+            \item $\Vert A \Vert \geq 0$ und $\Vert A \Vert = 0 \Leftrightarrow A = 0$
+            \item $\Vert s\cdot A\Vert = \vert s \vert\cdot\Vert A \Vert$
+            \item Dreiecksungleichung\\
+            $\Vert A+B\Vert \leq \Vert A\Vert+\Vert B \Vert$
+            \item \hide{$\Vert A\cdot B\Vert \leq \Vert A\Vert\cdot\Vert B \vert$}
+        \end{enumerate}
+    \end{field}
+    \begin{field}
+        Für die Matrixnorm gilt:
+        \begin{enumerate}[(1)]
+            \item $\Vert A \Vert \geq 0$ und $\Vert A \Vert = 0 \Leftrightarrow A = 0$
+            \item $\Vert s\cdot A\Vert = \vert s \vert\cdot\Vert A \Vert$
+            \item Dreiecksungleichung\\
+            $\Vert A+B\Vert \leq \Vert A\Vert+\Vert B \Vert$
+            \item $\Vert A\cdot B\Vert \leq \Vert A\Vert\cdot\Vert B \vert$
+            \cite{Notiz 15.27}
+        \end{enumerate}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{4e5c6ce5-477f-4b00-b53c-f3d80babd45d}
+
+    \xfield{
+        Eine Reihe $\sum_{k=0}^\infty A^{(k)}$ mit\\ $A^{(k)} = (a_{ij}^{(k)})\in\Mat_{\CC}(n\times n)$ ist \textbf{konvergent}, wenn \dots
+    }
+    \begin{field}
+        Eine Reihe $\sum_{k=0}^\infty A^{(k)}$ mit\\ $A^{(k)} = (a_{ij}^{(k)})\in\Mat_{\CC}(n\times n)$ ist \textbf{konvergent}, wenn\\ für alle $i$ und $j$ $\sum_{k=0}^\infty a_{ij}^{(k)}$ in $\CC$ konvergiert.
+        \cite{Def. 15.28}
+    \end{field}
+
+    \xfield{
+        Eine Reihe $\sum_{k=0}^\infty A^{(k)}$ mit\\ $A^{(k)} = (a_{ij}^{(k)})\in\Mat_{\CC}(n\times n)$ ist \textbf{absolut konvergent}, wenn \dots
+    }
+    \begin{field}
+        Eine Reihe $\sum_{k=0}^\infty A^{(k)}$ mit\\ $A^{(k)} = (a_{ij}^{(k)})\in\Mat_{\CC}(n\times n)$ ist \textbf{absolut konvergent}, wenn\\ für alle $i$ und $j$ $\sum_{k=0}^\infty a_{ij}^{(k)}$ in $\RR$ konvergiert.
+        \cite{Def. 15.28}
+    \end{field}
+
+    \xfield{
+        Eine Reihe $\sum_{k=0}^\infty A^{(k)}$ mit\\ $A^{(k)} = (a_{ij}^{(k)})\in\Mat_{\CC}(n\times n)$ ist \textbf{normkonvergent}, wenn \dots
+    }
+    \begin{field}
+        Eine Reihe $\sum_{k=0}^\infty A^{(k)}$ mit\\ $A^{(k)} = (a_{ij}^{(k)})\in\Mat_{\CC}(n\times n)$ ist \textbf{normkonvergent}, wenn\\ $\sum_{k=0}^\infty \Vert A^{(k)} \Vert$ in $\RR$ konvergiert.
+        \cite{Def. 15.28}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{f3b576d9-44b3-4105-98c8-7253cab4fca3}
+
+    \xfield{
+        \textbf{Multiplikationssatz}\\
+        Für kommutierende Matrizen $A, B \in\Mat_{\CC}(n\times n)$ gilt
+        \[\exp(A+B) = \dots\]
+    }
+    \begin{field}
+        \textbf{Multiplikationssatz}\\
+        Für kommutierende Matrizen $A, B \in\Mat_{\CC}(n\times n)$ gilt
+        \[\exp(A+B) = \exp(A)\cdot\exp(B)\]
+        \cite{Satz 15.31}
+    \end{field}
+
+    \xfield{
+        Für beliebige $B\in\Mat_{\CC}(n\times n)$ und $J\in\text{GL}_n(\CC)$ ist
+        \[\exp(JBJ^{-1}) = \dots\]
+    }
+    \begin{field}
+        Für beliebige $B\in\Mat_{\CC}(n\times n)$ und $J\in\text{GL}_n(\CC)$ ist
+        \[\exp(JBJ^{-1}) = J\cdot\exp(B)\cdot J^{-1}\]
+        \cite{Satz 15.31}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{181261b9-23f1-44a1-8be1-d8934ac917cf}
+
+    \xfield{
+        Ein \textbf{homogenes lineares Differentialgleichungssystem erster Ordnung mit konstanten Koeffizienten} ist \dots
+    }
+    \begin{field}
+        Ein \textbf{homogenes lineares Differentialgleichungssystem erster Ordnung mit konstanten Koeffizienten} ist eine Gleichung der Form
+        \[\dot{\vec{x}} = A\cdot\vec{x}\]
+        für ein $A\in\Mat_{\CC}(n\times n)$.
+    \end{field}
+
+
+    \xfield{
+        Ein \textbf{homogenes lineares Differentialgleichungssystem erster Ordnung mit konstanten Koeffizienten} ist eine Gleichung der Form
+        \[\dot{\vec{x}} = A\cdot\vec{x}\]
+        mit
+        \[\vec{x} : \dots \qquad \text{und} \qquad\dot{\vec{x}} : \dots\]
+    }
+    \begin{field}
+        Ein \textbf{homogenes lineares Differentialgleichungssystem erster Ordnung mit konstanten Koeffizienten} ist eine Gleichung der Form
+        \[\dot{\vec{x}} = A\cdot\vec{x}\]
+        für ein $A\in\Mat_{\CC}(n\times n)$ mit
+        \begin{align*}
+            \vec{x} \colon &\RR\longrightarrow \CC^n \quad\qquad \text{und} &\dot{\vec{x}}\colon &\RR\longrightarrow \CC^n\\
+            &t\mapsto\begin{pmatrix}
+                x_1(t)\\
+                x_2(t)\\
+                \vdots\\
+                x_n(t)
+        \end{pmatrix} \qquad
+        &&t\mapsto\begin{pmatrix}
+            \frac{\mathrm{d}}{\mathrm{d}t}x_1(t)\\
+            \frac{\mathrm{d}}{\mathrm{d}t}x_2(t)\\
+            \vdots\\
+            \frac{\mathrm{d}}{\mathrm{d}t}x_n(t)
+    \end{pmatrix}
+        \end{align*}
+    \end{field}
+
+    \xfield{
+        Für ein gegebenes $\vec{x}_0\in\CC^n$ ist eine \textbf{Lösung mit Anfangswert $\vec{x}_0$} \hint{Lösung Differentialgleichungssystem}\dots
+    }
+    \begin{field}
+        Für ein gegebenes $\vec{x}_0\in\CC^n$ ist eine \textbf{Lösung mit Anfangswert $\vec{x}_0$} eine differenzierbare Abbildung
+        \[\vec{x}:\RR\longrightarrow\CC^n\]
+        mit \[\vec{x}(0) = \vec{x}_0\]
+        und \[\dot{\vec{x}}(t) = A\cdot \vec{x}(t) \text{ für alle } t\in\RR\]
+        \cite{Def. 15.33}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{6d0d1a05-c5ca-4ab9-9511-9704105b8cc4}
+
+    \xfield{
+        Für jedes $\vec{x}_0\in\CC^n$ ist
+        \[\dots\]
+        eine Lösung des Systems
+        \[\dot{\vec{x}} = A\cdot\vec{x}\]
+        zum Anfangswert $x_0$.
+    }
+    \begin{field}
+        Für jedes $\vec{x}_0\in\CC^n$ ist
+        \[\vec{x}(t) := \exp(A\cdot t)\cdot \vec{x}_0\]
+        eine Lösung des Systems
+        \[\dot{\vec{x}} = A\cdot\vec{x}\]
+        zum Anfangswert $x_0$.
+        \cite{Satz 15.34}
+    \end{field}
+\end{note}
 \end{document}
