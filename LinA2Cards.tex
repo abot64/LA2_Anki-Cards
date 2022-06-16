@@ -3252,4 +3252,230 @@
         \cite{Satz 15.34}
     \end{field}
 \end{note}
+
+%%%%%%%%% Vorlesung 18 %%%%%%%%%%%%
+
+\tags{LinA-II-16-Dualisierung}
+
+\begin{note}
+    \tags{Def}
+    \xplain{f9209d9a-53ce-4c72-883b-350abca77548}
+
+    \xfield{
+    Sei $K$ ein beliebiger Körper und $V$ ein $K$-Vektorraum.\\
+    Der \textbf{Dualraum} von $V$ ist \dots
+    }
+    \begin{field}
+        Sei $K$ ein beliebiger Körper und $V$ ein $K$-Vektorraum.\\
+        Der \textbf{Dualraum} von $V$ ist der $K$-Vektorraum
+        \begin{align*}
+            V^\ast :&= \Hom_K(V,K)\\
+            &= \{\phi \colon V \longrightarrow K \mid \phi \text{ ist $K$-linear}\}
+        \end{align*}
+        mit der Vektorraum-Struktur aus Satz/Def 6.5:
+        \begin{align*}
+            (\phi + \psi)(\vec{v}) &:= \phi(\vec{v}) + \psi(\vec{v})\\
+            (a\cdot\phi)(\vec{v}) &:= a\cdot \phi(\vec{v})
+        \end{align*}
+        für $\phi, \psi\in V^\ast, \vec{v}\in V,a\in K$.
+        \cite{Def. 16.1}
+    \end{field}
+
+    \xfield{
+        Elemente des \emph{Dualraums} $V^\ast$ von $V$ heißen \dots
+    }
+    \begin{field}
+        Elemente des \emph{Dualraums} $V^\ast$ von $V$ heißen \textbf{Linearformen auf V}.
+        \cite{Def. 16.1}
+    \end{field}
+
+    \xfield{
+        Die zu einer linearen Abbildung $V\overset{f}{\longrightarrow} W$ \textbf{duale Abbildung} ist \dots
+    }
+    \begin{field}
+        Die zu einer linearen Abbildung $V\overset{f}{\longrightarrow} W$ \textbf{duale Abbildung} ist die Abbildung
+        \begin{align*}
+            V^\ast &\overset{f^\ast}{\longleftarrow} W^\ast\\
+            f^\ast(\phi) &:= (\phi\circ f)
+        \end{align*}
+        \cite{Def. 16.1}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz Def}
+    \xplain{a5630301-2141-4e16-a0e8-f8b74beb6535}
+
+    \xfield{
+    Sei $B=(\vec{b}_1,\dots,\vec{b}_n)$ eine endliche Basis von $V$.
+    Dann ist die \textbf{zu $B$ duale Basis} $B^\ast$ \dots
+    }
+    \begin{field}
+        Sei $B=(\vec{b}_1,\dots,\vec{b}_n)$ eine endliche Basis von $V$.\\
+        Dann ist die \textbf{zu $B$ duale Basis} $B^\ast := (\vec{b}^\ast_1,\dots,\vec{b}^\ast_n)$ eine Basis von $V^\ast$ mit
+        \begin{align*}
+            \vec{b}^\ast_i\colon V&\longrightarrow K\\
+            \vec{b}_j &\mapsto \delta_{ij} := \begin{cases}
+                1 & \text{ falls } i=j\\
+                0 & \text{sonst}
+        \end{cases}
+        \end{align*}
+        \cite{Satz \& Def. 16.3}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{ee7eb4e4-b3fc-494b-9be1-54cfed785cc6}
+
+    \xfield{
+        Sei $\dim V = n < \infty$. Dann
+        \[\dim V^\ast = \phantom{n = \dim V}\]
+    }
+    \begin{field}
+        Sei $\dim V = n < \infty$. Dann
+        \[\dim V^\ast = n = \dim V\]
+        \cite{Kor. 16.5}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{563b7097-98f1-4860-996d-ceda604424f4}
+
+    \xfield{
+    Seien $V_i$ $K$-Vektorräume $(i\in I)$.\\
+    Dann gilt
+    \[\left(\underset{i\in I}{\oplus} V_i\right)^\ast \cong \phantom{\prod_i V_i^\ast}\]
+    }
+    \begin{field}
+    Seien $V_i$ $K$-Vektorräume $(i\in I)$.\\
+    Dann gilt
+    \[\left(\underset{i\in I}{\oplus} V_i\right)^\ast \cong \prod_{i\in I} V_i^\ast\]
+    \cite{satz 16.8}
+    \end{field}
+
+    \xfield{
+        Seien $V_i$ $K$-Vektorräume $(i\in I)$.
+        Die Funktionen
+        \begin{align*}
+            \alpha \colon \left(\underset{i\in I}{\oplus} V_i\right)^\ast &\longrightarrow \prod_{i\in I} V_i^\ast\\
+            \phi &\overset{\alpha}{\mapsto}\left(\phi\vert_{V_i}\right)_{i\in I}\\
+            \beta \colon \prod_{i\in I} V_i^\ast &\longrightarrow \left(\underset{i\in I}{\oplus} V_i\right)^\ast\\
+            (\phi_i)_{i\in I} &\overset{\beta}{\mapsto}\left((\vec{v}_i)_{i\in I} \mapsto \sum_i \phi_i(\vec{v}_i)\right)
+        \end{align*}
+        definieren \hide{zueinander inverse Isomorphismen}.
+    }
+    \begin{field}
+        Seien $V_i$ $K$-Vektorräume $(i\in I)$.
+        Die Funktionen
+        \begin{align*}
+            \alpha \colon \left(\underset{i\in I}{\oplus} V_i\right)^\ast &\longrightarrow \prod_{i\in I} V_i^\ast\\
+            \phi &\overset{\alpha}{\mapsto}\left(\phi\vert_{V_i}\right)_{i\in I}\\
+            \beta \colon \prod_{i\in I} V_i^\ast &\longrightarrow \left(\underset{i\in I}{\oplus} V_i\right)^\ast\\
+            (\phi_i)_{i\in I} &\overset{\beta}{\mapsto}\left((\vec{v}_i)_{i\in I} \mapsto \sum_i \phi_i(\vec{v}_i)\right)
+        \end{align*}
+        definieren zueinander inverse Isomorphismen.
+        \cite{Satz 16.8}
+    \end{field}
+
+    \xfield{
+        Seien $V_i$ $K$-Vektorräume $(i\in I)$.
+        Die Funktionen
+        \begin{align*}
+            \alpha \colon \left(\underset{i\in I}{\oplus} V_i\right)^\ast &\longrightarrow \prod_{i\in I} V_i^\ast\\
+            \phi &\overset{\alpha}{\mapsto}\dots\phantom{\left(\phi\vert_{V_i}\right)_{i\in I}}\\
+            \beta \colon \prod_{i\in I} V_i^\ast &\longrightarrow \left(\underset{i\in I}{\oplus} V_i\right)^\ast\\
+            (\phi_i)_{i\in I} &\overset{\beta}{\mapsto}\left((\vec{v}_i)_{i\in I} \mapsto \sum_i \phi_i(\vec{v}_i)\right)
+        \end{align*}
+        definieren zueinander inverse Isomorphismen.
+    }
+    \begin{field}
+        Seien $V_i$ $K$-Vektorräume $(i\in I)$.
+        Die Funktionen
+        \begin{align*}
+            \alpha \colon \left(\underset{i\in I}{\oplus} V_i\right)^\ast &\longrightarrow \prod_{i\in I} V_i^\ast\\
+            \phi &\overset{\alpha}{\mapsto}{\left(\phi\vert_{V_i}\right)_{i\in I}}\\
+            \beta \colon \prod_{i\in I} V_i^\ast &\longrightarrow \left(\underset{i\in I}{\oplus} V_i\right)^\ast\\
+            (\phi_i)_{i\in I} &\overset{\beta}{\mapsto}\left((\vec{v}_i)_{i\in I} \mapsto \sum_i \phi_i(\vec{v}_i)\right)
+        \end{align*}
+        definieren zueinander inverse Isomorphismen.
+        \cite{Satz 16.8}
+    \end{field}
+
+    \xfield{
+        Seien $V_i$ $K$-Vektorräume $(i\in I)$.
+        Die Funktionen
+        \begin{align*}
+            \alpha \colon \left(\underset{i\in I}{\oplus} V_i\right)^\ast &\longrightarrow \prod_{i\in I} V_i^\ast\\
+            \phi &\overset{\alpha}{\mapsto}{\left(\phi\vert_{V_i}\right)_{i\in I}}\\
+            \beta \colon \prod_{i\in I} V_i^\ast &\longrightarrow \left(\underset{i\in I}{\oplus} V_i\right)^\ast\\
+            (\phi_i)_{i\in I} &\overset{\beta}{\mapsto}\dots \phantom{\left( (\vec{v}_i)_{i\in I} \mapsto \sum_i \phi_i(\vec{v}_i) \right)}
+        \end{align*}
+        definieren zueinander inverse Isomorphismen.
+    }
+    \begin{field}
+        Seien $V_i$ $K$-Vektorräume $(i\in I)$.
+        Die Funktionen
+        \begin{align*}
+            \alpha \colon \left(\underset{i\in I}{\oplus} V_i\right)^\ast &\longrightarrow \prod_{i\in I} V_i^\ast\\
+            \phi &\overset{\alpha}{\mapsto}{\left(\phi\vert_{V_i}\right)_{i\in I}}\\
+            \beta \colon \prod_{i\in I} V_i^\ast &\longrightarrow \left(\underset{i\in I}{\oplus} V_i\right)^\ast\\
+            (\phi_i)_{i\in I} &\overset{\beta}{\mapsto}\left((\vec{v}_i)_{i\in I} \mapsto \sum_i \phi_i(\vec{v}_i)\right)
+        \end{align*}
+        definieren zueinander inverse Isomorphismen.
+        \cite{Satz 16.8}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{ace73100-c31f-4165-9184-ffa5441bd84b}
+
+    \xfield{
+        Sei $V$ endlich-dimensionaler Vektorraum mit Basis $B$; dualer Basis $B^\ast$\\
+        und $W$ endlich-dimensionaler Vektorraum mit Basis $C$; dualer Basis $C^\ast$.\\
+        Sei $f\colon V \longrightarrow W$ eine lineare Abbildung und\\ $f^\ast\colon W^\ast \longrightarrow V^\ast$ die zu $f$ duale Abbildung. Dann gilt für die darstellende Matrix von $f^\ast$:
+        \[M(f^\ast) =\]
+    }
+    \begin{field}
+        Sei $V$ endlich-dimensionaler Vektorraum mit Basis $B$; dualer Basis $B^\ast$\\
+        und $W$ endlich-dimensionaler Vektorraum mit Basis $C$; dualer Basis $C^\ast$.\\
+        Sei $f\colon V \longrightarrow W$ eine lineare Abbildung und\\ $f^\ast\colon W^\ast \longrightarrow V^\ast$ die zu $f$ duale Abbildung. Dann gilt für die darstellende Matrix von $f^\ast$:
+        \[_{B^\ast}M_{C^\ast}(f^\ast) = \left(_C M_B(f)\right)^T\]
+        \cite{Satz 16.8}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{b74a3de4-17b8-413c-a490-e19e3ad2e0f3}
+
+    \xfield{
+        Sei $U\subseteq V$ ein Untervektorraum. Der \textbf{Annulator} von $U$ ist \dots
+    }
+    \begin{field}
+        Sei $U\subseteq V$ ein Untervektorraum. Der \textbf{Annulator} von $U$ ist der Untervektorraum $U^0 \subseteq V^\ast$, der gegeben ist durch
+        \[U^0 := \{\phi\in V^\ast \mid \phi(\vec{u}) = 0 \forall \vec{u}\in U\}\]
+        \cite{Def 16.10}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{833a8f8d-3fc5-413e-a5e4-4c3537148f6e}
+
+    \xfield{
+    Für jede lineare Abbildung $f$ ist
+    \[\ker(f^\ast) = \dots\]
+    \[\im(f^\ast) = \dots\]
+    \hint{Annulator}
+    }
+    \begin{field}
+        Für jede lineare Abbildung $f$ ist
+        \[\ker(f^\ast) = (\im f)^0\]
+        \[\im(f^\ast) = (\ker f)^0\]
+        \cite{Satz 16.12}
+    \end{field}
+\end{note}
 \end{document}
