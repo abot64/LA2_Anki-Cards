@@ -3648,4 +3648,73 @@
 
 \tags{LinA-II-17-Multilineare-Algebren}
 
+%%%%%%%%% Vorlesung 20 %%%%%%%%%%%%
+
+\begin{note}
+    \tags{Def}
+    \xplain{4bfc9556-8182-4a6d-ba13-e65645147b5c}
+
+    \xfield{
+        Seien $V_1,\dots,V_n,W$ $K$-Vektorräume. Eine Abbildung
+        \[f\colon V_1\times\cdots\times V_n \longrightarrow W\]
+        ist \textbf{$K$-multilinear}, falls \dots
+    }
+    \begin{field}
+
+            Seien $V_1,\dots,V_n,W$ $K$-Vektorräume. Eine Abbildung
+            \[f\colon V_1\times\cdots\times V_n \longrightarrow W\]
+            ist \textbf{$K$-multilinear}, falls für jedes $i\in\{1,\dots,n\}$ und beliebige Vektoren $\vec{v}_1,\dots,\vec{v}_{i-1},\vec{v}_{i+1},\dots,\vec{v}_n$ die Abbildung
+            \begin{align*}
+                V_i &\longrightarrow W\\
+                \vec{v} &\mapsto f(\vec{v}_1,\dots,\vec{v}_{i-1}, \vec{v}, \vec{v}_{i+1},\dots,\vec{v}_n)
+            \end{align*}
+            $K$-linear ist.
+            \cite{Def. 17.5}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def Satz}
+    \xplain{78d71d52-c77f-4bf8-8312-ce13d136f6f1}
+
+    \xfield{
+        Das \textbf{Tensorprodukt} $V_1\otimes\cdots\otimes V_n$ von $K$-Vektorräumen $V_1,\cdots,V_n$ ist ein $K$-Vektorraum zusammen mit einer (kanonischen) Abbildung\\ $\text{can}\colon V_1\times \cdots \times V_n \longrightarrow V_1\otimes\cdots\otimes V_n$
+        mit folgender universeller Eigenschaft:\\
+        $\text{can}$ ist \hide{multilinear} und\\
+         für jeden $K$-Vektorraum $T$ und jede multilineare Abbildung $t\colon V_1\times\cdots\times V_n \longrightarrow T$
+        existiert genau eine $K$-lineare Abbildung
+        $t'\colon V_1\times\cdots\times V_n \longrightarrow T$\\
+        mit $t'\circ \text{can} = t$.
+    }
+    \begin{field}
+        Das \textbf{Tensorprodukt} $V_1\otimes\cdots\otimes V_n$ von $K$-Vektorräumen $V_1,\cdots,V_n$ ist ein $K$-Vektorraum zusammen mit einer (kanonischen) Abbildung\\ $\text{can}\colon V_1\times \cdots \times V_n \longrightarrow V_1\otimes\cdots\otimes V_n$
+        mit folgender universeller Eigenschaft:\\
+        $\text{can}$ ist multilinear und\\
+         für jeden $K$-Vektorraum $T$ und jede multilineare Abbildung $t\colon V_1\times\cdots\times V_n \longrightarrow T$
+        existiert genau eine $K$-lineare Abbildung
+        $t'\colon V_1\times\cdots\times V_n \longrightarrow T$\\
+        mit $t'\circ \text{can} = t$.
+        \cite{Satz 17.6 / Def. 17.7}
+    \end{field}
+
+    \xfield{
+        Das \textbf{Tensorprodukt} $V_1\otimes\cdots\otimes V_n$ von $K$-Vektorräumen $V_1,\cdots,V_n$ ist ein $K$-Vektorraum zusammen mit einer (kanonischen) Abbildung\\ $\text{can}\colon V_1\times \cdots \times V_n \longrightarrow V_1\otimes\cdots\otimes V_n$
+        mit folgender universeller Eigenschaft:\\
+        $\text{can}$ ist multilinear und\\
+         für jeden $K$-Vektorraum $T$ und jede multilineare Abbildung $t\colon V_1\times\cdots\times V_n \longrightarrow T$
+        existiert \hide{genau eine $K$-lineare Abbildung
+        $t'\colon V_1\times\cdots\times V_n \longrightarrow T$\\
+        mit $t'\circ \text{can} = t$}.
+    }
+    \begin{field}
+        Das \textbf{Tensorprodukt} $V_1\otimes\cdots\otimes V_n$ von $K$-Vektorräumen $V_1,\cdots,V_n$ ist ein $K$-Vektorraum zusammen mit einer (kanonischen) Abbildung\\ $\text{can}\colon V_1\times \cdots \times V_n \longrightarrow V_1\otimes\cdots\otimes V_n$
+        mit folgender universeller Eigenschaft:\\
+        $\text{can}$ ist multilinear und\\
+         für jeden $K$-Vektorraum $T$ und jede multilineare Abbildung $t\colon V_1\times\cdots\times V_n \longrightarrow T$
+        existiert genau eine $K$-lineare Abbildung
+        $t'\colon V_1\times\cdots\times V_n \longrightarrow T$\\
+        mit $t'\circ \text{can} = t$.
+        \cite{Satz 17.6 / Def. 17.7}
+    \end{field}
+\end{note}
 \end{document}
