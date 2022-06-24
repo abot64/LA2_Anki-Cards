@@ -3478,4 +3478,174 @@
         \cite{Satz 16.12}
     \end{field}
 \end{note}
+
+%%%%%%%%% Vorlesung 19 %%%%%%%%%%%%
+
+\begin{note}
+    \tags{Satz}
+    \xplain{d6bba2ed-dd4d-4fb4-b9fe-ac2d4c343844}
+
+    \xfield{
+        Eine lineare Abbildung $f$ ist genau dann \emph{injektiv}, wenn \hint{duale Abbildung}\hide{die duale Abbildung $f^*$ surjektiv ist.}
+    }
+    \begin{field}
+        Eine lineare Abbildung $f$ ist genau dann \emph{injektiv}, wenn die duale Abbildung $f^*$ surjektiv ist.
+        \cite{Kor. 16.13}
+    \end{field}
+
+    \xfield{
+        Eine lineare Abbildung $f$ ist genau dann \emph{surjektiv}, wenn \hint{duale Abbildung}\hide{die duale Abbildung $f^*$ injektiv ist.}
+    }
+    \begin{field}
+        Eine lineare Abbildung $f$ ist genau dann \emph{surjektiv}, wenn die duale Abbildung $f^*$ injektiv ist.
+        \cite{Kor. 16.13}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{2948efa5-9029-4284-a634-ee09edfad4b2}
+
+    \xfield{
+        Sei $V$ ein endlich-dimensionaler Vektorraum, dann gilt für jeden Untervektorraum $U\subseteq V$:
+        \[\dim(U^0) = \]
+    }
+    \begin{field}
+        Sei $V$ ein endlich-dimensionaler Vektorraum, dann gilt für jeden Untervektorraum $U\subseteq V$:
+        \[\dim(U^0) = \dim V - \dim U\]
+        \cite{Kor. 16.14}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{ae8e8491-fda3-474b-87b0-beaf8e05f0e3}
+
+    \xfield{
+        Der \textbf{Bidualraum} eines $K$-Vektorraums $V$ ist \dots
+    }
+    \begin{field}
+        Der \textbf{Bidualraum} eines $K$-Vektorraums $V$ ist
+        \[V^{**}:= (V^*)^*\]
+        \cite{Def. 16.15}
+    \end{field}
+
+    \xfield{
+        Der \textbf{Bidualraumhomomorphismus} ist die Abbildung
+        \[\omega_V\colon\]
+    }
+    \begin{field}
+        Der \textbf{Bidualraumhomomorphismus} ist die Abbildung
+        \begin{align*}
+            \omega_V\colon V &\longrightarrow V^{**}\\
+            \vec{v} &\mapsto \begin{pmatrix}
+                V^* & \longrightarrow &K\\
+                \phi & \mapsto &\phi(\vec{v})
+        \end{pmatrix}
+        \end{align*}
+        \cite{Def. 16.15}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{730505c9-1d7c-4524-8246-22a4cbbab07a}
+
+    \xfield{
+        Der Bidualraumhomomorphismus $\omega_V$ ist \hint{Linearität} \hide{$K$-linear}.
+    }
+    \begin{field}
+        Der Bidualraumhomomorphismus $\omega_V$ ist $K$-linear.
+        \cite{Notiz 16.16}
+    \end{field}
+
+    \xfield{
+        Sei $f\colon V  \longrightarrow W$ eine Abbildung und $\omega_W$ der Bidualraumhomomorphismus von $W$. Dann gilt
+        \[\omega_W \circ f = \]
+    }
+    \begin{field}
+        Sei $f\colon V  \longrightarrow W$ eine Abbildung und $\omega_W$ der Bidualraumhomomorphismus von $W$. Dann gilt
+        \[\omega_W \circ f = f^{**} \circ \omega_V\]
+        mit $f^{**} \colon V^{**} \longrightarrow W^{**}$ und $\omega_V$ der Bidualraumhomomorphismus zu $V$.
+        \cite{Notiz 16.17}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{26f469cc-ef15-4f31-83a9-89e412e0edf2}
+
+    \xfield{
+        Der Bidualraumhomomorphismus ist \hint{injektiv? surjektiv?}\hide{injektiv}.
+    }
+    \begin{field}
+        Der Bidualraumhomomorphismus ist injektiv.
+        \cite{Satz 16.18}
+    \end{field}
+
+    \xfield{
+        Der Bidualraumhomomorphismus ist genau dann \hide{ein Isomorphismus}, wenn $V$ endlich-dimensional ist.
+    }
+    \begin{field}
+        Der Bidualraumhomomorphismus ist genau dann ein Isomorphismus, wenn $V$ endlich-dimensional ist.
+        \cite{Satz 16.18}
+    \end{field}
+
+
+    \xfield{
+        Der Bidualraumhomomorphismus ist genau dann ein Isomorphismus, wenn \hide{$V$ endlich-dimensional ist}.
+    }
+    \begin{field}
+        Der Bidualraumhomomorphismus ist genau dann ein Isomorphismus, wenn $V$ endlich-dimensional ist.
+        \cite{Satz 16.18}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{b36837bf-1b54-4cdf-9bfd-241a2bd3ba01}
+
+    \xfield{
+        Sei $(V, \scprod{\cdot}{\cdot})$ ein endlich-dimensionaler euklidischer Vektorraum.\\
+        Dann ist die Abbildung
+        \begin{align*}
+            \psi\colon V &\longrightarrow V^{*}\\
+            \vec{v} &\mapsto \scprod{\vec{v}}{\cdot}
+        \end{align*}
+        \dots
+    }
+    \begin{field}
+        Sei $(V, \scprod{\cdot}{\cdot})$ ein endlich-dimensionaler euklidischer Vektorraum.\\
+        Dann ist die Abbildung
+        \begin{align*}
+            \psi\colon V &\longrightarrow V^{*}\\
+            \vec{v} &\mapsto \scprod{\vec{v}}{\cdot}
+        \end{align*}
+        ein \emph{kanonischer Isomorphismus} zu $V \cong V^*$.
+        \cite{Satz 16.19}
+    \end{field}
+
+    \xfield{
+        Sei $(V, \scprod{\cdot}{\cdot})$ ein endlich-dimensionaler euklidischer Vektorraum.\\
+        Dann ist die Abbildung
+        \begin{align*}
+            \psi\colon V &\longrightarrow V^{*}\\
+            \vec{v} &\mapsto \phantom{\scprod{\vec{v}}{\cdot}}
+        \end{align*}
+        ein \emph{kanonischer Isomorphismus} zu $V \cong V^*$.
+    }
+    \begin{field}
+        Sei $(V, \scprod{\cdot}{\cdot})$ ein endlich-dimensionaler euklidischer Vektorraum.\\
+        Dann ist die Abbildung
+        \begin{align*}
+            \psi\colon V &\longrightarrow V^{*}\\
+            \vec{v} &\mapsto \scprod{\vec{v}}{\cdot}
+        \end{align*}
+        ein \emph{kanonischer Isomorphismus} zu $V \cong V^*$.
+        \cite{Satz 16.19}
+    \end{field}
+\end{note}
+
+\tags{LinA-II-17-Multilineare-Algebren}
+
 \end{document}
