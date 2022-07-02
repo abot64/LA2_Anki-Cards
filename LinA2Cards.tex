@@ -3915,4 +3915,135 @@
         \cite{Satz 17.12}
     \end{field}
 \end{note}
+
+%%%%%%%%% Vorlesung 22 %%%%%%%%%%%%
+
+\begin{note}
+    \tags{Satz}
+    \xplain{da356929-7f8c-491d-b199-e2c65bfc393d}
+
+    \xfield{
+        Seien $B = (\vec{b}_i)_{i\in I}$ Basis von $V$, $C = (\vec{c}_j)_{j\in J}$ Basis von $W$. Dann ist eine Basis von $V\otimes W$:
+        \hide{\[(\vec{b}_i\otimes \vec{c}_j)_{i\in I, j\in J}\]}
+    }
+    \begin{field}
+        Seien $B = (\vec{b}_i)_{i\in I}$ Basis von $V$, $C = (\vec{c}_j)_{j\in J}$ Basis von $W$. Dann ist eine Basis von $V\otimes W$:
+        \[(\vec{b}_i\otimes \vec{c}_j)_{i\in I, j\in J}\]
+        \cite{Kor. 17.13}
+    \end{field}
+
+    \xfield{
+        Für endlich-dimensionale Vektorräume $V, W$ gilt
+        \[\dim V\otimes W = \phantom{\dim V \cdot \dim W}\]
+    }
+    \begin{field}
+        Für endlich-dimensionale Vektorräume $V, W$ gilt
+        \[\dim V\otimes W = \dim V \cdot \dim W\]
+        \cite{Kor. 17.13}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz Def}
+    \xplain{a360a5b0-ab37-4113-94f4-c118a467429f}
+
+    \xfield{
+        Sind $f_i\colon V_i \longrightarrow W_i$ für $i \in \{1,\dots,n\}$ $K$-lineare Abbildungen, so existiert \hint{Tensor}\dots
+    }
+    \begin{field}
+        Sind $f_i\colon V_i \longrightarrow W_i$ für $i \in \{1,\dots,n\}$ $K$-lineare Abbildungen, so existiert genau eine $K$-lineare Abbildung
+        \[f_1\otimes\dots\otimes f_n \colon V_1\otimes\dots\otimes V_n \longrightarrow W_1\otimes \dots W_n\]
+        mit
+        \[\vec{v}_1\otimes\dots\vec{v}_n \mapsto f_1(\vec{v}_1)\otimes\dots\otimes f_n(\vec{v}_n)\]
+        \cite{Satz/Def. 17.17}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{7c994a34-00c4-44b1-ba2d-d4c8e975c360}
+
+    \xfield{
+        \textbf{Tensorprodukt von Matrizen}\\
+        Seien $A = (a_{ij})_{ij}\in \Mat(m\times n), B\in\Mat_K(p\times q)$. Dann ist
+        \[A\otimes B := \phantom{\begin{pmatrix}
+            a_{11}B &\cdots& a_{1n}B\\
+            a_{21}B &\cdots& a_{2n}B\\
+            \vdots && \vdots\\
+            a_{m1}B &\cdots &a_{mn}B
+        \end{pmatrix}\in\Mat(mp \times nq)}\]
+    }
+    \begin{field}
+        \textbf{Tensorprodukt von Matrizen}\\
+        Seien $A = (a_{ij})_{ij}\in \Mat(m\times n), B\in\Mat_K(p\times q)$. Dann ist
+        \[A\otimes B := \begin{pmatrix}
+            a_{11}B &\cdots& a_{1n}B\\
+            a_{21}B &\cdots& a_{2n}B\\
+            \vdots && \vdots\\
+            a_{m1}B &\cdots &a_{mn}B
+        \end{pmatrix}\in\Mat(mp \times nq)\]
+        \cite{Def. 17.20}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{838e5316-141f-4294-bf5d-64da0883b96b}
+
+    \xfield{
+        Seien $f_1\colon V_1\longrightarrow W_1$, $f_2\colon V_2\longrightarrow W_2$ linear und seien die Basen der Vektorräume wie folgt:\\
+        \begin{tabular}{rl}
+            $V_1$: & $B_1 = (\vec{b}_1^{(1)},\dots,\vec{b}_n^{(1)})$\\
+            $V_2$: & $B_2 = (\vec{b}_1^{(2)},\dots,\vec{b}_q^{(2)})$\\
+            $W_1$: & $C_1 = (\vec{c}_1^{(1)},\dots,\vec{c}_m^{(1)})$\\
+            $W_2$: &  $C_2 = (\vec{c}_1^{(2)},\dots,\vec{c}_p^{(2)})$\\ \hline
+            $V_1\otimes V_2$: & "$B_1\otimes B_2 := (\vec{b}_1^{(1)}\otimes B_2, \dots, \vec{b}_n^{(1)}\otimes B_2)$"\\
+            $W_1\otimes W_2$: & "$C_1\otimes C_2 := (\vec{c}_1^{(1)}\otimes C_2, \dots, \vec{c}_m^{(1)}\otimes C_2)$"
+        \end{tabular}\\
+        Dann gilt:
+        \[_{C_1\otimes C_2}M_{B_1\otimes B_2}(f_1\otimes f_2) =\phantom{ _{C_1}M_{B_1}(f_1)\otimes _{C_2}M_{B_2}(f_2)}\]
+    }
+    \begin{field}
+        Seien $f_1\colon V_1\longrightarrow W_1$, $f_2\colon V_2\longrightarrow W_2$ linear und seien die Basen der Vektorräume wie folgt:\\
+        \begin{tabular}{rl}
+            $V_1$: & $B_1 = (\vec{b}_1^{(1)},\dots,\vec{b}_n^{(1)})$\\
+            $V_2$: & $B_2 = (\vec{b}_1^{(2)},\dots,\vec{b}_q^{(2)})$\\
+            $W_1$: & $C_1 = (\vec{c}_1^{(1)},\dots,\vec{c}_m^{(1)})$\\
+            $W_2$: &  $C_2 = (\vec{c}_1^{(2)},\dots,\vec{c}_p^{(2)})$\\ \hline
+            $V_1\otimes V_2$: & "$B_1\otimes B_2 := (\vec{b}_1^{(1)}\otimes B_2, \dots, \vec{b}_n^{(1)}\otimes B_2)$"\\
+            $W_1\otimes W_2$: & "$C_1\otimes C_2 := (\vec{c}_1^{(1)}\otimes C_2, \dots, \vec{c}_m^{(1)}\otimes C_2)$"
+        \end{tabular}\\
+        Dann gilt:
+        \[_{C_1\otimes C_2}M_{B_1\otimes B_2}(f_1\otimes f_2) = _{C_1}M_{B_1}(f_1)\otimes _{C_2}M_{B_2}(f_2)\]
+        \cite{Satz 17.21}
+    \end{field}
+
+    \xfield{
+        Seien $f_1\colon V_1\longrightarrow W_1$, $f_2\colon V_2\longrightarrow W_2$ linear und seien die Basen der Vektorräume wie folgt:\\
+        \begin{tabular}{rl}
+            $V_1$: & $B_1 = (\vec{b}_1^{(1)},\dots,\vec{b}_n^{(1)})$\\
+            $V_2$: & $B_2 = (\vec{b}_1^{(2)},\dots,\vec{b}_q^{(2)})$\\
+            $W_1$: & $C_1 = (\vec{c}_1^{(1)},\dots,\vec{c}_m^{(1)})$\\
+            $W_2$: &  $C_2 = (\vec{c}_1^{(2)},\dots,\vec{c}_p^{(2)})$\\ \hline
+            $V_1\otimes V_2$: & \hide{"$B_1\otimes B_2 := (\vec{b}_1^{(1)}\otimes B_2, \dots, \vec{b}_n^{(1)}\otimes B_2)$"}\\
+            $W_1\otimes W_2$: & \hide{"$C_1\otimes C_2 := (\vec{c}_1^{(1)}\otimes C_2, \dots, \vec{c}_m^{(1)}\otimes C_2)$"}
+        \end{tabular}\\
+        Dann gilt:
+        \[_{\phantom{C_1\otimes C_2}\dots}M_{\dots\phantom{B_1\otimes B_2}}(f_1\otimes f_2) = _{C_1}M_{B_1}(f_1)\otimes _{C_2}M_{B_2}(f_2)\]
+    }
+    \begin{field}
+        Seien $f_1\colon V_1\longrightarrow W_1$, $f_2\colon V_2\longrightarrow W_2$ linear und seien die Basen der Vektorräume wie folgt:\\
+        \begin{tabular}{rl}
+            $V_1$: & $B_1 = (\vec{b}_1^{(1)},\dots,\vec{b}_n^{(1)})$\\
+            $V_2$: & $B_2 = (\vec{b}_1^{(2)},\dots,\vec{b}_q^{(2)})$\\
+            $W_1$: & $C_1 = (\vec{c}_1^{(1)},\dots,\vec{c}_m^{(1)})$\\
+            $W_2$: &  $C_2 = (\vec{c}_1^{(2)},\dots,\vec{c}_p^{(2)})$\\ \hline
+            $V_1\otimes V_2$: & "$B_1\otimes B_2 := (\vec{b}_1^{(1)}\otimes B_2, \dots, \vec{b}_n^{(1)}\otimes B_2)$"\\
+            $W_1\otimes W_2$: & "$C_1\otimes C_2 := (\vec{c}_1^{(1)}\otimes C_2, \dots, \vec{c}_m^{(1)}\otimes C_2)$"
+        \end{tabular}\\
+        Dann gilt:
+        \[_{C_1\otimes C_2}M_{B_1\otimes B_2}(f_1\otimes f_2) = _{C_1}M_{B_1}(f_1)\otimes _{C_2}M_{B_2}(f_2)\]
+        \cite{Satz 17.21}
+    \end{field}
+\end{note}
 \end{document}
