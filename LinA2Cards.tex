@@ -4046,4 +4046,295 @@
         \cite{Satz 17.21}
     \end{field}
 \end{note}
+
+%%%%%%%%%
+% Vorlesung 23 bis 25 fielen krankheitsbedingt aus
+%%%%%%%%%
+
+%%%%%%%%% Vorlesung 26 (letzte Vorlesung) %%%%%%%%%%%%
+\begin{note}
+    \tags{Satz}
+    \xplain{1e63fc67-47a6-4f83-92bf-43e5f588d27e}
+
+    \xfield{
+        Für multiplizierbare Matrizen $A_1$ und $A_2$, und für multiplizierbare Matrizen $B_1$ und $B_2$ gilt:
+        \[(A_1\otimes A_2)\cdot(B_1\otimes B_2) = \phantom{(A_1\cdot A_2)\otimes (B_1\cdot B_2)}\]
+    }
+    \begin{field}
+        Für multiplizierbare Matrizen $A_1$ und $A_2$, und für multiplizierbare Matrizen $B_1$ und $B_2$ gilt:
+        \[(A_1\otimes B_1)\cdot(A_2\otimes B_2) = (A_1\cdot A_2)\otimes (B_1\cdot B_2)\]
+        \cite{Kor. 17.22}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{2c6f1b14-47cb-42fa-81ad-0f81fdada19a}
+
+    \xfield{
+        Sei $f\colon V\longrightarrow W$ linear und $U$ ein weiterer Vektorraum. Falls $f$ ein Isomorphismus ist, so ist
+        \[f \otimes \id_U\colon V\otimes U\longrightarrow W\otimes U\]
+        \dots
+    }
+    \begin{field}
+        Sei $f\colon V\longrightarrow W$ linear und $U$ ein weiterer Vektorraum. Falls $f$ ein Isomorphismus ist, so ist
+        \[f \otimes \id_U\colon V\otimes U\longrightarrow W\otimes U\]
+        ein Isomorphismus.
+        \cite{Satz 17.23}
+    \end{field}
+
+    \xfield{
+        Sei $f\colon V\longrightarrow W$ linear und $U$ ein weiterer Vektorraum. Für $f \otimes \id_U\colon V\otimes U\longrightarrow W\otimes U$ gilt:
+        \[\ker(f\otimes \id_U) \cong \phantom{\ker f \otimes U}\]
+    }
+    \begin{field}
+        Sei $f\colon V\longrightarrow W$ linear und $U$ ein weiterer Vektorraum. Für $f \otimes \id_U\colon V\otimes U\longrightarrow W\otimes U$ gilt:
+        \[\ker(f\otimes \id_U) \cong \ker f \otimes U\]
+        \cite{Satz 17.23}
+    \end{field}
+
+    \xfield{
+        Sei $f\colon V\longrightarrow W$ linear und $U$ ein weiterer Vektorraum. Für $f \otimes \id_U\colon V\otimes U\longrightarrow W\otimes U$ gilt:
+        \[\im(f\otimes \id_U) \cong \phantom{\im f \otimes U}\]
+    }
+    \begin{field}
+        Sei $f\colon V\longrightarrow W$ linear und $U$ ein weiterer Vektorraum. Für $f \otimes \id_U\colon V\otimes U\longrightarrow W\otimes U$ gilt:
+        \[\im(f\otimes \id_U) \cong \im f \otimes U\]
+        \cite{Satz 17.23}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{8da91ed4-2c6a-4b0a-851c-b01758850356}
+
+    \xfield{
+        Eine multilineare Abbildung
+        \[f\colon V\times V\times\dots\times V \longrightarrow W\]
+        ist \textbf{symmetrisch}, wenn \dots
+    }
+    \begin{field}
+        Eine multilineare Abbildung
+        \[f\colon V\times V\times\dots\times V \longrightarrow W\]
+        ist \textbf{symmetrisch}, wenn für beliebige $\vec{v}_1,\dots,\vec{v}_n\in V$ und $\sigma\in S_n$ gilt:
+        \[f(\vec{v}_1,\dots,\vec{v}_n) = f(\vec{v}_{\sigma(1)},\dots,\vec{v}_{\sigma(n)})\]
+        \cite{Def 17.24}
+    \end{field}
+
+    \xfield{
+        Eine multilineare Abbildung
+        \[f\colon V\times V\times\dots\times V \longrightarrow W\]
+        ist \textbf{schiefsymmetrisch}, wenn \dots
+    }
+    \begin{field}
+        Eine multilineare Abbildung
+        \[f\colon V\times V\times\dots\times V \longrightarrow W\]
+        ist \textbf{schiefsymmetrisch}, wenn für beliebige $\vec{v}_1,\dots,\vec{v}_n\in V$ und $\sigma\in S_n$ gilt:
+        \[f(\vec{v}_1,\dots,\vec{v}_n) = \text{sgn}(\sigma)\cdot f(\vec{v}_{\sigma(1)},\dots,\vec{v}_{\sigma(n)})\]
+        \cite{Def 17.24}
+    \end{field}
+
+    \xfield{
+        Eine multilineare Abbildung
+        \[f\colon V\times V\times\dots\times V \longrightarrow W\]
+        ist \textbf{alternierend}, wenn \dots
+    }
+    \begin{field}
+        Eine multilineare Abbildung
+        \[f\colon V\times V\times\dots\times V \longrightarrow W\]
+        ist \textbf{alternierend}, wenn gilt:
+        \[f(\vec{v}_1,\dots,\vec{v}_n) = 0\]
+        sobald $\vec{v}_i = \vec{v}_j$ für ein Paar $(i,j)$ mit $i\neq j$.
+        \cite{Def 17.24}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{2c117169-6d33-48f3-acd7-ef2d240f4eb8}
+
+    \xfield{
+        Zu einem $K$-Vektorraum $V$ und einer Zahl $k\in\NN_0$ existiert ein $K$-Vektorraum $S^k V$ zusammen mit einer Abbildung
+        \[\text{can}_S\colon V\times\dots\times V \longrightarrow S^k V\]
+        die folgende universelle Eigenschaft erfüllt:\\
+        \dots
+    }
+    \begin{field}
+        Zu einem $K$-Vektorraum $V$ und einer Zahl $k\in\NN_0$ existiert ein $K$-Vektorraum $S^k V$ zusammen mit einer Abbildung
+        \[\text{can}_S\colon V\times\dots\times V \longrightarrow S^k V\]
+        die folgende universelle Eigenschaft erfüllt:\\
+        can$_S$ ist $K$-multilinear und symmetrisch, und für jeden $K$-Vektorraum $T$ und jede $K$-multilineare symmetrische Abbildung
+        $t\colon V\times\dots\times V\longrightarrow T$      existiert genau eine lineare Abbildung $t_S$ mit $t = t_S\circ \text{can}_S$.
+        \cite{satz 17.28}
+    \end{field}
+
+    \xfield{
+    Zu einem $K$-Vektorraum $V$ und einer Zahl $k\in\NN_0$ existiert ein $K$-Vektorraum $\Lambda^k V$ zusammen mit einer Abbildung
+    \[\text{can}_{\Lambda}\colon V\times\dots\times V \longrightarrow \Lambda^k V\]
+    die folgende universelle Eigenschaft erfüllt:\\
+    \dots
+    }
+    \begin{field}
+        Zu einem $K$-Vektorraum $V$ und einer Zahl $k\in\NN_0$ existiert ein $K$-Vektorraum $\Lambda^k V$ zusammen mit einer Abbildung
+        \[\text{can}_{\Lambda}\colon V\times\dots\times V \longrightarrow \Lambda^k V\]
+        die folgende universelle Eigenschaft erfüllt:\\
+        can$_{\Lambda}$ ist $K$-multilinear und alternierend, und für jeden $K$-Vektorraum $T$ und jede $K$-multilineare alternierende Abbildung
+        $t\colon V\times\dots\times V\longrightarrow T$      existiert genau eine lineare Abbildung $t_{\Lambda}$ mit $t = t_{\Lambda}\circ \text{can}_{\Lambda}$.
+        \cite{Satz 17.28}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Def}
+    \xplain{dde4d0f7-4594-4869-9657-2e02cc677f69}
+
+    \xfield{
+        \[V^{\otimes k} := \phantom{V\otimes \dots \otimes V}\] ist die \textbf{$k$-te \hide{Tensorpotenz} von $V$}.
+    }
+    \begin{field}
+        \[V^{\otimes k} := V\otimes \dots \otimes V\] ist die \textbf{$k$-te Tensorpotenz von $V$}.
+        \cite{Def. 17.29}
+    \end{field}
+
+    \xfield{
+        $S^k V$ ist die \textbf{$k$-te \hide{symmetrische Potenz} von V}.
+    }
+    \begin{field}
+        $S^k V$ ist die \textbf{$k$-te symmetrische Potenz von V}.
+        \cite{Def. 17.29}
+    \end{field}
+
+    \xfield{
+        $\Lambda^k V$ ist die \textbf{$k$-te \hide{äußere Potenz} von V}.
+    }
+    \begin{field}
+        $\Lambda^k V$ ist die \textbf{$k$-te äußere Potenz von V}.
+        \cite{Def. 17.29}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{bb2eb259-bf62-4b35-a333-e61752f6bfa8}
+
+    \xfield{
+        Für beliebige $K$-Vektorräume $V$ und $W$ existiert ein kanonischer Isomorphismus
+        \[S^k(V\oplus W) \overset{\cong}{\longleftarrow} \phantom{\oplus_{j=0}^k S^j(V)\otimes S^{k-j}(W)}\]
+        mit \dots
+    }
+    \begin{field}
+        Für beliebige $K$-Vektorräume $V$ und $W$ existiert ein kanonischer Isomorphismus
+        \[S^k(V\oplus W) \overset{\cong}{\longleftarrow} \oplus_{j=0}^k S^j(V)\otimes S^{k-j}(W)\]
+        mit
+        \[\vec{v}_1\cdot\dots\cdot\vec{v}_j\cdot\vec{w}_{j+1}\cdot\dots\cdot\vec{w}_k \mapsfrom (\vec{v}_1\cdot\dots\cdot\vec{v}_j)\otimes(\vec{w}_{j+1}\cdot\dots\cdot\vec{w}_k)\]
+        \cite{Satz 17.33}
+    \end{field}
+
+    \xfield{
+        Für beliebige $K$-Vektorräume $V$ und $W$ existiert ein kanonischer Isomorphismus
+        \[\Lambda^k(V\oplus W) \overset{\cong}{\longleftarrow} \phantom{\oplus_{j=0}^k \Lambda^j(V)\otimes \Lambda^{k-j}(W)}\]
+        mit \dots
+    }
+    \begin{field}
+        Für beliebige $K$-Vektorräume $V$ und $W$ existiert ein kanonischer Isomorphismus
+        \[\Lambda^k(V\oplus W) \overset{\cong}{\longleftarrow} \oplus_{j=0}^k \Lambda^j(V)\otimes \Lambda^{k-j}(W)\]
+        mit
+        \begin{align*}
+            \vec{v}_1\land\dots\land\vec{v}_j\land\vec{w}_{j+1}\land\dots\land\vec{w}_k \mapsfrom & (\vec{v}_1\land\dots\land\vec{v}_j)\otimes\\
+            &(\vec{w}_{j+1}\land\dots\land\vec{w}_k)
+        \end{align*}
+        \cite{Satz 17.33}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz}
+    \xplain{a32f90b0-d353-43fd-84c6-7f61075e40bb}
+
+    \xfield{
+        Ist $B=(\vec{b}_1,\dots,\vec{b}_n)$ Basis von $V$, so gilt für alle $k\geq 1$:
+        \[B_S := \phantom{(\vec{b}_{i_1}\cdot\vec{b}_{i_k})_{1\leq i_1 \leq\dots\leq i_k\leq n}}\]
+        ist eine Basis von $S^k V$.
+    }
+    \begin{field}
+        Ist $B=(\vec{b}_1,\dots,\vec{b}_n)$ Basis von $V$, so gilt für alle $k\geq 1$:
+        \[B_S := (\vec{b}_{i_1}\cdot\vec{b}_{i_k})_{1\leq i_1 \leq\dots\leq i_k\leq n}\]
+        ist eine Basis von $S^k V$.
+        \cite{Kor. 17.34}
+    \end{field}
+
+    \xfield{
+        Ist $B=(\vec{b}_1,\dots,\vec{b}_n)$ Basis von $V$, so gilt für alle $k\geq 1$:
+        \[B_\Lambda := \phantom{(\vec{b}_{i_1}\cdot\vec{b}_{i_k})_{1\leq i_1 <\dots< i_k\leq n}}\]
+        ist eine Basis von $\Lambda^k V$.
+    }
+    \begin{field}
+        Ist $B=(\vec{b}_1,\dots,\vec{b}_n)$ Basis von $V$, so gilt für alle $k\geq 1$:
+        \[B_S := (\vec{b}_{i_1}\cdot\vec{b}_{i_k})_{1\leq i_1 <\dots< i_k\leq n}\]
+        ist eine Basis von $S^k V$.
+        \cite{Kor. 17.34}
+    \end{field}
+
+    \xfield{
+    Sei $V$ ein Vektorraum mit $\dim V = n$. Dann gilt für alle $k\geq 0$:
+    \[\dim S^k V = \phantom{\binom{n+k-1}{k}}\]
+    }
+    \begin{field}
+        Sei $V$ ein Vektorraum mit $\dim V = n$. Dann gilt für alle $k\geq 0$:
+        \[\dim S^k V = \binom{n+k-1}{k}\]
+        \cite{Kor. 17.34}
+    \end{field}
+
+    \xfield{
+    Sei $V$ ein Vektorraum mit $\dim V = n$. Dann gilt für alle $k\geq 0$:
+    \[\dim \Lambda^k V = \phantom{\binom{n}{k}}\]
+    }
+    \begin{field}
+        Sei $V$ ein Vektorraum mit $\dim V = n$. Dann gilt für alle $k\geq 0$:
+        \[\dim \Lambda^k V = \binom{n}{k}\]
+        \cite{Kor. 17.34}
+    \end{field}
+\end{note}
+
+\begin{note}
+    \tags{Satz Def}
+    \xplain{48a522dd-cb93-4cc3-ab8b-8a0893c0a4da}
+
+    \xfield{
+        Zu jeder $K$-linearen Abbildung $f\colon V\longrightarrow W$ existiert für jedes $k\in \NN$ die \textbf{$k$-te Tensorpotenz von $f$}
+        \[f^{\otimes k}\colon \phantom{V^{\otimes k} \longrightarrow W^{\otimes k}}\]
+    }
+    \begin{field}
+        Zu jeder $K$-linearen Abbildung $f\colon V\longrightarrow W$ existiert für jedes $k\in \NN$ die \textbf{$k$-te Tensorpotenz von $f$}
+        \[f^{\otimes k}\colon V^{\otimes k} \longrightarrow W^{\otimes k}\]
+        mit
+        \[\vec{v}_1\otimes\dots\otimes\vec{v}_k\mapsto f(\vec{v}_1)\otimes\dots\otimes f(\vec{v}_k)\]
+        \cite{Satz/Def. 17.35}
+    \end{field}
+
+    \xfield{
+        Zu jeder $K$-linearen Abbildung $f\colon V\longrightarrow W$ existiert für jedes $k\in \NN$ die \textbf{$k$-te symmetrische Potenz von $f$}
+        \[S^k f\colon \phantom{S^kV \longrightarrow S^kW}\]
+    }
+    \begin{field}
+        Zu jeder $K$-linearen Abbildung $f\colon V\longrightarrow W$ existiert für jedes $k\in \NN$ die \textbf{$k$-te symmetrische Potenz von $f$}
+        \[S^kf\colon S^kV \longrightarrow S^kW\]
+        mit
+        \[\vec{v}_1\cdot\dots\cdot\vec{v}_k\mapsto f(\vec{v}_1)\cdot\dots\cdot f(\vec{v}_k)\]
+        \cite{Satz/Def. 17.35}
+    \end{field}
+
+    \xfield{
+        Zu jeder $K$-linearen Abbildung $f\colon V\longrightarrow W$ existiert für jedes $k\in \NN$ die \textbf{$k$-te äußere Potenz von $f$}
+        \[\Lambda^k f\colon \phantom{\Lambda^kV \longrightarrow \Lambda^kW}\]
+    }
+    \begin{field}
+        Zu jeder $K$-linearen Abbildung $f\colon V\longrightarrow W$ existiert für jedes $k\in \NN$ die \textbf{$k$-te äußere Potenz von $f$}
+        \[\Lambda^kf\colon \Lambda^kV \longrightarrow \Lambda^kW\]
+        mit
+        \[\vec{v}_1\land\dots\land\vec{v}_k\mapsto f(\vec{v}_1)\land\dots\land f(\vec{v}_k)\]
+        \cite{Satz/Def. 17.35}
+    \end{field}
+\end{note}
+
 \end{document}
